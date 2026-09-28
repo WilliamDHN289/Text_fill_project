@@ -1,0 +1,263 @@
+Metadata-Version: 2.4
+Name: letta
+Version: 0.16.8
+Summary: Create LLM agents with long-term memory and custom tools
+Author-email: Letta Team <contact@letta.com>
+License: Apache License
+License-File: LICENSE
+Requires-Python: <3.14,>=3.11
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: aiomultiprocess>=0.9.1
+Requires-Dist: alembic>=1.13.3
+Requires-Dist: anthropic>=0.75.0
+Requires-Dist: apscheduler>=3.11.0
+Requires-Dist: async-lru>=2.0.5
+Requires-Dist: black[jupyter]>=24.2.0
+Requires-Dist: brotli>=1.1.0
+Requires-Dist: certifi>=2025.6.15
+Requires-Dist: clickhouse-connect>=0.10.0
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: datadog>=0.49.1
+Requires-Dist: datamodel-code-generator[http]>=0.25.0
+Requires-Dist: ddtrace>=4.2.1
+Requires-Dist: demjson3>=3.0.6
+Requires-Dist: docstring-parser<0.17,>=0.16
+Requires-Dist: exa-py>=1.15.4
+Requires-Dist: faker>=36.1.0
+Requires-Dist: fastmcp>=2.12.5
+Requires-Dist: google-genai>=1.52.0
+Requires-Dist: grpcio-tools>=1.68.1
+Requires-Dist: grpcio>=1.68.1
+Requires-Dist: html2text>=2020.1.16
+Requires-Dist: httpx-sse>=0.4.0
+Requires-Dist: httpx>=0.28.0
+Requires-Dist: letta-client>=1.7.12
+Requires-Dist: llama-index-embeddings-openai>=0.3.1
+Requires-Dist: llama-index>=0.12.2
+Requires-Dist: markitdown[docx,pdf,pptx]>=0.1.2
+Requires-Dist: marshmallow-sqlalchemy>=1.4.1
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: mcp[cli]>=1.9.4
+Requires-Dist: mistralai>=1.8.1
+Requires-Dist: nltk>=3.8.1
+Requires-Dist: numpy>=2.1.0
+Requires-Dist: openai[realtime]>=2.24.0
+Requires-Dist: opentelemetry-api==1.30.0
+Requires-Dist: opentelemetry-exporter-otlp==1.30.0
+Requires-Dist: opentelemetry-instrumentation-requests==0.51b0
+Requires-Dist: opentelemetry-instrumentation-sqlalchemy==0.51b0
+Requires-Dist: opentelemetry-sdk==1.30.0
+Requires-Dist: orjson>=3.11.1
+Requires-Dist: pathvalidate>=3.2.1
+Requires-Dist: prettytable>=3.9.0
+Requires-Dist: psutil>=5.9.0
+Requires-Dist: pydantic-settings>=2.2.1
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pyhumps>=3.8.0
+Requires-Dist: python-box>=7.1.1
+Requires-Dist: python-multipart>=0.0.19
+Requires-Dist: pytz>=2023.3.post1
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: questionary>=2.0.1
+Requires-Dist: readability-lxml
+Requires-Dist: rich>=13.9.4
+Requires-Dist: ruff>=0.12.10
+Requires-Dist: sentry-sdk[fastapi]==2.19.1
+Requires-Dist: setuptools>=70
+Requires-Dist: sqlalchemy-json>=0.7.0
+Requires-Dist: sqlalchemy-utils>=0.41.2
+Requires-Dist: sqlalchemy[asyncio]>=2.0.41
+Requires-Dist: sqlmodel>=0.0.16
+Requires-Dist: structlog>=25.4.0
+Requires-Dist: tavily-python>=0.7.2
+Requires-Dist: temporalio>=1.8.0
+Requires-Dist: tqdm>=4.66.1
+Requires-Dist: trafilatura
+Requires-Dist: ty>=0.0.17
+Requires-Dist: typer>=0.15.2
+Provides-Extra: bedrock
+Requires-Dist: aioboto3>=14.3.0; extra == 'bedrock'
+Requires-Dist: boto3>=1.36.24; extra == 'bedrock'
+Provides-Extra: cloud-tool-sandbox
+Requires-Dist: e2b-code-interpreter>=1.0.3; extra == 'cloud-tool-sandbox'
+Provides-Extra: desktop
+Requires-Dist: aiosqlite>=0.21.0; extra == 'desktop'
+Requires-Dist: async-lru>=2.0.5; extra == 'desktop'
+Requires-Dist: docker>=7.1.0; extra == 'desktop'
+Requires-Dist: fastapi>=0.115.6; extra == 'desktop'
+Requires-Dist: langchain-community>=0.3.7; extra == 'desktop'
+Requires-Dist: langchain>=0.3.7; extra == 'desktop'
+Requires-Dist: locust>=2.31.5; extra == 'desktop'
+Requires-Dist: magika>=0.6.2; extra == 'desktop'
+Requires-Dist: pgvector>=0.2.3; extra == 'desktop'
+Requires-Dist: sqlite-vec>=0.1.7a2; extra == 'desktop'
+Requires-Dist: tiktoken>=0.11.0; extra == 'desktop'
+Requires-Dist: uvicorn==0.29.0; extra == 'desktop'
+Requires-Dist: websockets; extra == 'desktop'
+Requires-Dist: wikipedia>=1.4.0; extra == 'desktop'
+Provides-Extra: dev
+Requires-Dist: ipdb>=0.13.13; extra == 'dev'
+Requires-Dist: ipykernel>=6.29.5; extra == 'dev'
+Requires-Dist: pexpect>=4.9.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.5.0; extra == 'dev'
+Requires-Dist: pyright>=1.1.347; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.24.0; extra == 'dev'
+Requires-Dist: pytest-json-report>=1.5.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.14.0; extra == 'dev'
+Requires-Dist: pytest-order>=1.2.0; extra == 'dev'
+Provides-Extra: experimental
+Requires-Dist: granian[reload,uvloop]>=2.3.2; extra == 'experimental'
+Requires-Dist: uvloop>=0.21.0; extra == 'experimental'
+Provides-Extra: external-tools
+Requires-Dist: docker>=7.1.0; extra == 'external-tools'
+Requires-Dist: exa-py>=1.15.4; extra == 'external-tools'
+Requires-Dist: langchain-community>=0.3.7; extra == 'external-tools'
+Requires-Dist: langchain>=0.3.7; extra == 'external-tools'
+Requires-Dist: turbopuffer>=0.5.17; extra == 'external-tools'
+Requires-Dist: wikipedia>=1.4.0; extra == 'external-tools'
+Provides-Extra: modal
+Requires-Dist: modal>=1.1.0; extra == 'modal'
+Provides-Extra: pinecone
+Requires-Dist: pinecone[asyncio]>=7.3.0; extra == 'pinecone'
+Provides-Extra: postgres
+Requires-Dist: asyncpg>=0.30.0; extra == 'postgres'
+Requires-Dist: pg8000>=1.30.3; extra == 'postgres'
+Requires-Dist: pgvector>=0.2.3; extra == 'postgres'
+Requires-Dist: psycopg2-binary>=2.9.10; extra == 'postgres'
+Requires-Dist: psycopg2>=2.9.10; extra == 'postgres'
+Provides-Extra: profiling
+Requires-Dist: ddtrace>=4.2.1; extra == 'profiling'
+Provides-Extra: redis
+Requires-Dist: redis>=6.2.0; extra == 'redis'
+Provides-Extra: server
+Requires-Dist: fastapi>=0.115.6; extra == 'server'
+Requires-Dist: uvicorn==0.29.0; extra == 'server'
+Requires-Dist: websockets; extra == 'server'
+Provides-Extra: sqlite
+Requires-Dist: aiosqlite>=0.21.0; extra == 'sqlite'
+Requires-Dist: sqlite-vec>=0.1.7a2; extra == 'sqlite'
+Description-Content-Type: text/markdown
+
+# Letta (formerly MemGPT)
+
+Build AI with advanced memory that can learn and self-improve over time.
+
+* [Letta Code](https://docs.letta.com/letta-code): run agents locally in your terminal
+* [Letta API](https://docs.letta.com/quickstart/): build agents into your applications
+
+## Get started in the CLI
+
+Requires [Node.js 18+](https://nodejs.org/en/download)
+
+1. Install the [Letta Code](https://github.com/letta-ai/letta-code) CLI tool: `npm install -g @letta-ai/letta-code`
+2. Run `letta` in your terminal to launch an agent with memory running on your local computer
+
+When running the CLI tool, your agent help you code and do any task you can do on your computer.
+
+Letta Code supports [skills](https://docs.letta.com/letta-code/skills) and [subagents](https://docs.letta.com/letta-code/subagents), and bundles pre-built skills/subagents for advanced memory and continual learning. Letta is fully model-agnostic, though we recommend Opus 4.5 and GPT-5.2 for best performance (see our [model leaderboard](https://leaderboard.letta.com/) for our rankings).
+
+## Get started with the Letta API
+
+Use the Letta API to integrate stateful agents into your own applications.
+Letta has a full-featured agents API, and a Python and Typescript SDK (view our [API reference](https://docs.letta.com/api)).
+
+### Installation
+
+TypeScript / Node.js:
+```bash
+npm install @letta-ai/letta-client
+```
+
+Python:
+```bash
+pip install letta-client
+```
+
+### Hello World example
+
+Below is a quick example of creating a stateful agent and sending it a message (requires a [Letta API key](https://app.letta.com)).
+See the full [quickstart guide](https://docs.letta.com/quickstart) for complete documentation.
+
+TypeScript:
+```typescript
+import Letta from "@letta-ai/letta-client";
+
+const client = new Letta({ apiKey: process.env.LETTA_API_KEY });
+
+// Create your agent
+const agentState = await client.agents.create({
+  model: "openai/gpt-5.2",
+  memory_blocks: [
+    {
+      label: "human",
+      value:
+        "Name: Timber. Status: dog. Occupation: building Letta, infrastructure to democratize self-improving superintelligence",
+    },
+    {
+      label: "persona",
+      value:
+        "I am a self-improving superintelligence. Timber is my best friend and collaborator.",
+    },
+  ],
+  tools: ["web_search", "fetch_webpage"],
+});
+
+console.log("Agent created with ID:", agentState.id);
+
+// Send your agent a message
+const response = await client.agents.messages.create(agentState.id, {
+  input: "What do you know about me?",
+});
+
+for (const message of response.messages) {
+  console.log(message);
+}
+```
+
+Python:
+```python
+from letta_client import Letta
+import os
+
+client = Letta(api_key=os.getenv("LETTA_API_KEY"))
+
+# Create your agent
+agent_state = client.agents.create(
+    model="openai/gpt-5.2",
+    memory_blocks=[
+        {
+          "label": "human",
+          "value": "Name: Timber. Status: dog. Occupation: building Letta, infrastructure to democratize self-improving superintelligence"
+        },
+        {
+          "label": "persona",
+          "value": "I am a self-improving superintelligence. Timber is my best friend and collaborator."
+        }
+    ],
+    tools=["web_search", "fetch_webpage"]
+)
+
+print(f"Agent created with ID: {agent_state.id}")
+
+# Send your agent a message
+response = client.agents.messages.create(
+    agent_id=agent_state.id,
+    input="What do you know about me?"
+)
+
+for message in response.messages:
+    print(message)
+```
+
+## Contributing
+
+Letta is an open source project built by over a hundred contributors from around the world. There are many ways to get involved in the Letta OSS project!
+
+* [**Join the Discord**](https://discord.gg/letta): Chat with the Letta devs and other AI developers.
+* [**Chat on our forum**](https://forum.letta.com/): If you're not into Discord, check out our developer forum.
+* **Follow our socials**: [Twitter/X](https://twitter.com/Letta_AI), [LinkedIn](https://www.linkedin.com/in/letta), [YouTube](https://www.youtube.com/@letta-ai)
+
+---
+
+***Legal notices**: By using Letta and related Letta services (such as the Letta endpoint or hosted service), you are agreeing to our [privacy policy](https://www.letta.com/privacy-policy) and [terms of service](https://www.letta.com/terms-of-service).*
