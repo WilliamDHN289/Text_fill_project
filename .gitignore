@@ -1,0 +1,17 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+_venvs/
+**/.build/
+*.egg-info/
+*.gguf
+*.pem
+.git.__bak/
+.claude/
+*.swp
+*.swo
