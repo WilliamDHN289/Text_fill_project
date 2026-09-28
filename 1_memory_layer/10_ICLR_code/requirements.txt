@@ -1,0 +1,7 @@
+# Python 3.11. pfm.py, extractor.py, benchmark.py, metrics.py use the standard library only.
+pyyaml>=6.0
+numpy>=1.24
+sentence-transformers>=2.2   # dense and hybrid arms (all-MiniLM-L6-v2)
+torch>=2.0
+matplotlib>=3.7              # make_report.py figures
+# exp_llm.py also needs a local ollama server with qwen2:7b pulled.

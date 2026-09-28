@@ -1,0 +1,149 @@
+%% ==========================================================================
+%%  AAAI-27 submission — Personal Fact Memory (PFM)
+%%  DOUBLE-BLIND / ANONYMIZED for review.
+%%
+%%  BEFORE COMPILING you MUST download the AAAI-27 Author Kit and place these
+%%  files next to this .tex (the kit is the ONLY authoritative source):
+%%      aaai27.sty      aaai27.bst
+%%  Get it from: https://aaai.org/conference/aaai/aaai-27/  (Author Kit link).
+%%  If the kit ships a different version string, update the \pdfinfo
+%%  TemplateVersion line below to match the kit's aaai27.sty header.
+%%
+%%  Compile:  pdflatex -> bibtex -> pdflatex -> pdflatex
+%%
+%%  HARD RULES from the AAAI kit (do NOT change / do NOT add):
+%%    - No \usepackage{hyperref}       (AAAI forbids it in submissions)
+%%    - No geometry / fullpage / authblk / titlesec / etc. margin packages
+%%    - US Letter, two-column, Type 1 / TrueType fonts (times/helvet/courier)
+%%    - Main PDF <= 9 pages; pages 8–9 references ONLY; <= 7 content pages
+%%    - Remove ALL author/affiliation identity for review (done below)
+%% ==========================================================================
+
+\documentclass[letterpaper]{article}
+
+\usepackage{aaai27}          % from the AAAI-27 Author Kit
+\usepackage{times}           % roman text font
+\usepackage{helvet}          % sans-serif font
+\usepackage{courier}         % typewriter font
+\usepackage[hyphens]{url}    % url breaking
+\usepackage{graphicx}        % figures
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+% --- Extra math/table packages that ARE allowed by the kit ---------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% --- PDF metadata (required by the kit) ----------------------------------
+% NOTE: keep TemplateVersion in sync with the aaai27.sty you downloaded.
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\setcounter{secnumdepth}{0} % AAAI style: no section numbering
+
+% ==========================================================================
+\title{Personal Fact Memory: A Cognitively-Grounded, Latency-Bounded\\
+       Memory Layer for On-Device LLM Assistants}
+
+% --- DOUBLE-BLIND: no author identity during review. --------------------
+% AAAI allows replacing author info with paper number / keywords.
+\author{
+    Anonymous Submission
+}
+\affiliations{
+    Paper ID: (assigned by OpenReview)
+}
+% ==========================================================================
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Persistent memory for an on-device language assistant must satisfy three
+constraints jointly: retrieved facts must concern the intended person, remain
+valid as personal information changes, and arrive before generation commits
+to a response. We formulate this as \emph{deadline-constrained personal fact
+retrieval}: returning a small set of currently valid, identity-correct facts
+from an evolving personal store within a fixed serving deadline and memory
+budget. Existing agent-memory systems address temporal consistency,
+personalization, and retrieval efficiency separately, and assume server-scale
+infrastructure an on-device assistant cannot afford. We
+introduce Personal Fact Memory (PFM), which represents atomic facts in a
+bitemporal entity graph where superseding values close their predecessors
+instead of competing with them, and retrieves by bounded in-memory lexical
+search with local graph expansion; no embedding model or LLM is invoked on
+the hot path, and speculative prefetch with deadline racing makes retrieval
+non-blocking by construction. Forgetting is biologically grounded: a dual
+recency/usage-reinforcement decay---echoing the Ebbinghaus curve and the
+testing effect---lets facts fade unless reinforced by accepted completions,
+stratifies episodic, semantic, and pinned profile memory, and bounds the
+store by use rather than corpus size. We further propose a choice-theoretic
+serving layer: completion acceptance as discrete user choice, per-user fusion
+weights estimated online from implicit accept/reject feedback, and
+prompt-slot allocation under a character budget as constrained assortment
+optimization. In offline replay from a deployed autocomplete assistant, PFM
+raises ground-truth fact availability from 0\% to 96\% (24/25 scenarios) and
+sustains 1.8~ms median retrieval at 20{,}000 facts---two orders of magnitude
+below LLM prefill. PFM treats stale, misattributed, and late facts as
+distinct failures, and the individual, not the corpus, as the unit of design.
+\end{abstract}
+
+% AAAI-27 main track has no printed keyword field; keep this here for the
+% OpenReview "Keywords" form field and for your own reference.
+% Keywords: Personalized Memory Systems; On-Device LLM Agents;
+% Cognitively-Inspired Memory Architecture; Low-Latency Retrieval-Augmented
+% Generation; Bi-Temporal Knowledge Representation; Discrete Choice Models;
+% Assortment Optimization; Real-Time Text Completion
+
+% ==========================================================================
+%  PAPER BODY — stubs to grow into the <=7 content pages before July 28.
+%  Delete these comments as you fill each section.
+% ==========================================================================
+
+\section{Introduction}
+% Motivation: on-device small-model assistants; the joint constraint
+% (identity + latency/storage + non-blocking) no prior system targets.
+% End with an explicit contribution list.
+
+\section{Related Work and the Gap}
+% Map Mem0, Zep/Graphiti, HippoRAG, MemoryOS, A-MEM, Letta/MemGPT, and the
+% 2026 cognitively-grounded systems; argue the un-addressed joint constraint.
+% Position against RCPO (training-side choice models) vs. our serving side.
+
+\section{Personal Fact Memory}
+% The three pillars: P1 identity-grounded association; P2 bounded-footprint,
+% deadline-safe serving; P3 biologically-grounded stratification.
+
+\section{Choice-Theoretic Memory Serving}
+% Demand side: MNL over accept/reject, online MLE of fusion weights.
+% Supply side: cardinality- and budget-constrained assortment optimization.
+% Be explicit about the two-stage-causality (facts -> completion -> accept)
+% modeling approximation.
+
+\section{Experiments}
+% Study 1 (deployed offline replay, done): 0% -> 96% availability, latency.
+% Study 3 (three-arm ablation): constant top-k vs. online-MLE top-k vs.
+% MLE+assortment; include the mixed/nested-logit model-mismatch robustness
+% check. Provide a Code and Data Supplement (AAAI reproducibility policy:
+% "will release after acceptance" does NOT count).
+
+\section{Limitations}
+% Rule-extractor recall; prompt-side proxy metric; semi-synthetic corpus;
+% the choice-model approximation of §"Choice-Theoretic Memory Serving".
+
+\section{Conclusion}
+
+% --- Bibliography --------------------------------------------------------
+\bibliographystyle{aaai27}   % from the Author Kit
+\bibliography{references}     % references.bib in this folder
+
+\end{document}

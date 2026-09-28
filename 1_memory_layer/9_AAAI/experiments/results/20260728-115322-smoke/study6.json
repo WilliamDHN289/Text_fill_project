@@ -1,0 +1,362 @@
+{
+  "status": "DONE",
+  "corpus": "noisy",
+  "n_queries": 45,
+  "budget": 800,
+  "store": {
+    "facts": 221,
+    "valid_facts": 180,
+    "index_terms": 314,
+    "entities": 187,
+    "graph_nodes": 182
+  },
+  "deadlines_ms": [
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    20
+  ],
+  "arms": {
+    "pfm_full": {
+      "metrics": {
+        "current": {
+          "rate": 1.0,
+          "lo": 0.9213,
+          "hi": 1.0,
+          "k": 45,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0787,
+          "k": 0,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2889,
+          "lo": 0.1773,
+          "hi": 0.4337,
+          "k": 13,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.7111,
+          "lo": 0.5663,
+          "hi": 0.8227,
+          "k": 32,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 45,
+        "p50_ms": 0.0238,
+        "p95_ms": 0.036,
+        "max_ms": 0.0518
+      },
+      "build_s": 0.0,
+      "backend": null
+    },
+    "temporal_bm25": {
+      "metrics": {
+        "current": {
+          "rate": 1.0,
+          "lo": 0.9213,
+          "hi": 1.0,
+          "k": 45,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0787,
+          "k": 0,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2889,
+          "lo": 0.1773,
+          "hi": 0.4337,
+          "k": 13,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.7111,
+          "lo": 0.5663,
+          "hi": 0.8227,
+          "k": 32,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 45,
+        "p50_ms": 0.0066,
+        "p95_ms": 0.013,
+        "max_ms": 0.0139
+      },
+      "build_s": 0.001,
+      "backend": null
+    },
+    "bm25_recency": {
+      "metrics": {
+        "current": {
+          "rate": 0.9556,
+          "lo": 0.8517,
+          "hi": 0.9877,
+          "k": 43,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.7111,
+          "lo": 0.5663,
+          "hi": 0.8227,
+          "k": 32,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2444,
+          "lo": 0.1424,
+          "hi": 0.3867,
+          "k": 11,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.2,
+          "lo": 0.109,
+          "hi": 0.3382,
+          "k": 9,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 45,
+        "p50_ms": 0.0115,
+        "p95_ms": 0.0206,
+        "max_ms": 0.0238
+      },
+      "build_s": 0.001,
+      "backend": null
+    },
+    "bm25_plain": {
+      "metrics": {
+        "current": {
+          "rate": 0.9556,
+          "lo": 0.8517,
+          "hi": 0.9877,
+          "k": 43,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.7333,
+          "lo": 0.5896,
+          "hi": 0.8404,
+          "k": 33,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2222,
+          "lo": 0.1254,
+          "hi": 0.3627,
+          "k": 10,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.1778,
+          "lo": 0.0929,
+          "hi": 0.3133,
+          "k": 8,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 45,
+        "p50_ms": 0.0101,
+        "p95_ms": 0.0166,
+        "max_ms": 0.019
+      },
+      "build_s": 0.001,
+      "backend": null
+    },
+    "dense": {
+      "metrics": {
+        "current": {
+          "rate": 1.0,
+          "lo": 0.9213,
+          "hi": 1.0,
+          "k": 45,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.7556,
+          "lo": 0.6133,
+          "hi": 0.8576,
+          "k": 34,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2667,
+          "lo": 0.1596,
+          "hi": 0.4104,
+          "k": 12,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.1778,
+          "lo": 0.0929,
+          "hi": 0.3133,
+          "k": 8,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 45,
+        "p50_ms": 7.6544,
+        "p95_ms": 8.1342,
+        "max_ms": 8.5585
+      },
+      "build_s": 9.693,
+      "backend": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "hybrid_rrf": {
+      "metrics": {
+        "current": {
+          "rate": 1.0,
+          "lo": 0.9213,
+          "hi": 1.0,
+          "k": 45,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.7333,
+          "lo": 0.5896,
+          "hi": 0.8404,
+          "k": 33,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2889,
+          "lo": 0.1773,
+          "hi": 0.4337,
+          "k": 13,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.1778,
+          "lo": 0.0929,
+          "hi": 0.3133,
+          "k": 8,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 45,
+        "p50_ms": 7.6493,
+        "p95_ms": 8.1192,
+        "max_ms": 8.7539
+      },
+      "build_s": 2.121,
+      "backend": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "pfm_snapshot": {
+      "metrics": {
+        "current": {
+          "rate": 1.0,
+          "lo": 0.9213,
+          "hi": 1.0,
+          "k": 45,
+          "n": 45
+        },
+        "stale": {
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0787,
+          "k": 0,
+          "n": 45
+        },
+        "wrong": {
+          "rate": 0.2889,
+          "lo": 0.1773,
+          "hi": 0.4337,
+          "k": 13,
+          "n": 45
+        },
+        "clean": {
+          "rate": 0.7111,
+          "lo": 0.5663,
+          "hi": 0.8227,
+          "k": 32,
+          "n": 45
+        }
+      },
+      "latency": {
+        "n": 0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0,
+        "max_ms": 0.0
+      },
+      "build_s": 0.0,
+      "backend": "prefetched snapshot (O(1) read)"
+    }
+  },
+  "curves": {
+    "pfm_full": [
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111
+    ],
+    "temporal_bm25": [
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111
+    ],
+    "bm25_recency": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "bm25_plain": [
+      0.1778,
+      0.1778,
+      0.1778,
+      0.1778,
+      0.1778,
+      0.1778
+    ],
+    "dense": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1778,
+      0.1778
+    ],
+    "hybrid_rrf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1778,
+      0.1778
+    ],
+    "pfm_snapshot": [
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111,
+      0.7111
+    ]
+  },
+  "timing_boundary": "wall time around arm.retrieve(): query construction/encoding + scoring + ranking + block formatting; median of 1 runs after warmup; single query at a time (batch=1)"
+}

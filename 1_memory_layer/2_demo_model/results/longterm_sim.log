@@ -1,0 +1,528 @@
+
+==========================================================================
+ Session 01/30  (day 0)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  23.8%   dphm  19.0%   (Δ -4.8pp)
+ next-word top-3   base  33.3%   dphm  31.0%
+ keystrokes saved  base  47 ch   dphm  40 ch   (cumulative 47 vs 40)
+ latency           llama p50 180 ms   dphm hot-path p50 0.400 ms  p99 2.406 ms
+ memory            970 trie contexts | 0 habits (+0 new)
+ probe 'Let me know if you '            -> 'can'(ngram,-2.38)  'to'(ngram,-3.03)  'like'(ngram,-3.11)
+ probe 'I think we '                    -> 'can'(ngram,-2.42)
+ probe 'Please give me a call if '      -> 'indeed'(ngram,-2.25)
+ probe 'We will continue to '           -> 'me'(ngram,-2.8)  'this'(ngram,-3.42)  'talk'(ngram,-3.42)
+ probe 'in my opinion she '             -> 'also'(ngram,-2.55)  'is'(ngram,-2.64)
+ probe 'It is a truth universally '     -> ','(ngram,-3.5)  'the'(ngram,-4.05)  'and'(ngram,-4.44)
+ [base win ] …pena - 1:30; Spurling @11:15 | truth='and' base='and' dphm='pena'
+
+==========================================================================
+ Session 02/30  (day 1)   5 emails + 2 prose   40 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  25.0%   dphm  32.5%   (Δ +7.5pp)
+ next-word top-3   base  35.0%   dphm  40.0%
+ keystrokes saved  base  44 ch   dphm  59 ch   (cumulative 91 vs 99)
+ latency           llama p50 138 ms   dphm hot-path p50 1.150 ms  p99 2.487 ms
+ memory            1,552 trie contexts | 0 habits (+0 new)
+ probe 'Let me know if you '            -> 'did'(ngram,-2.9)  '.'(ngram,-2.9)  'can'(ngram,-3.18)
+ probe 'I think we '                    -> 'need'(ngram,-2.3)  'can'(ngram,-3.32)
+ probe 'Please give me a call if '      -> 'there'(ngram,-2.3)  'indeed'(ngram,-3.32)
+ probe 'We will continue to '           -> 'me'(ngram,-2.89)  'let'(ngram,-3.49)  'fall'(ngram,-3.49)
+ probe 'in my opinion she '             -> 'is'(ngram,-3.26)  'also'(ngram,-3.32)  ','(ngram,-5.04)
+ probe 'It is a truth universally '     -> ','(ngram,-3.69)  '.'(ngram,-4.28)  'the'(ngram,-4.31)
+ [dphm win ] … in North Carolina -- 2024672778) Greg Piper | truth='carol' dphm='carol'(ngram) base='p'
+ [dphm win ] …03-464-8536 Kathleen -- Providence Gas (Mike | truth='mccall' dphm='mccall'(ngram) base='and'
+
+==========================================================================
+ Session 03/30  (day 2)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  12.2%   dphm  22.0%   (Δ +9.8pp)
+ next-word top-3   base  24.4%   dphm  36.6%
+ keystrokes saved  base  24 ch   dphm  43 ch   (cumulative 115 vs 142)
+ latency           llama p50 138 ms   dphm hot-path p50 1.329 ms  p99 2.093 ms
+ memory            1,983 trie contexts | 5 habits (+5 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.0 | "meet you there" 3.0
+ probe 'Let me know if you '            -> 'there'(ngram,-2.96)  'will'(ngram,-3.23)  'to'(ngram,-3.75)
+ probe 'I think we '                    -> 'need'(ngram,-3.32)  'can'(ngram,-3.34)  ','(ngram,-5.43)
+ probe 'Please give me a call if '      -> 'there'(ngram,-3.32)  'indeed'(ngram,-3.34)  ','(ngram,-5.43)
+ probe 'We will continue to '           -> 'take'(ngram,-2.93)  'be'(ngram,-3.14)  'dial'(ngram,-3.51)
+ probe 'in my opinion she '             -> 'will'(ngram,-2.34)  'also'(ngram,-3.46)  'is'(ngram,-3.46)
+ probe 'It is a truth universally '     -> ','(ngram,-3.88)  '.'(ngram,-4.33)  'the'(ngram,-4.5)
+ [dphm win ] …Slade Gorton -- Craig Gannett | truth='meeting' dphm='meeting'(ngram) base='of'
+ [dphm win ] …e (PFI in North Carolina -- 2024672778) Greg | truth='piper' dphm='piper'(ngram) base='g'
+
+==========================================================================
+ Session 04/30  (day 3)   5 emails + 2 prose   40 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  10.0%   dphm  10.0%   (Δ +0.0pp)
+ next-word top-3   base  20.0%   dphm  20.0%
+ keystrokes saved  base  19 ch   dphm  19 ch   (cumulative 134 vs 161)
+ latency           llama p50 136 ms   dphm hot-path p50 1.294 ms  p99 2.972 ms
+ memory            2,351 trie contexts | 6 habits (+1 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.0 | "cynthia will" 3.9
+ probe 'Let me know if you '            -> 'do'(ngram,-2.83)
+ probe 'I think we '                    -> 'need'(ngram,-3.34)  'can'(ngram,-3.36)  ','(ngram,-4.96)
+ probe 'Please give me a call if '      -> 'you'(ngram,-2.77)  'there'(ngram,-3.45)  'indeed'(ngram,-3.48)
+ probe 'We will continue to '           -> 'be'(ngram,-3.15)  'hold'(ngram,-3.53)  'give'(ngram,-3.64)
+ probe 'in my opinion she '             -> 'ought'(ngram,-2.37)  'will'(ngram,-3.53)  'also'(ngram,-3.58)
+ probe 'It is a truth universally '     -> ','(ngram,-3.77)  '.'(ngram,-4.23)  'of'(ngram,-4.72)
+
+==========================================================================
+ Session 05/30  (day 4)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  28.6%   dphm  28.6%   (Δ +0.0pp)
+ next-word top-3   base  40.5%   dphm  40.5%
+ keystrokes saved  base  37 ch   dphm  37 ch   (cumulative 171 vs 198)
+ latency           llama p50 137 ms   dphm hot-path p50 1.183 ms  p99 2.716 ms
+ memory            2,841 trie contexts | 6 habits (+0 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.0 | "cynthia will" 3.9
+ probe 'Let me know if you '            -> 'would'(ngram,-2.58)  'do'(ngram,-3.32)
+ probe 'I think we '                    -> 'can'(ngram,-2.35)  'have'(ngram,-2.61)  'need'(ngram,-2.82)
+ probe 'Please give me a call if '      -> 'there'(ngram,-2.34)  'you'(ngram,-2.49)  'indeed'(ngram,-3.7)
+ probe 'We will continue to '           -> 'the'(ngram,-3.36)  'be'(ngram,-3.41)  'take'(ngram,-3.6)
+ probe 'in my opinion she '             -> 'is'(ngram,-2.2)  'ought'(ngram,-3.62)  'will'(ngram,-3.65)
+ probe 'It is a truth universally '     -> ','(ngram,-4.02)  '.'(ngram,-4.08)  'the'(ngram,-4.44)
+
+==========================================================================
+ Session 06/30  (day 5)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  42.9%   dphm  40.5%   (Δ -2.4pp)
+ next-word top-3   base  50.0%   dphm  47.6%
+ keystrokes saved  base  75 ch   dphm  71 ch   (cumulative 246 vs 269)
+ latency           llama p50 138 ms   dphm hot-path p50 1.339 ms  p99 3.947 ms
+ memory            3,408 trie contexts | 6 habits (+0 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.7 | "cynthia will" 3.9
+ probe 'Let me know if you '            -> 'would'(ngram,-3.32)  'do'(ngram,-3.34)  'guys'(ngram,-3.63)
+ probe 'I think we '                    -> 'were'(ngram,-2.29)
+ probe 'Please give me a call if '      -> 'you'(ngram,-2.94)  'there'(ngram,-2.96)  'indeed'(ngram,-3.71)
+ probe 'We will continue to '           -> 'let'(ngram,-2.35)
+ probe 'in my opinion she '             -> 'is'(ngram,-2.66)  'was'(ngram,-2.73)  'wanted'(ngram,-3.3)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.99)  ','(ngram,-4.08)  'the'(ngram,-4.33)
+ [base win ] …ds. It would not be in use full time and the | truth='only' base='only' dphm='rest'
+
+==========================================================================
+ Session 07/30  (day 6)   5 emails + 2 prose   40 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  30.0%   dphm  30.0%   (Δ +0.0pp)
+ next-word top-3   base  42.5%   dphm  40.0%
+ keystrokes saved  base  40 ch   dphm  40 ch   (cumulative 286 vs 309)
+ latency           llama p50 138 ms   dphm hot-path p50 1.412 ms  p99 4.929 ms
+ memory            3,937 trie contexts | 7 habits (+1 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.7 | "cynthia will" 3.9
+ probe 'Let me know if you '            -> 'will'(ngram,-2.71)  'decline'(ngram,-2.71)  'would'(ngram,-3.56)
+ probe 'I think we '                    -> 'were'(ngram,-2.78)  'needed'(ngram,-3.19)  'would'(ngram,-3.88)
+ probe 'Please give me a call if '      -> 'you'(ngram,-2.2)  'i'(ngram,-3.21)  'the'(ngram,-3.21)
+ probe 'We will continue to '           -> 'let'(ngram,-3.19)  'be'(ngram,-4.08)  'know'(ngram,-4.3)
+ probe 'in my opinion she '             -> 'will'(ngram,-2.4)  'is'(ngram,-3.05)  'was'(ngram,-3.41)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.06)  ','(ngram,-4.13)  'the'(ngram,-4.29)
+
+==========================================================================
+ Session 08/30  (day 7)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  33.3%   dphm  31.0%   (Δ -2.3pp)
+ next-word top-3   base  47.6%   dphm  50.0%
+ keystrokes saved  base  47 ch   dphm  43 ch   (cumulative 333 vs 352)
+ latency           llama p50 138 ms   dphm hot-path p50 1.594 ms  p99 4.120 ms
+ memory            4,550 trie contexts | 12 habits (+5 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.7 | "cynthia will" 3.9
+ probe 'Let me know if you '            -> 'will'(ngram,-3.53)  'decline'(ngram,-3.53)  'would'(ngram,-3.58)
+ probe 'I think we '                    -> 'were'(ngram,-3.21)  'have'(ngram,-3.91)  'can'(ngram,-4.36)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.27)  'there'(ngram,-2.82)  'you'(ngram,-2.9)
+ probe 'We will continue to '           -> 'let'(ngram,-3.21)  'do'(ngram,-4.29)  'the'(ngram,-4.67)
+ probe 'in my opinion she '             -> 'began'(ngram,-2.75)  'had'(ngram,-2.85)  'is'(ngram,-3.17)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.05)  'the'(ngram,-4.14)  ','(ngram,-4.15)
+ [dphm win ] …f the same things we would say, but they may | truth='be' dphm='be'(base) base='also'
+ [base win ] …dual curves, the assumptions underlying them | truth='and' base='and' dphm=','
+
+==========================================================================
+ Session 09/30  (day 8)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  29.3%   dphm  29.3%   (Δ +0.0pp)
+ next-word top-3   base  39.0%   dphm  36.6%
+ keystrokes saved  base  39 ch   dphm  39 ch   (cumulative 372 vs 391)
+ latency           llama p50 138 ms   dphm hot-path p50 0.798 ms  p99 5.226 ms
+ memory            5,086 trie contexts | 15 habits (+3 new)
+ top habits        "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0 | "that he" 4.7 | "cynthia will" 3.9
+ probe 'Let me know if you '            -> 'will'(ngram,-3.19)  'decline'(ngram,-3.54)  'would'(ngram,-3.59)
+ probe 'I think we '                    -> 'were'(ngram,-3.23)  'need'(ngram,-3.72)  'should'(ngram,-3.72)
+ probe 'Please give me a call if '      -> 'it'(ngram,-2.68)  'you'(ngram,-3.09)  'someone'(ngram,-3.27)
+ probe 'We will continue to '           -> 'let'(ngram,-3.23)  'the'(ngram,-4.1)  'discuss'(ngram,-4.5)
+ probe 'in my opinion she '             -> ','(ngram,-2.61)  'is'(ngram,-3.23)  'had'(ngram,-3.56)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.07)  ','(ngram,-4.09)  'the'(ngram,-4.32)
+
+==========================================================================
+ Session 10/30  (day 9)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  38.1%   dphm  40.5%   (Δ +2.4pp)
+ next-word top-3   base  47.6%   dphm  54.8%
+ keystrokes saved  base  54 ch   dphm  61 ch   (cumulative 426 vs 452)
+ latency           llama p50 139 ms   dphm hot-path p50 0.779 ms  p99 3.683 ms
+ memory            5,674 trie contexts | 18 habits (+3 new)
+ top habits        "mr . bingley" 6.6 | "may be" 6.6 | "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0
+ probe 'Let me know if you '            -> "don't"(ngram,-3.33)  'about'(ngram,-3.48)  'will'(ngram,-3.56)
+ probe 'I think we '                    -> 'were'(ngram,-3.25)  'need'(ngram,-3.87)  'have'(ngram,-3.87)
+ probe 'Please give me a call if '      -> 'it'(ngram,-2.36)  'you'(ngram,-3.14)  'we'(ngram,-3.38)
+ probe 'We will continue to '           -> 'let'(ngram,-3.25)  'be'(ngram,-4.27)  'make'(ngram,-4.42)
+ probe 'in my opinion she '             -> 'is'(ngram,-3.23)  'had'(ngram,-3.57)  'was'(ngram,-3.59)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.0)  ','(ngram,-4.1)  'the'(ngram,-4.18)
+ [dphm win ] …In a few days Mr. | truth='bingley' dphm='bingley'(habit) base='and'
+
+==========================================================================
+ Session 11/30  (day 10)   5 emails + 2 prose   40 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  25.0%   dphm  27.5%   (Δ +2.5pp)
+ next-word top-3   base  45.0%   dphm  45.0%
+ keystrokes saved  base  37 ch   dphm  44 ch   (cumulative 463 vs 496)
+ latency           llama p50 138 ms   dphm hot-path p50 1.192 ms  p99 15.987 ms
+ memory            6,195 trie contexts | 19 habits (+1 new)
+ top habits        "mr . bingley" 9.5 | "may be" 6.6 | "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0
+ probe 'Let me know if you '            -> 'would'(ngram,-3.04)  'will'(ngram,-3.57)  'decline'(ngram,-3.57)
+ probe 'I think we '                    -> 'were'(ngram,-3.27)  "don't"(ngram,-3.53)  'expect'(ngram,-3.53)
+ probe 'Please give me a call if '      -> 'you'(ngram,-3.15)  'it'(ngram,-3.35)  'we'(ngram,-3.38)
+ probe 'We will continue to '           -> 'let'(ngram,-3.27)  'be'(ngram,-4.09)  'say'(ngram,-5.08)
+ probe 'in my opinion she '             -> 'began'(ngram,-2.69)  'could'(ngram,-2.9)  'is'(ngram,-3.34)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.97)  ','(ngram,-4.19)  'the'(ngram,-4.2)
+ [dphm win ] …he ball; and a report soon followed that Mr. | truth='bingley' dphm='bingley'(habit) base='and'
+
+==========================================================================
+ Session 12/30  (day 11)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  31.0%   dphm  31.0%   (Δ +0.0pp)
+ next-word top-3   base  42.9%   dphm  42.9%
+ keystrokes saved  base  50 ch   dphm  50 ch   (cumulative 513 vs 546)
+ latency           llama p50 138 ms   dphm hot-path p50 0.964 ms  p99 5.797 ms
+ memory            6,810 trie contexts | 20 habits (+1 new)
+ top habits        "mr . bingley" 12.3 | "may be" 7.3 | "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0
+ probe 'Let me know if you '            -> 'will'(ngram,-3.59)  'decline'(ngram,-3.59)  'would'(ngram,-3.63)
+ probe 'I think we '                    -> 'could'(ngram,-2.76)  'were'(ngram,-3.29)
+ probe 'Please give me a call if '      -> 'you'(ngram,-3.15)  'it'(ngram,-3.36)  'we'(ngram,-3.39)
+ probe 'We will continue to '           -> 'be'(ngram,-3.21)  'let'(ngram,-3.29)  'make'(ngram,-4.6)
+ probe 'in my opinion she '             -> 'is'(ngram,-3.35)  'began'(ngram,-3.63)  'was'(ngram,-3.63)
+ probe 'It is a truth universally '     -> ','(ngram,-3.95)  '.'(ngram,-4.01)  'the'(ngram,-4.09)
+
+==========================================================================
+ Session 13/30  (day 12)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  35.7%   dphm  35.7%   (Δ +0.0pp)
+ next-word top-3   base  59.5%   dphm  57.1%
+ keystrokes saved  base  51 ch   dphm  51 ch   (cumulative 564 vs 597)
+ latency           llama p50 179 ms   dphm hot-path p50 2.115 ms  p99 7.437 ms
+ memory            7,352 trie contexts | 26 habits (+6 new)
+ top habits        "mr . bingley" 13.0 | "may be" 7.3 | "will meet" 5.0 | "meet you" 5.0 | "will meet you" 5.0
+ probe 'Let me know if you '            -> 'get'(ngram,-2.44)  'will'(ngram,-3.7)  'decline'(ngram,-3.7)
+ probe 'I think we '                    -> 'were'(ngram,-3.31)  'may'(ngram,-3.49)  'should'(ngram,-4.18)
+ probe 'Please give me a call if '      -> 'you'(ngram,-2.39)  'we'(ngram,-2.48)  'it'(ngram,-3.44)
+ probe 'We will continue to '           -> 'let'(ngram,-3.31)  'get'(ngram,-4.54)  'the'(ngram,-4.61)
+ probe 'in my opinion she '             -> 'is'(ngram,-3.32)  'began'(ngram,-3.63)  'had'(ngram,-3.69)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.94)  ','(ngram,-4.09)  'the'(ngram,-4.23)
+
+==========================================================================
+ Session 14/30  (day 13)   5 emails + 2 prose   40 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  17.5%   dphm  17.5%   (Δ +0.0pp)
+ next-word top-3   base  32.5%   dphm  32.5%
+ keystrokes saved  base  28 ch   dphm  28 ch   (cumulative 592 vs 625)
+ latency           llama p50 138 ms   dphm hot-path p50 1.819 ms  p99 4.712 ms
+ memory            7,748 trie contexts | 31 habits (+5 new)
+ top habits        "mr . bingley" 13.0 | "may be" 7.3 | "let me" 5.4 | "will meet" 5.0 | "meet you" 5.0
+ probe 'Let me know if you '            -> 'would'(ngram,-3.12)  'get'(ngram,-3.58)  'will'(ngram,-3.72)
+ probe 'I think we '                    -> 'have'(ngram,-2.46)  'were'(ngram,-3.33)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.14)  'you'(ngram,-3.1)  'they'(ngram,-3.22)
+ probe 'We will continue to '           -> 'let'(ngram,-3.33)  'setting'(ngram,-4.0)  'triangulate'(ngram,-4.0)
+ probe 'in my opinion she '             -> 'is'(ngram,-2.43)  'can'(ngram,-2.99)  'began'(ngram,-3.73)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.01)  ','(ngram,-4.01)  'the'(ngram,-4.35)
+
+==========================================================================
+ Session 15/30  (day 14)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  38.1%   dphm  38.1%   (Δ +0.0pp)
+ next-word top-3   base  54.8%   dphm  54.8%
+ keystrokes saved  base  69 ch   dphm  69 ch   (cumulative 661 vs 694)
+ latency           llama p50 137 ms   dphm hot-path p50 1.955 ms  p99 9.167 ms
+ memory            8,237 trie contexts | 34 habits (+3 new)
+ top habits        "mr . bingley" 13.4 | "may be" 8.7 | "for us" 5.6 | "let me" 5.4 | "will meet" 5.0
+ probe 'Let me know if you '            -> 'are'(ngram,-3.3)  'get'(ngram,-3.59)  'had'(ngram,-3.66)
+ probe 'I think we '                    -> 'are'(ngram,-3.21)  'were'(ngram,-3.35)  'have'(ngram,-3.69)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.04)  'you'(ngram,-3.14)  'it'(ngram,-3.6)
+ probe 'We will continue to '           -> 'hope'(ngram,-2.56)  'believe'(ngram,-2.77)  'let'(ngram,-3.61)
+ probe 'in my opinion she '             -> 'is'(ngram,-2.49)  'had'(ngram,-2.84)  'told'(ngram,-3.25)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.96)  'the'(ngram,-4.09)  ','(ngram,-4.1)
+
+==========================================================================
+ Session 16/30  (day 15)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  31.7%   dphm  29.3%   (Δ -2.4pp)
+ next-word top-3   base  51.2%   dphm  51.2%
+ keystrokes saved  base  45 ch   dphm  42 ch   (cumulative 706 vs 736)
+ latency           llama p50 138 ms   dphm hot-path p50 1.754 ms  p99 6.360 ms
+ memory            8,824 trie contexts | 37 habits (+3 new)
+ top habits        "mr . bingley" 14.1 | "may be" 9.5 | "for us" 5.6 | "let me" 5.4 | "will meet" 5.0
+ probe 'Let me know if you '            -> 'get'(ngram,-3.18)  'and'(ngram,-3.69)  'will'(ngram,-3.74)
+ probe 'I think we '                    -> 'were'(ngram,-3.37)  'need'(ngram,-4.04)  'may'(ngram,-4.04)
+ probe 'Please give me a call if '      -> 'he'(ngram,-2.67)  'we'(ngram,-2.75)  'you'(ngram,-3.18)
+ probe 'We will continue to '           -> 'need'(ngram,-2.42)  'believe'(ngram,-3.52)  'hope'(ngram,-3.52)
+ probe 'in my opinion she '             -> 'was'(ngram,-2.22)  'is'(ngram,-3.17)  'entered'(ngram,-3.6)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.99)  ','(ngram,-4.06)  'the'(ngram,-4.11)
+ [base win ] … it. Everybody said how well she looked; and | truth='mr' base='mr' dphm='i'
+
+==========================================================================
+ Session 17/30  (day 16)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  22.0%   dphm  19.5%   (Δ -2.5pp)
+ next-word top-3   base  41.5%   dphm  31.7%
+ keystrokes saved  base  36 ch   dphm  32 ch   (cumulative 742 vs 768)
+ latency           llama p50 137 ms   dphm hot-path p50 1.227 ms  p99 9.497 ms
+ memory            9,145 trie contexts | 41 habits (+4 new)
+ top habits        "mr . bingley" 14.1 | "may be" 9.5 | "for us" 5.6 | "let me" 5.4 | "mrs . bennet" 5.3
+ probe 'Let me know if you '            -> 'probably'(ngram,-3.33)  'after'(ngram,-3.33)  'get'(ngram,-3.62)
+ probe 'I think we '                    -> 'need'(ngram,-2.39)  'were'(ngram,-3.53)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.75)  'you'(ngram,-3.18)  'it'(ngram,-3.65)
+ probe 'We will continue to '           -> 'need'(ngram,-3.52)  'believe'(ngram,-3.54)  'hope'(ngram,-3.54)
+ probe 'in my opinion she '             -> 'was'(ngram,-1.96)  'is'(ngram,-3.24)  'had'(ngram,-3.72)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.89)  ','(ngram,-3.99)  'the'(ngram,-4.15)
+ [base win ] …You probably saw the announcement | truth='that' base='that' dphm='of'
+
+==========================================================================
+ Session 18/30  (day 17)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  35.7%   dphm  33.3%   (Δ -2.4pp)
+ next-word top-3   base  54.8%   dphm  54.8%
+ keystrokes saved  base  65 ch   dphm  66 ch   (cumulative 807 vs 834)
+ latency           llama p50 180 ms   dphm hot-path p50 2.661 ms  p99 7.098 ms
+ memory            9,642 trie contexts | 44 habits (+3 new)
+ top habits        "mr . bingley" 14.1 | "may be" 9.5 | "my dear" 6.1 | "for us" 5.6 | ", my dear" 5.4
+ probe 'Let me know if you '            -> 'are'(ngram,-2.46)  'get'(ngram,-3.73)  'will'(ngram,-3.87)
+ probe 'I think we '                    -> 'need'(ngram,-2.88)  'were'(ngram,-3.55)  'suggested'(ngram,-3.81)
+ probe 'Please give me a call if '      -> 'you'(ngram,-2.72)  'we'(ngram,-2.92)  'at'(ngram,-3.47)
+ probe 'We will continue to '           -> 'need'(ngram,-3.53)  'believe'(ngram,-3.55)  'hope'(ngram,-3.55)
+ probe 'in my opinion she '             -> 'added'(ngram,-2.77)  'was'(ngram,-2.82)  'is'(ngram,-3.28)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.99)  'the'(ngram,-4.12)  ','(ngram,-4.13)
+ [dphm win ] …me enough to dance with! I wish you had been | truth='there' dphm='there'(base) base='here'
+ [base win ] …give San Diego the flexibility to accept one | truth='or' base='or' dphm='of'
+
+==========================================================================
+ Session 19/30  (day 18)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  34.1%   dphm  31.7%   (Δ -2.4pp)
+ next-word top-3   base  56.1%   dphm  56.1%
+ keystrokes saved  base  45 ch   dphm  43 ch   (cumulative 852 vs 877)
+ latency           llama p50 143 ms   dphm hot-path p50 2.507 ms  p99 10.664 ms
+ memory            11,142 trie contexts | 57 habits (+13 new)
+ top habits        "mr . bingley" 14.1 | "have been" 14.0 | "may be" 10.9 | "price caps" 8.3 | "san diego" 7.7
+ probe 'Let me know if you '            -> 'are'(ngram,-3.28)  'do'(ngram,-3.5)  'get'(ngram,-3.74)
+ probe 'I think we '                    -> 'should'(ngram,-2.38)  'need'(ngram,-3.43)  'were'(ngram,-3.69)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.06)  'there'(ngram,-2.96)  'you'(ngram,-3.22)
+ probe 'We will continue to '           -> 'need'(ngram,-3.54)  'believe'(ngram,-3.57)  'hope'(ngram,-3.57)
+ probe 'in my opinion she '             -> 'was'(ngram,-2.83)  'is'(ngram,-3.25)  'had'(ngram,-3.76)
+ probe 'It is a truth universally '     -> 'the'(ngram,-3.95)  '.'(ngram,-4.01)  ','(ngram,-4.24)
+ [dphm win ] …arket.\n\nGavin -- please send Irwin copies of | truth='the' dphm='the'(base) base='this'
+ [base win ] …ed as an alternative to legislated rate caps | truth='in' base='in' dphm='for'
+
+==========================================================================
+ Session 20/30  (day 19)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  26.2%   dphm  26.2%   (Δ +0.0pp)
+ next-word top-3   base  38.1%   dphm  38.1%
+ keystrokes saved  base  36 ch   dphm  36 ch   (cumulative 888 vs 913)
+ latency           llama p50 138 ms   dphm hot-path p50 1.224 ms  p99 11.303 ms
+ memory            11,723 trie contexts | 64 habits (+7 new)
+ top habits        "would be" 18.5 | "mr . bingley" 14.1 | "have been" 14.0 | "may be" 10.9 | "price caps" 8.3
+ probe 'Let me know if you '            -> 'are'(ngram,-2.91)  'the'(ngram,-3.41)  'converse'(ngram,-3.57)
+ probe 'I think we '                    -> 'need'(ngram,-3.26)  'should'(ngram,-3.4)  'have'(ngram,-3.65)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.18)  'ever'(ngram,-3.1)  'you'(ngram,-3.28)
+ probe 'We will continue to '           -> 'need'(ngram,-3.56)  'believe'(ngram,-3.58)  'hope'(ngram,-3.58)
+ probe 'in my opinion she '             -> 'was'(habit,-1.83)  'is'(ngram,-3.32)  'had'(ngram,-3.8)
+ probe 'It is a truth universally '     -> 'the'(ngram,-4.04)  '.'(ngram,-4.12)  ','(ngram,-4.23)
+
+==========================================================================
+ Session 21/30  (day 20)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  31.0%   dphm  33.3%   (Δ +2.3pp)
+ next-word top-3   base  47.6%   dphm  47.6%
+ keystrokes saved  base  57 ch   dphm  61 ch   (cumulative 945 vs 974)
+ latency           llama p50 139 ms   dphm hot-path p50 2.433 ms  p99 8.608 ms
+ memory            12,160 trie contexts | 68 habits (+4 new)
+ top habits        "would be" 18.5 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.4 | "san diego" 8.4
+ probe 'Let me know if you '            -> 'may'(ngram,-3.24)  'are'(ngram,-3.65)  'get'(ngram,-3.77)
+ probe 'I think we '                    -> 'can'(ngram,-2.41)  'should'(ngram,-3.53)  'need'(ngram,-3.58)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.01)  'you'(ngram,-3.31)  'there'(ngram,-3.72)
+ probe 'We will continue to '           -> 'emphasize'(ngram,-2.5)  'need'(ngram,-3.68)  'believe'(ngram,-3.7)
+ probe 'in my opinion she '             -> 'was'(habit,-2.44)  'is'(ngram,-3.32)  'had'(ngram,-3.8)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.95)  'the'(ngram,-4.13)  ','(ngram,-4.15)
+ [dphm win ] …worked on Enron's proposals to San Diego and | truth='jeff' dphm='jeff'(base) base='san'
+
+==========================================================================
+ Session 22/30  (day 21)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  28.6%   dphm  26.2%   (Δ -2.4pp)
+ next-word top-3   base  59.5%   dphm  59.5%
+ keystrokes saved  base  38 ch   dphm  35 ch   (cumulative 983 vs 1009)
+ latency           llama p50 140 ms   dphm hot-path p50 1.039 ms  p99 10.296 ms
+ memory            12,655 trie contexts | 71 habits (+3 new)
+ top habits        "would be" 18.5 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.4 | "had been" 8.8
+ probe 'Let me know if you '            -> 'need'(ngram,-3.29)  'worked'(ngram,-3.29)  'are'(ngram,-3.67)
+ probe 'I think we '                    -> 'are'(ngram,-2.76)  'can'(ngram,-3.5)  'should'(ngram,-3.54)
+ probe 'Please give me a call if '      -> 'there'(ngram,-2.61)  'we'(ngram,-2.64)  'he'(ngram,-2.97)
+ probe 'We will continue to '           -> 'believe'(ngram,-2.23)  'emphasize'(ngram,-3.67)  'need'(ngram,-3.78)
+ probe 'in my opinion she '             -> 'was'(habit,-2.5)  'smiled'(ngram,-3.25)  'is'(ngram,-3.36)
+ probe 'It is a truth universally '     -> 'the'(ngram,-3.95)  '.'(ngram,-3.98)  ','(ngram,-4.14)
+ [base win ] …relative ranking offers the most flexibility | truth='and' base='and' dphm='in'
+
+==========================================================================
+ Session 23/30  (day 22)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  38.1%   dphm  38.1%   (Δ +0.0pp)
+ next-word top-3   base  52.4%   dphm  52.4%
+ keystrokes saved  base  74 ch   dphm  74 ch   (cumulative 1057 vs 1083)
+ latency           llama p50 138 ms   dphm hot-path p50 2.946 ms  p99 9.879 ms
+ memory            13,038 trie contexts | 73 habits (+2 new)
+ top habits        "would be" 18.5 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.4 | "had been" 9.6
+ probe 'Let me know if you '            -> 'are'(ngram,-2.71)  'and'(ngram,-3.19)  'get'(ngram,-3.79)
+ probe 'I think we '                    -> 'are'(ngram,-2.83)  'have'(ngram,-3.45)  'can'(ngram,-3.51)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.64)  'you'(ngram,-3.37)  'there'(ngram,-3.49)
+ probe 'We will continue to '           -> 'believe'(ngram,-3.04)  'emphasize'(ngram,-3.68)  'need'(ngram,-3.79)
+ probe 'in my opinion she '             -> 'is'(ngram,-2.24)  'was'(habit,-2.54)  'had'(ngram,-3.88)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.0)  'the'(ngram,-4.05)  ','(ngram,-4.15)
+
+==========================================================================
+ Session 24/30  (day 23)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  21.4%   dphm  21.4%   (Δ +0.0pp)
+ next-word top-3   base  47.6%   dphm  47.6%
+ keystrokes saved  base  44 ch   dphm  44 ch   (cumulative 1101 vs 1127)
+ latency           llama p50 139 ms   dphm hot-path p50 1.063 ms  p99 5.713 ms
+ memory            13,432 trie contexts | 80 habits (+7 new)
+ top habits        "would be" 17.9 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.4 | "had been" 10.3
+ probe 'Let me know if you '            -> 'will'(ngram,-3.15)  'are'(ngram,-3.69)  'get'(ngram,-3.81)
+ probe 'I think we '                    -> 'can'(ngram,-3.09)  'are'(ngram,-3.51)  'should'(ngram,-3.57)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.62)  'you'(ngram,-3.32)  'there'(ngram,-3.5)
+ probe 'We will continue to '           -> 'believe'(ngram,-3.05)  'emphasize'(ngram,-3.69)  'be'(ngram,-3.8)
+ probe 'in my opinion she '             -> 'was'(habit,-2.54)  'is'(ngram,-3.11)  'had'(ngram,-3.88)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.0)  'the'(ngram,-4.01)  ','(ngram,-4.26)
+
+==========================================================================
+ Session 25/30  (day 24)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  31.7%   dphm  29.3%   (Δ -2.4pp)
+ next-word top-3   base  46.3%   dphm  48.8%
+ keystrokes saved  base  50 ch   dphm  44 ch   (cumulative 1151 vs 1171)
+ latency           llama p50 138 ms   dphm hot-path p50 3.181 ms  p99 8.870 ms
+ memory            13,823 trie contexts | 84 habits (+4 new)
+ top habits        "would be" 18.5 | "mr . bingley" 15.6 | "have been" 14.0 | "has been" 11.5 | "may be" 11.4
+ probe 'Let me know if you '            -> 'want'(ngram,-2.76)  'are'(ngram,-3.71)  'get'(ngram,-3.82)
+ probe 'I think we '                    -> 'protest'(ngram,-3.08)  'have'(ngram,-3.42)  'can'(ngram,-3.54)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.7)  'he'(ngram,-2.81)  'i'(ngram,-2.86)
+ probe 'We will continue to '           -> 'believe'(ngram,-3.07)  'emphasize'(ngram,-3.7)  'need'(ngram,-3.82)
+ probe 'in my opinion she '             -> 'was'(habit,-2.55)  'is'(ngram,-3.12)  'had'(ngram,-3.89)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.06)  'the'(ngram,-4.08)  ','(ngram,-4.12)
+ [base win ] …Thanks, Chris.\n\nRick - see the witness list | truth='below' base='below' dphm='for'
+
+==========================================================================
+ Session 26/30  (day 25)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  34.1%   dphm  36.6%   (Δ +2.5pp)
+ next-word top-3   base  43.9%   dphm  41.5%
+ keystrokes saved  base  53 ch   dphm  55 ch   (cumulative 1204 vs 1226)
+ latency           llama p50 138 ms   dphm hot-path p50 1.264 ms  p99 12.640 ms
+ memory            14,172 trie contexts | 85 habits (+1 new)
+ top habits        "would be" 19.1 | "mr . bingley" 15.6 | "have been" 14.0 | "has been" 11.5 | "may be" 11.2
+ probe 'Let me know if you '            -> 'think'(ngram,-2.71)  'need'(ngram,-3.0)  'are'(ngram,-3.9)
+ probe 'I think we '                    -> 'should'(ngram,-2.19)  'can'(ngram,-3.66)  'need'(ngram,-3.75)
+ probe 'Please give me a call if '      -> 'you'(ngram,-2.59)  'we'(ngram,-2.83)  'he'(ngram,-3.03)
+ probe 'We will continue to '           -> 'believe'(ngram,-3.08)  'emphasize'(ngram,-3.72)  'need'(ngram,-3.83)
+ probe 'in my opinion she '             -> 'was'(habit,-2.55)  'is'(ngram,-3.16)  'had'(ngram,-3.89)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.0)  'the'(ngram,-4.09)  ','(ngram,-4.21)
+ [dphm win ] …ion about Jose at year end to ensure that he | truth='is' dphm='is'(base) base='gets'
+
+==========================================================================
+ Session 27/30  (day 26)   5 emails + 2 prose   40 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  22.5%   dphm  25.0%   (Δ +2.5pp)
+ next-word top-3   base  45.0%   dphm  45.0%
+ keystrokes saved  base  26 ch   dphm  32 ch   (cumulative 1230 vs 1258)
+ latency           llama p50 138 ms   dphm hot-path p50 1.665 ms  p99 7.208 ms
+ memory            14,596 trie contexts | 92 habits (+7 new)
+ top habits        "would be" 19.1 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.9 | "has been" 11.5
+ probe 'Let me know if you '            -> 'could'(ngram,-2.66)  'need'(ngram,-3.81)  'think'(ngram,-3.81)
+ probe 'I think we '                    -> 'should'(ngram,-2.02)  'can'(ngram,-3.77)  'need'(ngram,-3.86)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.51)  'you'(ngram,-2.81)  'he'(ngram,-3.02)
+ probe 'We will continue to '           -> 'believe'(ngram,-3.09)  'emphasize'(ngram,-3.73)  'need'(ngram,-3.85)
+ probe 'in my opinion she '             -> 'is'(ngram,-2.74)  'was'(habit,-2.74)  'can'(ngram,-3.33)
+ probe 'It is a truth universally '     -> '.'(ngram,-3.95)  'the'(ngram,-4.11)  ','(ngram,-4.21)
+ [dphm win ] …sounds good. I think we | truth='should' dphm='should'(base) base='can'
+
+==========================================================================
+ Session 28/30  (day 27)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  36.6%   dphm  36.6%   (Δ +0.0pp)
+ next-word top-3   base  65.9%   dphm  65.9%
+ keystrokes saved  base  51 ch   dphm  51 ch   (cumulative 1281 vs 1309)
+ latency           llama p50 138 ms   dphm hot-path p50 1.027 ms  p99 11.916 ms
+ memory            14,945 trie contexts | 95 habits (+3 new)
+ top habits        "would be" 19.1 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.9 | "has been" 11.5
+ probe 'Let me know if you '            -> 'get'(ngram,-3.51)  'could'(ngram,-3.79)  'need'(ngram,-3.82)
+ probe 'I think we '                    -> 'stay'(ngram,-2.48)  'should'(ngram,-2.7)  'can'(ngram,-3.87)
+ probe 'Please give me a call if '      -> 'i'(ngram,-2.71)  'we'(ngram,-2.88)  'anybody'(ngram,-3.05)
+ probe 'We will continue to '           -> 'believe'(ngram,-3.1)  'emphasize'(ngram,-3.74)  'need'(ngram,-3.86)
+ probe 'in my opinion she '             -> 'was'(habit,-2.6)  'is'(ngram,-2.91)  'cannot'(ngram,-3.83)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.0)  'the'(ngram,-4.14)  ','(ngram,-4.31)
+
+==========================================================================
+ Session 29/30  (day 28)   5 emails + 2 prose   41 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  29.3%   dphm  31.7%   (Δ +2.4pp)
+ next-word top-3   base  43.9%   dphm  48.8%
+ keystrokes saved  base  38 ch   dphm  47 ch   (cumulative 1319 vs 1356)
+ latency           llama p50 137 ms   dphm hot-path p50 1.436 ms  p99 7.126 ms
+ memory            15,253 trie contexts | 102 habits (+7 new)
+ top habits        "would be" 19.1 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.9 | "has been" 11.5
+ probe 'Let me know if you '            -> 'could'(ngram,-3.0)  'are'(ngram,-3.39)  'should'(ngram,-3.6)
+ probe 'I think we '                    -> 'need'(ngram,-2.44)  'should'(ngram,-2.79)  'stay'(ngram,-3.8)
+ probe 'Please give me a call if '      -> 'we'(ngram,-2.5)  'she'(ngram,-2.76)  'you'(ngram,-3.26)
+ probe 'We will continue to '           -> 'grow'(ngram,-2.47)  'believe'(ngram,-3.21)  'emphasize'(ngram,-3.85)
+ probe 'in my opinion she '             -> 'were'(ngram,-2.83)  'was'(habit,-2.89)  'had'(ngram,-3.13)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.01)  'the'(ngram,-4.07)  ','(ngram,-4.24)
+ [dphm win ] …arding these issues. Attached is some text I | truth='have' dphm='have'(base) base='wrote'
+ [dphm win ] …ng so drew her notice. It was at Sir William | truth='lucas' dphm='lucas'(ngram) base='hamilton'
+ [base win ] …married to him to-morrow, I should think she | truth='had' base='had' dphm='was'
+
+==========================================================================
+ Session 30/30  (day 29)   5 emails + 2 prose   42 eval points
+--------------------------------------------------------------------------
+ next-word top-1   base  21.4%   dphm  23.8%   (Δ +2.4pp)
+ next-word top-3   base  42.9%   dphm  45.2%
+ keystrokes saved  base  27 ch   dphm  31 ch   (cumulative 1346 vs 1387)
+ latency           llama p50 137 ms   dphm hot-path p50 0.988 ms  p99 13.600 ms
+ memory            15,507 trie contexts | 103 habits (+1 new)
+ top habits        "would be" 19.1 | "mr . bingley" 15.6 | "have been" 14.0 | "may be" 11.9 | "has been" 11.3
+ probe 'Let me know if you '            -> 'meet'(ngram,-3.08)  'please'(ngram,-3.42)  'could'(ngram,-3.82)
+ probe 'I think we '                    -> 'should'(ngram,-2.8)  'need'(ngram,-2.95)  'are'(ngram,-3.53)
+ probe 'Please give me a call if '      -> 'i'(ngram,-2.64)  'he'(ngram,-2.7)  'we'(ngram,-2.9)
+ probe 'We will continue to '           -> 'have'(ngram,-2.76)  'pursue'(ngram,-2.87)  'believe'(ngram,-3.38)
+ probe 'in my opinion she '             -> 'was'(habit,-2.92)  'turned'(ngram,-2.93)  'is'(ngram,-3.29)
+ probe 'It is a truth universally '     -> '.'(ngram,-4.03)  ','(ngram,-4.2)  'the'(ngram,-4.21)
+ [dphm win ] …m know that I see what he is about. He has a | truth='very' dphm='very'(base) base='great'
+
+==========================================================================
+ OVERALL {
+  "n_sessions": 30,
+  "n_points": 1239,
+  "base_top1": 28.9,
+  "dphm_top1": 29.2,
+  "base_top3": 45.1,
+  "dphm_top3": 45.5,
+  "first_half": {
+    "base_top1": 28.1,
+    "dphm_top1": 28.9
+  },
+  "second_half": {
+    "base_top1": 29.7,
+    "dphm_top1": 29.5
+  },
+  "cum_saved": {
+    "base": 1346,
+    "dphm": 1387
+  },
+  "dphm_ms_p99": 8.87,
+  "llama_ms_p50": 138.0
+}
+ -> results/longterm_sim.json

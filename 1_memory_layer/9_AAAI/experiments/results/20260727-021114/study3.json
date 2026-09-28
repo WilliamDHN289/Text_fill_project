@@ -1,0 +1,2309 @@
+{
+  "status": "DONE",
+  "n_scenarios_used": 24,
+  "config_used": {
+    "episodes": 1200,
+    "warmup_frac": 0.25,
+    "shortlist": 30,
+    "seeds": [
+      1,
+      2
+    ],
+    "lr": 0.15,
+    "l2": 0.001,
+    "char_unit": 40,
+    "relevance_boost": 2.5,
+    "mixed_sigma": 0.4,
+    "nested_lambda": 0.5,
+    "budgets": [
+      800,
+      240
+    ]
+  },
+  "table": {
+    "mnl/balanced/b800": {
+      "A": {
+        "acc": 0.8619,
+        "chars": 291.8,
+        "ndcg": 0.926,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8571,
+        "chars": 292.8,
+        "ndcg": 0.8886,
+        "truth": 0.9928
+      },
+      "C": {
+        "acc": 0.8571,
+        "chars": 292.8,
+        "ndcg": 0.8886,
+        "truth": 0.9928
+      }
+    },
+    "mnl/repetition/b800": {
+      "A": {
+        "acc": 0.8311,
+        "chars": 296.15,
+        "ndcg": 0.9341,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8275,
+        "chars": 295.7,
+        "ndcg": 0.8497,
+        "truth": 0.8972
+      },
+      "C": {
+        "acc": 0.8275,
+        "chars": 295.7,
+        "ndcg": 0.8497,
+        "truth": 0.8972
+      }
+    },
+    "mnl/associative/b800": {
+      "A": {
+        "acc": 0.7462,
+        "chars": 301.9,
+        "ndcg": 0.9488,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7374,
+        "chars": 301.9,
+        "ndcg": 0.8504,
+        "truth": 0.9711
+      },
+      "C": {
+        "acc": 0.7374,
+        "chars": 301.9,
+        "ndcg": 0.8504,
+        "truth": 0.9711
+      }
+    },
+    "mixed/balanced/b800": {
+      "A": {
+        "acc": 0.7924,
+        "chars": 290.0,
+        "ndcg": 0.9297,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7734,
+        "chars": 290.2,
+        "ndcg": 0.8049,
+        "truth": 0.9639
+      },
+      "C": {
+        "acc": 0.7734,
+        "chars": 290.2,
+        "ndcg": 0.8049,
+        "truth": 0.9639
+      }
+    },
+    "mixed/repetition/b800": {
+      "A": {
+        "acc": 0.7755,
+        "chars": 292.65,
+        "ndcg": 0.9291,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7671,
+        "chars": 292.5,
+        "ndcg": 0.8157,
+        "truth": 0.9139
+      },
+      "C": {
+        "acc": 0.7671,
+        "chars": 292.5,
+        "ndcg": 0.8155,
+        "truth": 0.9139
+      }
+    },
+    "mixed/associative/b800": {
+      "A": {
+        "acc": 0.6975,
+        "chars": 296.9,
+        "ndcg": 0.9417,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.6905,
+        "chars": 297.2,
+        "ndcg": 0.846,
+        "truth": 0.9817
+      },
+      "C": {
+        "acc": 0.6905,
+        "chars": 297.2,
+        "ndcg": 0.8458,
+        "truth": 0.9817
+      }
+    },
+    "nested/balanced/b800": {
+      "A": {
+        "acc": 0.8557,
+        "chars": 291.0,
+        "ndcg": 0.9245,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8516,
+        "chars": 292.15,
+        "ndcg": 0.8898,
+        "truth": 0.9939
+      },
+      "C": {
+        "acc": 0.8516,
+        "chars": 292.15,
+        "ndcg": 0.8898,
+        "truth": 0.9939
+      }
+    },
+    "nested/repetition/b800": {
+      "A": {
+        "acc": 0.8254,
+        "chars": 297.1,
+        "ndcg": 0.9346,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8193,
+        "chars": 296.35,
+        "ndcg": 0.8348,
+        "truth": 0.8872
+      },
+      "C": {
+        "acc": 0.8193,
+        "chars": 296.35,
+        "ndcg": 0.8348,
+        "truth": 0.8872
+      }
+    },
+    "nested/associative/b800": {
+      "A": {
+        "acc": 0.7467,
+        "chars": 289.65,
+        "ndcg": 0.9481,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7431,
+        "chars": 290.05,
+        "ndcg": 0.8739,
+        "truth": 0.9894
+      },
+      "C": {
+        "acc": 0.7431,
+        "chars": 290.05,
+        "ndcg": 0.8739,
+        "truth": 0.9894
+      }
+    },
+    "mnl/balanced/b240": {
+      "A": {
+        "acc": 0.852,
+        "chars": 201.1,
+        "ndcg": 0.9186,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8359,
+        "chars": 199.5,
+        "ndcg": 0.8823,
+        "truth": 0.9795
+      },
+      "C": {
+        "acc": 0.8337,
+        "chars": 165.8,
+        "ndcg": 0.8756,
+        "truth": 0.9755
+      }
+    },
+    "mnl/repetition/b240": {
+      "A": {
+        "acc": 0.8226,
+        "chars": 199.5,
+        "ndcg": 0.9165,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.802,
+        "chars": 196.75,
+        "ndcg": 0.8421,
+        "truth": 0.8778
+      },
+      "C": {
+        "acc": 0.7743,
+        "chars": 166.05,
+        "ndcg": 0.7896,
+        "truth": 0.7894
+      }
+    },
+    "mnl/associative/b240": {
+      "A": {
+        "acc": 0.7383,
+        "chars": 200.5,
+        "ndcg": 0.9323,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7252,
+        "chars": 198.35,
+        "ndcg": 0.8445,
+        "truth": 0.955
+      },
+      "C": {
+        "acc": 0.7202,
+        "chars": 165.7,
+        "ndcg": 0.8327,
+        "truth": 0.9433
+      }
+    },
+    "mixed/balanced/b240": {
+      "A": {
+        "acc": 0.7936,
+        "chars": 202.0,
+        "ndcg": 0.9138,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7744,
+        "chars": 200.95,
+        "ndcg": 0.8561,
+        "truth": 0.97
+      },
+      "C": {
+        "acc": 0.7645,
+        "chars": 168.35,
+        "ndcg": 0.826,
+        "truth": 0.9522
+      }
+    },
+    "mixed/repetition/b240": {
+      "A": {
+        "acc": 0.7641,
+        "chars": 202.0,
+        "ndcg": 0.9148,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7345,
+        "chars": 199.7,
+        "ndcg": 0.8146,
+        "truth": 0.8673
+      },
+      "C": {
+        "acc": 0.707,
+        "chars": 167.25,
+        "ndcg": 0.7599,
+        "truth": 0.7583
+      }
+    },
+    "mixed/associative/b240": {
+      "A": {
+        "acc": 0.7047,
+        "chars": 201.25,
+        "ndcg": 0.9274,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.6857,
+        "chars": 198.75,
+        "ndcg": 0.8228,
+        "truth": 0.9378
+      },
+      "C": {
+        "acc": 0.6802,
+        "chars": 168.55,
+        "ndcg": 0.8131,
+        "truth": 0.9227
+      }
+    },
+    "nested/balanced/b240": {
+      "A": {
+        "acc": 0.8536,
+        "chars": 201.1,
+        "ndcg": 0.9153,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8411,
+        "chars": 199.85,
+        "ndcg": 0.8725,
+        "truth": 0.9806
+      },
+      "C": {
+        "acc": 0.833,
+        "chars": 166.25,
+        "ndcg": 0.8762,
+        "truth": 0.9694
+      }
+    },
+    "nested/repetition/b240": {
+      "A": {
+        "acc": 0.8171,
+        "chars": 201.35,
+        "ndcg": 0.9214,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7899,
+        "chars": 199.2,
+        "ndcg": 0.8375,
+        "truth": 0.8883
+      },
+      "C": {
+        "acc": 0.7706,
+        "chars": 167.45,
+        "ndcg": 0.7917,
+        "truth": 0.8173
+      }
+    },
+    "nested/associative/b240": {
+      "A": {
+        "acc": 0.7302,
+        "chars": 199.8,
+        "ndcg": 0.9372,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.724,
+        "chars": 198.2,
+        "ndcg": 0.8609,
+        "truth": 0.9761
+      },
+      "C": {
+        "acc": 0.7169,
+        "chars": 166.35,
+        "ndcg": 0.8426,
+        "truth": 0.9556
+      }
+    }
+  },
+  "gain_retention_C_over_A": {
+    "mixed/balanced/b800": 3.958,
+    "nested/balanced/b800": 0.854,
+    "mixed/repetition/b800": 2.333,
+    "nested/repetition/b800": 1.694,
+    "mixed/associative/b800": 0.795,
+    "nested/associative/b800": 0.409,
+    "mixed/balanced/b240": 1.59,
+    "nested/balanced/b240": 1.126,
+    "mixed/repetition/b240": 1.182,
+    "nested/repetition/b240": 0.963,
+    "mixed/associative/b240": 1.354,
+    "nested/associative/b240": 0.735
+  },
+  "runs": [
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8624,
+          "acceptance_realized": 0.86,
+          "ndcg_at_k": 0.9243,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 291.8,
+          "acceptance_per_100_chars": 0.2956
+        },
+        "B": {
+          "acceptance_true": 0.8595,
+          "acceptance_realized": 0.8567,
+          "ndcg_at_k": 0.9162,
+          "truth_injected_rate": 0.9967,
+          "injected_chars_mean": 292.7,
+          "acceptance_per_100_chars": 0.2937
+        },
+        "C": {
+          "acceptance_true": 0.8595,
+          "acceptance_realized": 0.8567,
+          "ndcg_at_k": 0.9162,
+          "truth_injected_rate": 0.9967,
+          "injected_chars_mean": 292.7,
+          "acceptance_per_100_chars": 0.2937
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 1.077,
+        "rec": -0.647,
+        "heat": 0.347,
+        "assoc": 0.394,
+        "bias": -0.644
+      },
+      "theta_hat_C": {
+        "bm25": 1.077,
+        "rec": -0.647,
+        "heat": 0.347,
+        "assoc": 0.394,
+        "bias": -0.644
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8615,
+          "acceptance_realized": 0.8744,
+          "ndcg_at_k": 0.9277,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 291.8,
+          "acceptance_per_100_chars": 0.2953
+        },
+        "B": {
+          "acceptance_true": 0.8546,
+          "acceptance_realized": 0.8667,
+          "ndcg_at_k": 0.8611,
+          "truth_injected_rate": 0.9889,
+          "injected_chars_mean": 292.9,
+          "acceptance_per_100_chars": 0.2918
+        },
+        "C": {
+          "acceptance_true": 0.8546,
+          "acceptance_realized": 0.8667,
+          "ndcg_at_k": 0.8611,
+          "truth_injected_rate": 0.9889,
+          "injected_chars_mean": 292.9,
+          "acceptance_per_100_chars": 0.2918
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.031,
+        "rec": -0.221,
+        "heat": 0.217,
+        "assoc": 1.075,
+        "bias": -0.269
+      },
+      "theta_hat_C": {
+        "bm25": -0.031,
+        "rec": -0.221,
+        "heat": 0.217,
+        "assoc": 1.075,
+        "bias": -0.269
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8327,
+          "acceptance_realized": 0.8178,
+          "ndcg_at_k": 0.9348,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 294.7,
+          "acceptance_per_100_chars": 0.2825
+        },
+        "B": {
+          "acceptance_true": 0.8282,
+          "acceptance_realized": 0.8133,
+          "ndcg_at_k": 0.8361,
+          "truth_injected_rate": 0.8744,
+          "injected_chars_mean": 294.0,
+          "acceptance_per_100_chars": 0.2817
+        },
+        "C": {
+          "acceptance_true": 0.8282,
+          "acceptance_realized": 0.8133,
+          "ndcg_at_k": 0.8361,
+          "truth_injected_rate": 0.8744,
+          "injected_chars_mean": 294.0,
+          "acceptance_per_100_chars": 0.2817
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.315,
+        "rec": -0.595,
+        "heat": 1.006,
+        "assoc": 0.538,
+        "bias": -0.838
+      },
+      "theta_hat_C": {
+        "bm25": 0.315,
+        "rec": -0.595,
+        "heat": 1.006,
+        "assoc": 0.538,
+        "bias": -0.838
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8295,
+          "acceptance_realized": 0.8167,
+          "ndcg_at_k": 0.9334,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 297.6,
+          "acceptance_per_100_chars": 0.2787
+        },
+        "B": {
+          "acceptance_true": 0.8268,
+          "acceptance_realized": 0.8133,
+          "ndcg_at_k": 0.8632,
+          "truth_injected_rate": 0.92,
+          "injected_chars_mean": 297.4,
+          "acceptance_per_100_chars": 0.278
+        },
+        "C": {
+          "acceptance_true": 0.8268,
+          "acceptance_realized": 0.8133,
+          "ndcg_at_k": 0.8632,
+          "truth_injected_rate": 0.92,
+          "injected_chars_mean": 297.4,
+          "acceptance_per_100_chars": 0.278
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.174,
+        "rec": -0.897,
+        "heat": 0.645,
+        "assoc": -0.05,
+        "bias": -1.289
+      },
+      "theta_hat_C": {
+        "bm25": -0.174,
+        "rec": -0.897,
+        "heat": 0.645,
+        "assoc": -0.05,
+        "bias": -1.289
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.741,
+          "acceptance_realized": 0.7589,
+          "ndcg_at_k": 0.949,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 306.3,
+          "acceptance_per_100_chars": 0.242
+        },
+        "B": {
+          "acceptance_true": 0.7326,
+          "acceptance_realized": 0.7522,
+          "ndcg_at_k": 0.8592,
+          "truth_injected_rate": 0.9733,
+          "injected_chars_mean": 306.4,
+          "acceptance_per_100_chars": 0.2391
+        },
+        "C": {
+          "acceptance_true": 0.7326,
+          "acceptance_realized": 0.7522,
+          "ndcg_at_k": 0.8592,
+          "truth_injected_rate": 0.9733,
+          "injected_chars_mean": 306.4,
+          "acceptance_per_100_chars": 0.2391
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.476,
+        "rec": -0.851,
+        "heat": -0.365,
+        "assoc": 2.641,
+        "bias": -0.837
+      },
+      "theta_hat_C": {
+        "bm25": 0.476,
+        "rec": -0.851,
+        "heat": -0.365,
+        "assoc": 2.641,
+        "bias": -0.837
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7515,
+          "acceptance_realized": 0.7589,
+          "ndcg_at_k": 0.9487,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 297.5,
+          "acceptance_per_100_chars": 0.2526
+        },
+        "B": {
+          "acceptance_true": 0.7423,
+          "acceptance_realized": 0.7478,
+          "ndcg_at_k": 0.8417,
+          "truth_injected_rate": 0.9689,
+          "injected_chars_mean": 297.4,
+          "acceptance_per_100_chars": 0.2496
+        },
+        "C": {
+          "acceptance_true": 0.7423,
+          "acceptance_realized": 0.7478,
+          "ndcg_at_k": 0.8417,
+          "truth_injected_rate": 0.9689,
+          "injected_chars_mean": 297.4,
+          "acceptance_per_100_chars": 0.2496
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.05,
+        "rec": -0.975,
+        "heat": -0.063,
+        "assoc": 2.021,
+        "bias": -1.257
+      },
+      "theta_hat_C": {
+        "bm25": 0.05,
+        "rec": -0.975,
+        "heat": -0.063,
+        "assoc": 2.021,
+        "bias": -1.257
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7928,
+          "acceptance_realized": 0.7933,
+          "ndcg_at_k": 0.9318,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 291.3,
+          "acceptance_per_100_chars": 0.2721
+        },
+        "B": {
+          "acceptance_true": 0.7705,
+          "acceptance_realized": 0.7756,
+          "ndcg_at_k": 0.792,
+          "truth_injected_rate": 0.9589,
+          "injected_chars_mean": 291.8,
+          "acceptance_per_100_chars": 0.264
+        },
+        "C": {
+          "acceptance_true": 0.7705,
+          "acceptance_realized": 0.7756,
+          "ndcg_at_k": 0.792,
+          "truth_injected_rate": 0.9589,
+          "injected_chars_mean": 291.8,
+          "acceptance_per_100_chars": 0.264
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.257,
+        "rec": -0.36,
+        "heat": -0.032,
+        "assoc": 0.668,
+        "bias": -0.143
+      },
+      "theta_hat_C": {
+        "bm25": 0.257,
+        "rec": -0.36,
+        "heat": -0.032,
+        "assoc": 0.668,
+        "bias": -0.143
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "balanced",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7921,
+          "acceptance_realized": 0.7744,
+          "ndcg_at_k": 0.9276,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 288.7,
+          "acceptance_per_100_chars": 0.2744
+        },
+        "B": {
+          "acceptance_true": 0.7763,
+          "acceptance_realized": 0.7589,
+          "ndcg_at_k": 0.8177,
+          "truth_injected_rate": 0.9689,
+          "injected_chars_mean": 288.6,
+          "acceptance_per_100_chars": 0.269
+        },
+        "C": {
+          "acceptance_true": 0.7763,
+          "acceptance_realized": 0.7589,
+          "ndcg_at_k": 0.8177,
+          "truth_injected_rate": 0.9689,
+          "injected_chars_mean": 288.6,
+          "acceptance_per_100_chars": 0.269
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.562,
+        "rec": -0.798,
+        "heat": 0.149,
+        "assoc": 0.702,
+        "bias": -0.697
+      },
+      "theta_hat_C": {
+        "bm25": 0.562,
+        "rec": -0.798,
+        "heat": 0.149,
+        "assoc": 0.702,
+        "bias": -0.697
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7805,
+          "acceptance_realized": 0.79,
+          "ndcg_at_k": 0.9325,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 297.2,
+          "acceptance_per_100_chars": 0.2626
+        },
+        "B": {
+          "acceptance_true": 0.7711,
+          "acceptance_realized": 0.7789,
+          "ndcg_at_k": 0.8488,
+          "truth_injected_rate": 0.9433,
+          "injected_chars_mean": 297.6,
+          "acceptance_per_100_chars": 0.2591
+        },
+        "C": {
+          "acceptance_true": 0.7711,
+          "acceptance_realized": 0.7789,
+          "ndcg_at_k": 0.8482,
+          "truth_injected_rate": 0.9433,
+          "injected_chars_mean": 297.6,
+          "acceptance_per_100_chars": 0.2591
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.911,
+        "rec": -0.594,
+        "heat": 0.524,
+        "assoc": 0.266,
+        "bias": -0.678
+      },
+      "theta_hat_C": {
+        "bm25": 0.911,
+        "rec": -0.593,
+        "heat": 0.524,
+        "assoc": 0.266,
+        "bias": -0.679
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "repetition",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7706,
+          "acceptance_realized": 0.7533,
+          "ndcg_at_k": 0.9257,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 288.1,
+          "acceptance_per_100_chars": 0.2674
+        },
+        "B": {
+          "acceptance_true": 0.7632,
+          "acceptance_realized": 0.75,
+          "ndcg_at_k": 0.7827,
+          "truth_injected_rate": 0.8844,
+          "injected_chars_mean": 287.4,
+          "acceptance_per_100_chars": 0.2655
+        },
+        "C": {
+          "acceptance_true": 0.7632,
+          "acceptance_realized": 0.75,
+          "ndcg_at_k": 0.7827,
+          "truth_injected_rate": 0.8844,
+          "injected_chars_mean": 287.4,
+          "acceptance_per_100_chars": 0.2655
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.234,
+        "rec": -0.423,
+        "heat": 0.959,
+        "assoc": -0.228,
+        "bias": -0.368
+      },
+      "theta_hat_C": {
+        "bm25": 0.234,
+        "rec": -0.423,
+        "heat": 0.959,
+        "assoc": -0.228,
+        "bias": -0.368
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7049,
+          "acceptance_realized": 0.7133,
+          "ndcg_at_k": 0.9381,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 299.7,
+          "acceptance_per_100_chars": 0.2352
+        },
+        "B": {
+          "acceptance_true": 0.7005,
+          "acceptance_realized": 0.7111,
+          "ndcg_at_k": 0.8533,
+          "truth_injected_rate": 0.99,
+          "injected_chars_mean": 300.4,
+          "acceptance_per_100_chars": 0.2332
+        },
+        "C": {
+          "acceptance_true": 0.7005,
+          "acceptance_realized": 0.7111,
+          "ndcg_at_k": 0.8533,
+          "truth_injected_rate": 0.99,
+          "injected_chars_mean": 300.4,
+          "acceptance_per_100_chars": 0.2332
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.847,
+        "rec": -0.736,
+        "heat": -0.568,
+        "assoc": 1.61,
+        "bias": -0.601
+      },
+      "theta_hat_C": {
+        "bm25": 0.847,
+        "rec": -0.736,
+        "heat": -0.568,
+        "assoc": 1.61,
+        "bias": -0.601
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "associative",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.6901,
+          "acceptance_realized": 0.7133,
+          "ndcg_at_k": 0.9453,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 294.1,
+          "acceptance_per_100_chars": 0.2347
+        },
+        "B": {
+          "acceptance_true": 0.6805,
+          "acceptance_realized": 0.6978,
+          "ndcg_at_k": 0.8387,
+          "truth_injected_rate": 0.9733,
+          "injected_chars_mean": 294.0,
+          "acceptance_per_100_chars": 0.2314
+        },
+        "C": {
+          "acceptance_true": 0.6805,
+          "acceptance_realized": 0.6978,
+          "ndcg_at_k": 0.8382,
+          "truth_injected_rate": 0.9733,
+          "injected_chars_mean": 294.0,
+          "acceptance_per_100_chars": 0.2315
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.465,
+        "rec": -0.842,
+        "heat": -0.394,
+        "assoc": 2.064,
+        "bias": -0.907
+      },
+      "theta_hat_C": {
+        "bm25": 0.464,
+        "rec": -0.855,
+        "heat": -0.396,
+        "assoc": 2.065,
+        "bias": -0.895
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8561,
+          "acceptance_realized": 0.8644,
+          "ndcg_at_k": 0.9214,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 291.5,
+          "acceptance_per_100_chars": 0.2937
+        },
+        "B": {
+          "acceptance_true": 0.8493,
+          "acceptance_realized": 0.8544,
+          "ndcg_at_k": 0.8621,
+          "truth_injected_rate": 0.9889,
+          "injected_chars_mean": 292.6,
+          "acceptance_per_100_chars": 0.2902
+        },
+        "C": {
+          "acceptance_true": 0.8493,
+          "acceptance_realized": 0.8544,
+          "ndcg_at_k": 0.8621,
+          "truth_injected_rate": 0.9889,
+          "injected_chars_mean": 292.6,
+          "acceptance_per_100_chars": 0.2902
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.209,
+        "rec": -0.684,
+        "heat": 0.133,
+        "assoc": 0.892,
+        "bias": -0.645
+      },
+      "theta_hat_C": {
+        "bm25": 0.209,
+        "rec": -0.684,
+        "heat": 0.133,
+        "assoc": 0.892,
+        "bias": -0.645
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "balanced",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8552,
+          "acceptance_realized": 0.8567,
+          "ndcg_at_k": 0.9277,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 290.5,
+          "acceptance_per_100_chars": 0.2944
+        },
+        "B": {
+          "acceptance_true": 0.8539,
+          "acceptance_realized": 0.8544,
+          "ndcg_at_k": 0.9175,
+          "truth_injected_rate": 0.9989,
+          "injected_chars_mean": 291.7,
+          "acceptance_per_100_chars": 0.2927
+        },
+        "C": {
+          "acceptance_true": 0.8539,
+          "acceptance_realized": 0.8544,
+          "ndcg_at_k": 0.9175,
+          "truth_injected_rate": 0.9989,
+          "injected_chars_mean": 291.7,
+          "acceptance_per_100_chars": 0.2927
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.446,
+        "rec": -0.493,
+        "heat": 0.207,
+        "assoc": 0.701,
+        "bias": -0.551
+      },
+      "theta_hat_C": {
+        "bm25": 0.446,
+        "rec": -0.493,
+        "heat": 0.207,
+        "assoc": 0.701,
+        "bias": -0.551
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8196,
+          "acceptance_realized": 0.8244,
+          "ndcg_at_k": 0.9351,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 293.7,
+          "acceptance_per_100_chars": 0.279
+        },
+        "B": {
+          "acceptance_true": 0.813,
+          "acceptance_realized": 0.82,
+          "ndcg_at_k": 0.8185,
+          "truth_injected_rate": 0.8844,
+          "injected_chars_mean": 292.6,
+          "acceptance_per_100_chars": 0.2779
+        },
+        "C": {
+          "acceptance_true": 0.813,
+          "acceptance_realized": 0.82,
+          "ndcg_at_k": 0.8185,
+          "truth_injected_rate": 0.8844,
+          "injected_chars_mean": 292.6,
+          "acceptance_per_100_chars": 0.2779
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.117,
+        "rec": -0.47,
+        "heat": 0.711,
+        "assoc": -0.148,
+        "bias": -0.754
+      },
+      "theta_hat_C": {
+        "bm25": -0.117,
+        "rec": -0.47,
+        "heat": 0.711,
+        "assoc": -0.148,
+        "bias": -0.754
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "repetition",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8311,
+          "acceptance_realized": 0.8278,
+          "ndcg_at_k": 0.9342,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 300.5,
+          "acceptance_per_100_chars": 0.2766
+        },
+        "B": {
+          "acceptance_true": 0.8256,
+          "acceptance_realized": 0.8267,
+          "ndcg_at_k": 0.8511,
+          "truth_injected_rate": 0.89,
+          "injected_chars_mean": 300.1,
+          "acceptance_per_100_chars": 0.2751
+        },
+        "C": {
+          "acceptance_true": 0.8256,
+          "acceptance_realized": 0.8267,
+          "ndcg_at_k": 0.8511,
+          "truth_injected_rate": 0.89,
+          "injected_chars_mean": 300.1,
+          "acceptance_per_100_chars": 0.2751
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.058,
+        "rec": -0.221,
+        "heat": 0.667,
+        "assoc": 0.192,
+        "bias": -0.488
+      },
+      "theta_hat_C": {
+        "bm25": -0.058,
+        "rec": -0.221,
+        "heat": 0.667,
+        "assoc": 0.192,
+        "bias": -0.488
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7586,
+          "acceptance_realized": 0.7733,
+          "ndcg_at_k": 0.9513,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 293.5,
+          "acceptance_per_100_chars": 0.2585
+        },
+        "B": {
+          "acceptance_true": 0.755,
+          "acceptance_realized": 0.7656,
+          "ndcg_at_k": 0.8713,
+          "truth_injected_rate": 0.9889,
+          "injected_chars_mean": 293.9,
+          "acceptance_per_100_chars": 0.2569
+        },
+        "C": {
+          "acceptance_true": 0.755,
+          "acceptance_realized": 0.7656,
+          "ndcg_at_k": 0.8713,
+          "truth_injected_rate": 0.9889,
+          "injected_chars_mean": 293.9,
+          "acceptance_per_100_chars": 0.2569
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.126,
+        "rec": -0.389,
+        "heat": -0.219,
+        "assoc": 1.403,
+        "bias": -0.48
+      },
+      "theta_hat_C": {
+        "bm25": 0.126,
+        "rec": -0.389,
+        "heat": -0.219,
+        "assoc": 1.403,
+        "bias": -0.48
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "associative",
+      "seed": 2,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7347,
+          "acceptance_realized": 0.7233,
+          "ndcg_at_k": 0.9449,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 285.8,
+          "acceptance_per_100_chars": 0.2571
+        },
+        "B": {
+          "acceptance_true": 0.7313,
+          "acceptance_realized": 0.7189,
+          "ndcg_at_k": 0.8764,
+          "truth_injected_rate": 0.99,
+          "injected_chars_mean": 286.2,
+          "acceptance_per_100_chars": 0.2555
+        },
+        "C": {
+          "acceptance_true": 0.7313,
+          "acceptance_realized": 0.7189,
+          "ndcg_at_k": 0.8764,
+          "truth_injected_rate": 0.99,
+          "injected_chars_mean": 286.2,
+          "acceptance_per_100_chars": 0.2555
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.253,
+        "rec": -1.054,
+        "heat": -0.68,
+        "assoc": 1.776,
+        "bias": -1.276
+      },
+      "theta_hat_C": {
+        "bm25": -0.253,
+        "rec": -1.054,
+        "heat": -0.68,
+        "assoc": 1.776,
+        "bias": -1.276
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8545,
+          "acceptance_realized": 0.8556,
+          "ndcg_at_k": 0.9186,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 201.7,
+          "acceptance_per_100_chars": 0.4237
+        },
+        "B": {
+          "acceptance_true": 0.8342,
+          "acceptance_realized": 0.8389,
+          "ndcg_at_k": 0.875,
+          "truth_injected_rate": 0.9733,
+          "injected_chars_mean": 200.1,
+          "acceptance_per_100_chars": 0.4169
+        },
+        "C": {
+          "acceptance_true": 0.8304,
+          "acceptance_realized": 0.8333,
+          "ndcg_at_k": 0.862,
+          "truth_injected_rate": 0.9689,
+          "injected_chars_mean": 166.9,
+          "acceptance_per_100_chars": 0.4975
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.144,
+        "rec": -0.566,
+        "heat": 0.092,
+        "assoc": 0.206,
+        "bias": -0.527
+      },
+      "theta_hat_C": {
+        "bm25": 0.114,
+        "rec": -0.615,
+        "heat": -0.167,
+        "assoc": 0.136,
+        "bias": -0.584
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8496,
+          "acceptance_realized": 0.8222,
+          "ndcg_at_k": 0.9187,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.5,
+          "acceptance_per_100_chars": 0.4237
+        },
+        "B": {
+          "acceptance_true": 0.8376,
+          "acceptance_realized": 0.8089,
+          "ndcg_at_k": 0.8897,
+          "truth_injected_rate": 0.9856,
+          "injected_chars_mean": 198.9,
+          "acceptance_per_100_chars": 0.421
+        },
+        "C": {
+          "acceptance_true": 0.8369,
+          "acceptance_realized": 0.8056,
+          "ndcg_at_k": 0.8892,
+          "truth_injected_rate": 0.9822,
+          "injected_chars_mean": 164.7,
+          "acceptance_per_100_chars": 0.508
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.534,
+        "rec": -0.743,
+        "heat": 0.17,
+        "assoc": 0.379,
+        "bias": -1.014
+      },
+      "theta_hat_C": {
+        "bm25": 0.637,
+        "rec": -0.72,
+        "heat": 0.098,
+        "assoc": 0.379,
+        "bias": -1.164
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8202,
+          "acceptance_realized": 0.8156,
+          "ndcg_at_k": 0.9174,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.7,
+          "acceptance_per_100_chars": 0.4086
+        },
+        "B": {
+          "acceptance_true": 0.7985,
+          "acceptance_realized": 0.7922,
+          "ndcg_at_k": 0.8391,
+          "truth_injected_rate": 0.8822,
+          "injected_chars_mean": 198.0,
+          "acceptance_per_100_chars": 0.4032
+        },
+        "C": {
+          "acceptance_true": 0.7627,
+          "acceptance_realized": 0.7622,
+          "ndcg_at_k": 0.7838,
+          "truth_injected_rate": 0.7833,
+          "injected_chars_mean": 165.5,
+          "acceptance_per_100_chars": 0.4608
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.759,
+        "rec": -0.795,
+        "heat": 1.432,
+        "assoc": 0.115,
+        "bias": -0.885
+      },
+      "theta_hat_C": {
+        "bm25": 0.882,
+        "rec": -1.01,
+        "heat": 1.737,
+        "assoc": -0.062,
+        "bias": -1.144
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8251,
+          "acceptance_realized": 0.8111,
+          "ndcg_at_k": 0.9157,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 198.3,
+          "acceptance_per_100_chars": 0.4162
+        },
+        "B": {
+          "acceptance_true": 0.8055,
+          "acceptance_realized": 0.7911,
+          "ndcg_at_k": 0.8452,
+          "truth_injected_rate": 0.8733,
+          "injected_chars_mean": 195.5,
+          "acceptance_per_100_chars": 0.412
+        },
+        "C": {
+          "acceptance_true": 0.7858,
+          "acceptance_realized": 0.7689,
+          "ndcg_at_k": 0.7955,
+          "truth_injected_rate": 0.7956,
+          "injected_chars_mean": 166.6,
+          "acceptance_per_100_chars": 0.4716
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.265,
+        "rec": -0.873,
+        "heat": 0.856,
+        "assoc": 0.528,
+        "bias": -1.238
+      },
+      "theta_hat_C": {
+        "bm25": 0.267,
+        "rec": -0.918,
+        "heat": 0.874,
+        "assoc": 0.656,
+        "bias": -1.207
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7322,
+          "acceptance_realized": 0.7489,
+          "ndcg_at_k": 0.9292,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.3,
+          "acceptance_per_100_chars": 0.3656
+        },
+        "B": {
+          "acceptance_true": 0.7215,
+          "acceptance_realized": 0.7411,
+          "ndcg_at_k": 0.8532,
+          "truth_injected_rate": 0.9622,
+          "injected_chars_mean": 198.2,
+          "acceptance_per_100_chars": 0.364
+        },
+        "C": {
+          "acceptance_true": 0.7138,
+          "acceptance_realized": 0.7322,
+          "ndcg_at_k": 0.8371,
+          "truth_injected_rate": 0.9444,
+          "injected_chars_mean": 166.2,
+          "acceptance_per_100_chars": 0.4294
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.09,
+        "rec": -0.777,
+        "heat": -0.394,
+        "assoc": 2.541,
+        "bias": -0.786
+      },
+      "theta_hat_C": {
+        "bm25": 0.135,
+        "rec": -0.821,
+        "heat": -0.444,
+        "assoc": 2.606,
+        "bias": -0.876
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7444,
+          "acceptance_realized": 0.7467,
+          "ndcg_at_k": 0.9353,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.7,
+          "acceptance_per_100_chars": 0.3708
+        },
+        "B": {
+          "acceptance_true": 0.7289,
+          "acceptance_realized": 0.7278,
+          "ndcg_at_k": 0.8359,
+          "truth_injected_rate": 0.9478,
+          "injected_chars_mean": 198.5,
+          "acceptance_per_100_chars": 0.3672
+        },
+        "C": {
+          "acceptance_true": 0.7266,
+          "acceptance_realized": 0.7189,
+          "ndcg_at_k": 0.8284,
+          "truth_injected_rate": 0.9422,
+          "injected_chars_mean": 165.2,
+          "acceptance_per_100_chars": 0.4398
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.048,
+        "rec": -0.844,
+        "heat": -0.377,
+        "assoc": 2.433,
+        "bias": -0.878
+      },
+      "theta_hat_C": {
+        "bm25": 0.123,
+        "rec": -1.019,
+        "heat": -0.398,
+        "assoc": 2.652,
+        "bias": -1.164
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7896,
+          "acceptance_realized": 0.7833,
+          "ndcg_at_k": 0.9129,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 202.0,
+          "acceptance_per_100_chars": 0.3909
+        },
+        "B": {
+          "acceptance_true": 0.7764,
+          "acceptance_realized": 0.7656,
+          "ndcg_at_k": 0.8496,
+          "truth_injected_rate": 0.9767,
+          "injected_chars_mean": 200.9,
+          "acceptance_per_100_chars": 0.3865
+        },
+        "C": {
+          "acceptance_true": 0.762,
+          "acceptance_realized": 0.7567,
+          "ndcg_at_k": 0.8243,
+          "truth_injected_rate": 0.9522,
+          "injected_chars_mean": 169.4,
+          "acceptance_per_100_chars": 0.4499
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.241,
+        "rec": -0.575,
+        "heat": -0.145,
+        "assoc": 0.054,
+        "bias": -0.399
+      },
+      "theta_hat_C": {
+        "bm25": 0.44,
+        "rec": -0.818,
+        "heat": -0.312,
+        "assoc": 0.5,
+        "bias": -0.726
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "balanced",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7977,
+          "acceptance_realized": 0.8044,
+          "ndcg_at_k": 0.9146,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 202.0,
+          "acceptance_per_100_chars": 0.3949
+        },
+        "B": {
+          "acceptance_true": 0.7725,
+          "acceptance_realized": 0.78,
+          "ndcg_at_k": 0.8627,
+          "truth_injected_rate": 0.9633,
+          "injected_chars_mean": 201.0,
+          "acceptance_per_100_chars": 0.3844
+        },
+        "C": {
+          "acceptance_true": 0.7669,
+          "acceptance_realized": 0.7789,
+          "ndcg_at_k": 0.8278,
+          "truth_injected_rate": 0.9522,
+          "injected_chars_mean": 167.3,
+          "acceptance_per_100_chars": 0.4585
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.614,
+        "rec": -0.67,
+        "heat": 0.186,
+        "assoc": 0.155,
+        "bias": -0.624
+      },
+      "theta_hat_C": {
+        "bm25": 0.526,
+        "rec": -0.569,
+        "heat": 0.169,
+        "assoc": 0.369,
+        "bias": -0.497
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7599,
+          "acceptance_realized": 0.7589,
+          "ndcg_at_k": 0.9128,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.8,
+          "acceptance_per_100_chars": 0.3784
+        },
+        "B": {
+          "acceptance_true": 0.7342,
+          "acceptance_realized": 0.7311,
+          "ndcg_at_k": 0.8164,
+          "truth_injected_rate": 0.8689,
+          "injected_chars_mean": 198.3,
+          "acceptance_per_100_chars": 0.3702
+        },
+        "C": {
+          "acceptance_true": 0.7103,
+          "acceptance_realized": 0.7189,
+          "ndcg_at_k": 0.7688,
+          "truth_injected_rate": 0.7644,
+          "injected_chars_mean": 165.7,
+          "acceptance_per_100_chars": 0.4288
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.482,
+        "rec": -0.736,
+        "heat": 1.012,
+        "assoc": -0.119,
+        "bias": -0.929
+      },
+      "theta_hat_C": {
+        "bm25": 0.518,
+        "rec": -0.805,
+        "heat": 1.04,
+        "assoc": -0.025,
+        "bias": -0.917
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "repetition",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7684,
+          "acceptance_realized": 0.7489,
+          "ndcg_at_k": 0.9169,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 203.2,
+          "acceptance_per_100_chars": 0.3781
+        },
+        "B": {
+          "acceptance_true": 0.7347,
+          "acceptance_realized": 0.7111,
+          "ndcg_at_k": 0.8129,
+          "truth_injected_rate": 0.8656,
+          "injected_chars_mean": 201.1,
+          "acceptance_per_100_chars": 0.3652
+        },
+        "C": {
+          "acceptance_true": 0.7037,
+          "acceptance_realized": 0.6822,
+          "ndcg_at_k": 0.751,
+          "truth_injected_rate": 0.7522,
+          "injected_chars_mean": 168.8,
+          "acceptance_per_100_chars": 0.4168
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.55,
+        "rec": -1.091,
+        "heat": 0.901,
+        "assoc": -0.286,
+        "bias": -1.213
+      },
+      "theta_hat_C": {
+        "bm25": 0.168,
+        "rec": -1.113,
+        "heat": 1.362,
+        "assoc": -0.154,
+        "bias": -1.259
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.6997,
+          "acceptance_realized": 0.6944,
+          "ndcg_at_k": 0.9305,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 201.5,
+          "acceptance_per_100_chars": 0.3473
+        },
+        "B": {
+          "acceptance_true": 0.677,
+          "acceptance_realized": 0.6711,
+          "ndcg_at_k": 0.8166,
+          "truth_injected_rate": 0.9356,
+          "injected_chars_mean": 198.8,
+          "acceptance_per_100_chars": 0.3405
+        },
+        "C": {
+          "acceptance_true": 0.6732,
+          "acceptance_realized": 0.6633,
+          "ndcg_at_k": 0.8103,
+          "truth_injected_rate": 0.9233,
+          "injected_chars_mean": 168.4,
+          "acceptance_per_100_chars": 0.3997
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.255,
+        "rec": -0.84,
+        "heat": -0.474,
+        "assoc": 1.74,
+        "bias": -1.001
+      },
+      "theta_hat_C": {
+        "bm25": -0.155,
+        "rec": -0.983,
+        "heat": -0.525,
+        "assoc": 1.809,
+        "bias": -1.152
+      }
+    },
+    {
+      "user_model": "mixed",
+      "persona": "associative",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7097,
+          "acceptance_realized": 0.7389,
+          "ndcg_at_k": 0.9243,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 201.0,
+          "acceptance_per_100_chars": 0.3532
+        },
+        "B": {
+          "acceptance_true": 0.6944,
+          "acceptance_realized": 0.7178,
+          "ndcg_at_k": 0.8291,
+          "truth_injected_rate": 0.94,
+          "injected_chars_mean": 198.7,
+          "acceptance_per_100_chars": 0.3496
+        },
+        "C": {
+          "acceptance_true": 0.6871,
+          "acceptance_realized": 0.7122,
+          "ndcg_at_k": 0.8158,
+          "truth_injected_rate": 0.9222,
+          "injected_chars_mean": 168.7,
+          "acceptance_per_100_chars": 0.4073
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.153,
+        "rec": -0.9,
+        "heat": -0.356,
+        "assoc": 2.229,
+        "bias": -1.095
+      },
+      "theta_hat_C": {
+        "bm25": -0.003,
+        "rec": -1.093,
+        "heat": -0.448,
+        "assoc": 2.353,
+        "bias": -1.296
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8508,
+          "acceptance_realized": 0.8444,
+          "ndcg_at_k": 0.9164,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 202.1,
+          "acceptance_per_100_chars": 0.4209
+        },
+        "B": {
+          "acceptance_true": 0.8358,
+          "acceptance_realized": 0.8322,
+          "ndcg_at_k": 0.8675,
+          "truth_injected_rate": 0.9756,
+          "injected_chars_mean": 200.8,
+          "acceptance_per_100_chars": 0.4162
+        },
+        "C": {
+          "acceptance_true": 0.8222,
+          "acceptance_realized": 0.8189,
+          "ndcg_at_k": 0.8704,
+          "truth_injected_rate": 0.9578,
+          "injected_chars_mean": 166.0,
+          "acceptance_per_100_chars": 0.4953
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.274,
+        "rec": -0.506,
+        "heat": 0.283,
+        "assoc": 0.953,
+        "bias": -0.629
+      },
+      "theta_hat_C": {
+        "bm25": 0.529,
+        "rec": -0.702,
+        "heat": 0.033,
+        "assoc": 0.932,
+        "bias": -0.864
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "balanced",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8563,
+          "acceptance_realized": 0.86,
+          "ndcg_at_k": 0.9143,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.1,
+          "acceptance_per_100_chars": 0.4279
+        },
+        "B": {
+          "acceptance_true": 0.8464,
+          "acceptance_realized": 0.8489,
+          "ndcg_at_k": 0.8775,
+          "truth_injected_rate": 0.9856,
+          "injected_chars_mean": 198.9,
+          "acceptance_per_100_chars": 0.4254
+        },
+        "C": {
+          "acceptance_true": 0.8438,
+          "acceptance_realized": 0.8456,
+          "ndcg_at_k": 0.882,
+          "truth_injected_rate": 0.9811,
+          "injected_chars_mean": 166.5,
+          "acceptance_per_100_chars": 0.5067
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.255,
+        "rec": -1.004,
+        "heat": -0.168,
+        "assoc": 1.206,
+        "bias": -1.035
+      },
+      "theta_hat_C": {
+        "bm25": -0.203,
+        "rec": -1.156,
+        "heat": -0.141,
+        "assoc": 1.309,
+        "bias": -1.167
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.82,
+          "acceptance_realized": 0.8089,
+          "ndcg_at_k": 0.9179,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 199.8,
+          "acceptance_per_100_chars": 0.4104
+        },
+        "B": {
+          "acceptance_true": 0.7998,
+          "acceptance_realized": 0.7889,
+          "ndcg_at_k": 0.8435,
+          "truth_injected_rate": 0.8933,
+          "injected_chars_mean": 197.7,
+          "acceptance_per_100_chars": 0.4045
+        },
+        "C": {
+          "acceptance_true": 0.7849,
+          "acceptance_realized": 0.7733,
+          "ndcg_at_k": 0.8012,
+          "truth_injected_rate": 0.8278,
+          "injected_chars_mean": 167.0,
+          "acceptance_per_100_chars": 0.47
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.247,
+        "rec": -0.798,
+        "heat": 0.733,
+        "assoc": 0.04,
+        "bias": -0.965
+      },
+      "theta_hat_C": {
+        "bm25": 0.358,
+        "rec": -0.798,
+        "heat": 0.679,
+        "assoc": 0.061,
+        "bias": -0.959
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "repetition",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8142,
+          "acceptance_realized": 0.8111,
+          "ndcg_at_k": 0.9249,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 202.9,
+          "acceptance_per_100_chars": 0.4012
+        },
+        "B": {
+          "acceptance_true": 0.7801,
+          "acceptance_realized": 0.7811,
+          "ndcg_at_k": 0.8314,
+          "truth_injected_rate": 0.8833,
+          "injected_chars_mean": 200.7,
+          "acceptance_per_100_chars": 0.3888
+        },
+        "C": {
+          "acceptance_true": 0.7563,
+          "acceptance_realized": 0.7533,
+          "ndcg_at_k": 0.7823,
+          "truth_injected_rate": 0.8067,
+          "injected_chars_mean": 167.9,
+          "acceptance_per_100_chars": 0.4504
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.427,
+        "rec": -0.727,
+        "heat": 1.042,
+        "assoc": -0.322,
+        "bias": -1.212
+      },
+      "theta_hat_C": {
+        "bm25": 0.225,
+        "rec": -0.812,
+        "heat": 1.453,
+        "assoc": -0.225,
+        "bias": -1.396
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7332,
+          "acceptance_realized": 0.7244,
+          "ndcg_at_k": 0.9352,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 199.2,
+          "acceptance_per_100_chars": 0.368
+        },
+        "B": {
+          "acceptance_true": 0.7313,
+          "acceptance_realized": 0.7167,
+          "ndcg_at_k": 0.8767,
+          "truth_injected_rate": 0.99,
+          "injected_chars_mean": 197.6,
+          "acceptance_per_100_chars": 0.3701
+        },
+        "C": {
+          "acceptance_true": 0.7259,
+          "acceptance_realized": 0.7122,
+          "ndcg_at_k": 0.861,
+          "truth_injected_rate": 0.9744,
+          "injected_chars_mean": 166.0,
+          "acceptance_per_100_chars": 0.4374
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.006,
+        "rec": -0.838,
+        "heat": -0.317,
+        "assoc": 1.574,
+        "bias": -1.145
+      },
+      "theta_hat_C": {
+        "bm25": 0.215,
+        "rec": -0.905,
+        "heat": -0.366,
+        "assoc": 1.429,
+        "bias": -1.186
+      }
+    },
+    {
+      "user_model": "nested",
+      "persona": "associative",
+      "seed": 2,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7272,
+          "acceptance_realized": 0.7067,
+          "ndcg_at_k": 0.9392,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.4,
+          "acceptance_per_100_chars": 0.3628
+        },
+        "B": {
+          "acceptance_true": 0.7167,
+          "acceptance_realized": 0.7033,
+          "ndcg_at_k": 0.8451,
+          "truth_injected_rate": 0.9622,
+          "injected_chars_mean": 198.8,
+          "acceptance_per_100_chars": 0.3605
+        },
+        "C": {
+          "acceptance_true": 0.708,
+          "acceptance_realized": 0.7,
+          "ndcg_at_k": 0.8242,
+          "truth_injected_rate": 0.9367,
+          "injected_chars_mean": 166.7,
+          "acceptance_per_100_chars": 0.4248
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.419,
+        "rec": -1.028,
+        "heat": -0.163,
+        "assoc": 2.654,
+        "bias": -1.276
+      },
+      "theta_hat_C": {
+        "bm25": 0.455,
+        "rec": -1.03,
+        "heat": -0.167,
+        "assoc": 2.629,
+        "bias": -1.313
+      }
+    }
+  ]
+}

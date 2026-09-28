@@ -1,0 +1,15 @@
+# Models and binaries are large and reproducible via download.sh — never commit.
+models/*.gguf
+models/*.bin
+bin/
+*.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# original assignment prompt — not published
+take-home.docx

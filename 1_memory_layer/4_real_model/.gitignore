@@ -1,0 +1,34 @@
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.playground/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Node
+**/node_modules/
+**/dist/
+
+# Local production-mode build output (not for distribution)
+dist-local/
+
+# Secrets
+.env
+invite-codes-plaintext.txt
+
+# Claude
+.claude/
+
+# Internal docs
+docs/superpowers/
+.superpowers/
+research/

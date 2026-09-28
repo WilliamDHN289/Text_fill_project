@@ -1,0 +1,1019 @@
+{
+  "status": "DONE",
+  "n_chains": 160,
+  "n_queries_per_corpus": 240,
+  "cells": {
+    "lean": {
+      "keyed/b800": {
+        "metrics": {
+          "current": {
+            "rate": 1.0,
+            "lo": 0.9842,
+            "hi": 1.0,
+            "k": 240,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.1167,
+            "lo": 0.082,
+            "hi": 0.1634,
+            "k": 28,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.8833,
+            "lo": 0.8366,
+            "hi": 0.918,
+            "k": 212,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9038
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8395
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.875
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9118
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.96
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7143
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7143
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.3488
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.925
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8704
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8718
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 429,
+          "valid_facts": 160,
+          "index_terms": 302,
+          "entities": 212,
+          "graph_nodes": 210,
+          "label_reachable": 1.0
+        }
+      },
+      "keyed/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.8875,
+            "lo": 0.8413,
+            "hi": 0.9215,
+            "k": 213,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.8875,
+            "lo": 0.8413,
+            "hi": 0.9215,
+            "k": 213,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.5962,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5962
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 0.963,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.963
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 0.9375,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9375
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 0.907,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.907
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 0.8375,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8375
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 0.6538,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6538
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 429,
+          "valid_facts": 160,
+          "index_terms": 302,
+          "entities": 212,
+          "graph_nodes": 210,
+          "label_reachable": 1.0
+        }
+      },
+      "keyless/b800": {
+        "metrics": {
+          "current": {
+            "rate": 0.8125,
+            "lo": 0.7583,
+            "hi": 0.8568,
+            "k": 195,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.6542,
+            "lo": 0.592,
+            "hi": 0.7115,
+            "k": 157,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.5167,
+            "lo": 0.4537,
+            "hi": 0.5791,
+            "k": 124,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.0042,
+            "lo": 0.0007,
+            "hi": 0.0232,
+            "k": 1,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.2917,
+            "lo": 0.2378,
+            "hi": 0.3521,
+            "k": 70,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.8269,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8077
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 0.9259,
+            "stale": 0.716,
+            "coinject": 0.6667,
+            "clean": 0.2593
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 0.9583,
+            "stale": 0.8542,
+            "coinject": 0.8333,
+            "clean": 0.125
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 0.6471,
+            "stale": 0.9706,
+            "coinject": 0.6176,
+            "clean": 0.0294
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 0.36,
+            "stale": 1.0,
+            "coinject": 0.36,
+            "clean": 0.0
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.8571,
+            "coinject": 0.8571,
+            "clean": 0.1429
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 0.2143,
+            "stale": 0.8571,
+            "coinject": 0.0714,
+            "clean": 0.1429
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 0.7907,
+            "stale": 0.7442,
+            "coinject": 0.5349,
+            "clean": 0.2326
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 0.9125,
+            "stale": 0.6125,
+            "coinject": 0.5875,
+            "clean": 0.325
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 0.7407,
+            "stale": 0.9444,
+            "coinject": 0.6852,
+            "clean": 0.0556
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 0.8205,
+            "stale": 0.2436,
+            "coinject": 0.2179,
+            "clean": 0.5897
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 375,
+          "valid_facts": 375,
+          "index_terms": 486,
+          "entities": 209,
+          "graph_nodes": 207,
+          "label_reachable": 0.8708
+        }
+      },
+      "keyless/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.675,
+            "lo": 0.6134,
+            "hi": 0.7311,
+            "k": 162,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.4083,
+            "lo": 0.3481,
+            "hi": 0.4715,
+            "k": 98,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.2667,
+            "lo": 0.2147,
+            "hi": 0.326,
+            "k": 64,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.4083,
+            "lo": 0.3481,
+            "hi": 0.4715,
+            "k": 98,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.5,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 0.8025,
+            "stale": 0.2963,
+            "coinject": 0.2469,
+            "clean": 0.5556
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 0.8542,
+            "stale": 0.5,
+            "coinject": 0.4583,
+            "clean": 0.3958
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 0.6176,
+            "stale": 0.7941,
+            "coinject": 0.4412,
+            "clean": 0.1765
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 0.36,
+            "stale": 0.92,
+            "coinject": 0.28,
+            "clean": 0.08
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 0.8571,
+            "stale": 0.2143,
+            "coinject": 0.2143,
+            "clean": 0.6429
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 0.0714,
+            "stale": 0.8571,
+            "coinject": 0.0714,
+            "clean": 0.0
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 0.5814,
+            "stale": 0.4651,
+            "coinject": 0.2558,
+            "clean": 0.3256
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 0.775,
+            "stale": 0.3375,
+            "coinject": 0.3125,
+            "clean": 0.4625
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 0.7407,
+            "stale": 0.6852,
+            "coinject": 0.4259,
+            "clean": 0.3148
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 0.4615,
+            "stale": 0.0897,
+            "coinject": 0.0513,
+            "clean": 0.4103
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 375,
+          "valid_facts": 375,
+          "index_terms": 486,
+          "entities": 209,
+          "graph_nodes": 207,
+          "label_reachable": 0.8708
+        }
+      }
+    },
+    "noisy": {
+      "keyed/b800": {
+        "metrics": {
+          "current": {
+            "rate": 1.0,
+            "lo": 0.9842,
+            "hi": 1.0,
+            "k": 240,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.125,
+            "lo": 0.089,
+            "hi": 0.1728,
+            "k": 30,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.875,
+            "lo": 0.8272,
+            "hi": 0.911,
+            "k": 210,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9038
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8148
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.875
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9118
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.96
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7143
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5714
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.3023
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.925
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8519
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.859
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 1429,
+          "valid_facts": 1160,
+          "index_terms": 1335,
+          "entities": 969,
+          "graph_nodes": 971,
+          "label_reachable": 1.0
+        }
+      },
+      "keyed/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.8958,
+            "lo": 0.8508,
+            "hi": 0.9284,
+            "k": 215,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.8958,
+            "lo": 0.8508,
+            "hi": 0.9284,
+            "k": 215,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.6154,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6154
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 0.9753,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9753
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 0.9375,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9375
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 0.9302,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.9302
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 0.85,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.85
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 0.6795,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6795
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 1429,
+          "valid_facts": 1160,
+          "index_terms": 1335,
+          "entities": 969,
+          "graph_nodes": 971,
+          "label_reachable": 1.0
+        }
+      },
+      "keyless/b800": {
+        "metrics": {
+          "current": {
+            "rate": 0.8125,
+            "lo": 0.7583,
+            "hi": 0.8568,
+            "k": 195,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.6625,
+            "lo": 0.6005,
+            "hi": 0.7193,
+            "k": 159,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.525,
+            "lo": 0.4619,
+            "hi": 0.5873,
+            "k": 126,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.0042,
+            "lo": 0.0007,
+            "hi": 0.0232,
+            "k": 1,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.2833,
+            "lo": 0.2301,
+            "hi": 0.3434,
+            "k": 68,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.8269,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8077
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 0.9259,
+            "stale": 0.7037,
+            "coinject": 0.6543,
+            "clean": 0.2716
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 0.9583,
+            "stale": 0.9167,
+            "coinject": 0.8958,
+            "clean": 0.0625
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 0.6471,
+            "stale": 0.9706,
+            "coinject": 0.6176,
+            "clean": 0.0294
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 0.36,
+            "stale": 1.0,
+            "coinject": 0.36,
+            "clean": 0.0
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.8571,
+            "coinject": 0.8571,
+            "clean": 0.1429
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 0.2143,
+            "stale": 0.8571,
+            "coinject": 0.0714,
+            "clean": 0.1429
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 0.7907,
+            "stale": 0.7209,
+            "coinject": 0.5116,
+            "clean": 0.2558
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 0.9125,
+            "stale": 0.625,
+            "coinject": 0.6,
+            "clean": 0.3125
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 0.7407,
+            "stale": 0.963,
+            "coinject": 0.7037,
+            "clean": 0.037
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 0.8205,
+            "stale": 0.2179,
+            "coinject": 0.1923,
+            "clean": 0.6154
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 1375,
+          "valid_facts": 1375,
+          "index_terms": 1519,
+          "entities": 966,
+          "graph_nodes": 968,
+          "label_reachable": 0.8708
+        }
+      },
+      "keyless/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.6667,
+            "lo": 0.6048,
+            "hi": 0.7233,
+            "k": 160,
+            "n": 240
+          },
+          "stale": {
+            "rate": 0.3875,
+            "lo": 0.3281,
+            "hi": 0.4504,
+            "k": 93,
+            "n": 240
+          },
+          "coinject": {
+            "rate": 0.25,
+            "lo": 0.1994,
+            "hi": 0.3084,
+            "k": 60,
+            "n": 240
+          },
+          "wrong": {
+            "rate": 0.0,
+            "lo": -0.0,
+            "hi": 0.0158,
+            "k": 0,
+            "n": 240
+          },
+          "clean": {
+            "rate": 0.4167,
+            "lo": 0.3561,
+            "hi": 0.4799,
+            "k": 100,
+            "n": 240
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.4615,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.4615
+          },
+          "rev0_n": 52,
+          "rev1": {
+            "current": 0.7901,
+            "stale": 0.2716,
+            "coinject": 0.2222,
+            "clean": 0.5679
+          },
+          "rev1_n": 81,
+          "rev2": {
+            "current": 0.8542,
+            "stale": 0.4583,
+            "coinject": 0.4375,
+            "clean": 0.4167
+          },
+          "rev2_n": 48,
+          "rev3": {
+            "current": 0.6471,
+            "stale": 0.7647,
+            "coinject": 0.4118,
+            "clean": 0.2353
+          },
+          "rev3_n": 34,
+          "rev4": {
+            "current": 0.36,
+            "stale": 0.92,
+            "coinject": 0.28,
+            "clean": 0.08
+          },
+          "rev4_n": 25,
+          "cancelled": {
+            "current": 0.9286,
+            "stale": 0.1429,
+            "coinject": 0.1429,
+            "clean": 0.7857
+          },
+          "cancelled_n": 14,
+          "verbatim_rev": {
+            "current": 0.1429,
+            "stale": 0.8571,
+            "coinject": 0.0714,
+            "clean": 0.0714
+          },
+          "verbatim_rev_n": 14,
+          "ambiguous": {
+            "current": 0.5581,
+            "stale": 0.4186,
+            "coinject": 0.2093,
+            "clean": 0.3488
+          },
+          "ambiguous_n": 43,
+          "paraphrased_query": {
+            "current": 0.7125,
+            "stale": 0.3,
+            "coinject": 0.275,
+            "clean": 0.4375
+          },
+          "paraphrased_query_n": 80,
+          "age<=2d": {
+            "current": 0.7222,
+            "stale": 0.6852,
+            "coinject": 0.4259,
+            "clean": 0.2963
+          },
+          "age<=2d_n": 54,
+          "age>10d": {
+            "current": 0.4359,
+            "stale": 0.0897,
+            "coinject": 0.0641,
+            "clean": 0.3718
+          },
+          "age>10d_n": 78
+        },
+        "store": {
+          "facts": 1375,
+          "valid_facts": 1375,
+          "index_terms": 1519,
+          "entities": 966,
+          "graph_nodes": 968,
+          "label_reachable": 0.8708
+        }
+      }
+    }
+  }
+}

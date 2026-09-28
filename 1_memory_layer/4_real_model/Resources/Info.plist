@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.astrabreeze.autocomplete</string>
+    <key>CFBundleName</key>
+    <string>FlowIn</string>
+    <key>CFBundleDisplayName</key>
+    <string>FlowIn</string>
+    <key>CFBundleExecutable</key>
+    <string>Autocomplete</string>
+    <key>CFBundleVersion</key>
+    <string>8</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.7</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>SUFeedURL</key>
+    <string>https://raw.githubusercontent.com/Xin-Jing/flowin-releases/main/appcast.xml</string>
+    <key>SUPublicEDKey</key>
+    <string>rxXDG8cvXJP7Mf80Qtq9j2UVzqrEAS0QIQtIwcs4EWE=</string>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
+    <key>SUScheduledCheckInterval</key>
+    <integer>14400</integer>
+    <key>SUShowReleaseNotes</key>
+    <true/>
+    <key>SUAllowsAutomaticUpdates</key>
+    <true/>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>FlowIn uses Apple Events to open chrome://accessibility in your browser when you click the link in the browser-compatibility hint.</string>
+</dict>
+</plist>

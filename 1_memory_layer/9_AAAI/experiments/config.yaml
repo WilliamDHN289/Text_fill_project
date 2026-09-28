@@ -1,0 +1,152 @@
+# ==========================================================================
+# config.yaml — 所有实验的唯一参数入口（aaai2027_full.tex 的 Studies 1-4）
+#
+# dpfm 段镜像 ../../8_dpfm_application/docs/dpfm-parameter-design.csv；
+# 改这里即可全局调参，所有 study 共享同一份 DPFM 配置。
+# ==========================================================================
+
+seed: 20260727
+output_dir: results          # 相对 experiments/ 目录
+
+# --------------------------------------------------------------------------
+# DPFM 系统参数（与部署配置一致；Study 1/3/4 共用）
+# --------------------------------------------------------------------------
+dpfm:
+  retrieval:
+    k: 6                     # facts injected per request
+    max_query_terms: 12      # IDF-aware query pruning (WAND-spirit)
+    query_pos_decay: 0.95    # term weight decays away from the cursor
+    participant_boost: 1.5   # extra weight on window-title terms
+    prompt_char_budget: 800  # hard cap of the injected block
+  scoring:
+    recency_half_life_days: 30
+    recency_floor: 0.15      # epsilon
+    heat_half_life_days: 14
+    heat_eta: 0.35
+    assoc_gamma: 0.8
+    field_weight_text: 1.0
+    field_weight_entities: 2.5
+    field_weight_participants: 2.0
+  graph:
+    damping: 0.5
+    expand_top: 12
+    max_degree: 64
+  admission:
+    dedup_jaccard: 0.8
+  extraction:
+    gazetteer: ["凤凰项目", "王小明"]
+
+# --------------------------------------------------------------------------
+# 开关：要跑哪些 study
+# --------------------------------------------------------------------------
+studies:
+  study1: true
+  study2: true
+  study3: true
+  study4: true
+  study5: true
+  study6: true
+  study7: true
+  study8: true
+
+# --------------------------------------------------------------------------
+# Study 1 — offline replay（小/大 harness 移植 + 延迟基准）
+# --------------------------------------------------------------------------
+study1:
+  latency_repeats: 20        # 每个场景重复检索次数（percentile 稳定性）
+  stress:
+    n_facts: 20000           # 压力基准的事实数
+    n_runs: 500              # 压力基准的检索次数
+    entity_pool: 2000        # 合成实体池大小（控制 posting list 长度分布）
+
+# --------------------------------------------------------------------------
+# Study 2 — in-app A/B 日志分析（无日志则 SKIPPED）
+# --------------------------------------------------------------------------
+study2:
+  log_path: ""               # 从部署 app 导出的 A/B 事件日志（JSONL）；留空 = SKIPPED
+                             # 期望字段: {arm: "A"|"B", accepted: bool, words_saved: int,
+                             #            latency_ms: float, ts: float}
+
+# --------------------------------------------------------------------------
+# Study 3 — 选择模型 + 选品优化三臂消融（论文 §Choice-Theoretic Serving）
+# --------------------------------------------------------------------------
+study3:
+  episodes: 1200             # 每个 (user_model, persona, seed) 的模拟请求数
+  warmup_frac: 0.25          # 前 25% 仅用于在线学习，不计入指标
+  shortlist: 30              # 检索候选集大小 |C|
+  seeds: [1, 2]              # 重复实验的随机种子
+  lr: 0.15                   # 在线 MLE 的 SGD 学习率
+  l2: 0.001                  # L2 正则
+  utility_clip: 30.0         # 数值安全：utility 裁剪
+  char_unit: 40              # DP 预算离散化粒度（字符）
+  line_overhead: 18          # 每条注入事实的格式开销（"- (date, to X) " 前缀）
+  relevance_boost: 2.5       # beta：真值事实在真实效用中的加成
+  usage_history_mean: 1.0    # 合成使用史：每个事实的期望 mark_used 次数（造 heat 方差）
+  budgets: [800, 240]        # 注入字符预算：800=部署值（合成短事实下不 binding），
+                             # 240=紧预算档（选品结构生效的压力区间；真实消息更长，
+                             # 部署中 800 同样会 binding——论文里要写明这层对应）
+  personas:                  # 真实用户模型 theta*（特征: log1p_bm25, rec, heat, assoc, bias）
+                             # bias 校准到接受率 ~0.15-0.5（避免天花板效应淹没臂间差异）
+    balanced:    {bm25: 1.0, rec: 0.8, heat: 0.6, assoc: 0.6, bias: -6.0}
+    repetition:  {bm25: 0.7, rec: 0.4, heat: 1.8, assoc: 0.3, bias: -6.0}
+    associative: {bm25: 0.6, rec: 0.5, heat: 0.3, assoc: 1.8, bias: -6.0}
+  user_models: [mnl, mixed, nested]   # 模拟器用的真实选择模型
+  mixed_sigma: 0.4           # mixed logit：theta ~ N(persona, sigma^2)
+  nested_lambda: 0.5         # nested logit：巢内相关性（1.0 = 退化为 MNL）
+
+# --------------------------------------------------------------------------
+# Study 4 — 端侧预算下的基线/消融对比
+# 每个消融对应论文的一类失败模式：
+#   no_participants -> misattributed（身份接地消融）
+#   no_recency      -> stale（时效消融，conflict 场景应退化）
+#   no_graph        -> associative 场景应退化
+# --------------------------------------------------------------------------
+study4:
+  deadline_ms: 20            # 端侧延迟预算（deadline race 的 Delta）
+  latency_repeats: 20
+  variants: [pfm_full, no_participants, no_graph, no_recency, recency_only, random_k]
+  external: [mem0, langmem]  # 未安装/无 API key 时优雅跳过并记录原因
+
+# --------------------------------------------------------------------------
+# Study 5 — 时序正确性端到端（keyed supersession）+ 受控更新基准（任务 1+5）
+# --------------------------------------------------------------------------
+study5:
+  n_chains: 160              # 修订链条数 → ~240 labeled queries / corpus
+                             # 上限受 (entity,slot) 唯一约束：4*36+2*20=184
+  seed: 7
+  corpora: {lean: 0, noisy: 1000}   # filler 消息数（语料规模维度）
+  budgets: [800, 240]
+  p_cancel: 0.25             # 取消（cancellation）vs 替换（replacement）
+  rev_weights: {0: 0.20, 1: 0.30, 2: 0.25, 3: 0.15, 4: 0.10}
+  arms: [keyed, keyless]     # keyless = 相同抽取覆盖、仅去掉 key（隔离机制）
+
+# --------------------------------------------------------------------------
+# Study 6 — 同语料/同预算的真实检索基线 + quality-vs-deadline 主图（任务 2+3）
+# --------------------------------------------------------------------------
+study6:
+  corpus: noisy
+  budget: 800
+  deadlines_ms: [0.5, 1, 2, 5, 10, 20]
+  n_latency_repeats: 3
+  dense_model: sentence-transformers/all-MiniLM-L6-v2
+  arms: [pfm_full, pfm_snapshot, temporal_bm25, bm25_recency, bm25_plain,
+         dense, hybrid_rrf]
+
+# --------------------------------------------------------------------------
+# Study 7 — 冻结 LLM 端到端回放（任务 4；无 ollama 时 SKIPPED）
+# --------------------------------------------------------------------------
+study7:
+  corpus: noisy
+  model_prefs: [qwen2:7b]    # 首选模型；否则取已 pull 的第一个
+  n_queries: 120             # 分层采样（revisions>=1 / ambiguous 占 75%）
+  arms: ["off", pfm_full, bm25_plain]   # "off" 必须带引号（YAML 会把裸 off 解析为 False）
+  num_predict: 24
+  timeout_s: 120
+
+# --------------------------------------------------------------------------
+# Study 8 — 系统扩展性（任务 6）
+# --------------------------------------------------------------------------
+study8:
+  grid: [100, 1000, 5000, 10000, 20000, 50000, 100000]
+  n_queries: 300
+  entity_pool_div: 10        # 实体池 = n/10（控制 posting list 密度）

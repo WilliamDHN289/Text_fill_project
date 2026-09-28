@@ -1,0 +1,1011 @@
+{
+  "status": "DONE",
+  "n_chains": 30,
+  "n_queries_per_corpus": 45,
+  "cells": {
+    "lean": {
+      "keyed/b800": {
+        "metrics": {
+          "current": {
+            "rate": 0.8444,
+            "lo": 0.7122,
+            "hi": 0.9225,
+            "k": 38,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0444,
+            "lo": 0.0123,
+            "hi": 0.1483,
+            "k": 2,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.8,
+            "lo": 0.6618,
+            "hi": 0.891,
+            "k": 36,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.7,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7143
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.0
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.0
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.8667,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.6364,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6364
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 77,
+          "valid_facts": 25,
+          "index_terms": 95,
+          "entities": 55,
+          "graph_nodes": 53
+        }
+      },
+      "keyed/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.8444,
+            "lo": 0.7122,
+            "hi": 0.9225,
+            "k": 38,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0222,
+            "lo": 0.0039,
+            "hi": 0.1157,
+            "k": 1,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.8222,
+            "lo": 0.6867,
+            "hi": 0.9071,
+            "k": 37,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.7,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7857
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.8667,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8667
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.6364,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6364
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 77,
+          "valid_facts": 25,
+          "index_terms": 95,
+          "entities": 55,
+          "graph_nodes": 53
+        }
+      },
+      "keyless/b800": {
+        "metrics": {
+          "current": {
+            "rate": 0.8444,
+            "lo": 0.7122,
+            "hi": 0.9225,
+            "k": 38,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.7333,
+            "lo": 0.5896,
+            "hi": 0.8404,
+            "k": 33,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.6,
+            "lo": 0.4545,
+            "hi": 0.7298,
+            "k": 27,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0444,
+            "lo": 0.0123,
+            "hi": 0.1483,
+            "k": 2,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.2444,
+            "lo": 0.1424,
+            "hi": 0.3867,
+            "k": 11,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 1.0,
+            "coinject": 0.8571,
+            "clean": 0.0
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.8,
+            "coinject": 0.7,
+            "clean": 0.1
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 0.4,
+            "stale": 1.0,
+            "coinject": 0.4,
+            "clean": 0.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 0.3333,
+            "stale": 1.0,
+            "coinject": 0.3333,
+            "clean": 0.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.9333,
+            "stale": 0.8,
+            "coinject": 0.7333,
+            "clean": 0.2
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 0.2,
+            "stale": 1.0,
+            "coinject": 0.2,
+            "clean": 0.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.9091,
+            "stale": 0.1818,
+            "coinject": 0.0909,
+            "clean": 0.8182
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 66,
+          "valid_facts": 66,
+          "index_terms": 160,
+          "entities": 55,
+          "graph_nodes": 53
+        }
+      },
+      "keyless/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.7778,
+            "lo": 0.6373,
+            "hi": 0.8746,
+            "k": 35,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.6444,
+            "lo": 0.4984,
+            "hi": 0.7678,
+            "k": 29,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.4889,
+            "lo": 0.3496,
+            "hi": 0.63,
+            "k": 22,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.2889,
+            "lo": 0.1773,
+            "hi": 0.4337,
+            "k": 13,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.8,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 0.7857,
+            "coinject": 0.6429,
+            "clean": 0.2143
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.8,
+            "coinject": 0.7,
+            "clean": 0.1
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 0.8333,
+            "stale": 0.8333,
+            "coinject": 0.6667,
+            "clean": 0.1667
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 0.4,
+            "stale": 1.0,
+            "coinject": 0.4,
+            "clean": 0.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 0.3333,
+            "stale": 1.0,
+            "coinject": 0.3333,
+            "clean": 0.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.8667,
+            "stale": 0.6,
+            "coinject": 0.5333,
+            "clean": 0.3333
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 0.2,
+            "stale": 1.0,
+            "coinject": 0.2,
+            "clean": 0.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.7273,
+            "stale": 0.1818,
+            "coinject": 0.0909,
+            "clean": 0.6364
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 66,
+          "valid_facts": 66,
+          "index_terms": 160,
+          "entities": 55,
+          "graph_nodes": 53
+        }
+      }
+    },
+    "noisy": {
+      "keyed/b800": {
+        "metrics": {
+          "current": {
+            "rate": 0.8444,
+            "lo": 0.7122,
+            "hi": 0.9225,
+            "k": 38,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0444,
+            "lo": 0.0123,
+            "hi": 0.1483,
+            "k": 2,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.8,
+            "lo": 0.6618,
+            "hi": 0.891,
+            "k": 36,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.7,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7143
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.0
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.0
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.8667,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.6364,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6364
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 227,
+          "valid_facts": 175,
+          "index_terms": 278,
+          "entities": 174,
+          "graph_nodes": 176
+        }
+      },
+      "keyed/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.8444,
+            "lo": 0.7122,
+            "hi": 0.9225,
+            "k": 38,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0222,
+            "lo": 0.0039,
+            "hi": 0.1157,
+            "k": 1,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.8222,
+            "lo": 0.6867,
+            "hi": 0.9071,
+            "k": 37,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.7,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.7857
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.5
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.8667,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8667
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.6364,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.6364
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 227,
+          "valid_facts": 175,
+          "index_terms": 278,
+          "entities": 174,
+          "graph_nodes": 176
+        }
+      },
+      "keyless/b800": {
+        "metrics": {
+          "current": {
+            "rate": 0.8444,
+            "lo": 0.7122,
+            "hi": 0.9225,
+            "k": 38,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.7333,
+            "lo": 0.5896,
+            "hi": 0.8404,
+            "k": 33,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.6,
+            "lo": 0.4545,
+            "hi": 0.7298,
+            "k": 27,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0444,
+            "lo": 0.0123,
+            "hi": 0.1483,
+            "k": 2,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.2444,
+            "lo": 0.1424,
+            "hi": 0.3867,
+            "k": 11,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 1.0,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 1.0
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 1.0,
+            "coinject": 0.8571,
+            "clean": 0.0
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.8,
+            "coinject": 0.7,
+            "clean": 0.1
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 0.4,
+            "stale": 1.0,
+            "coinject": 0.4,
+            "clean": 0.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 0.3333,
+            "stale": 1.0,
+            "coinject": 0.3333,
+            "clean": 0.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.9333,
+            "stale": 0.8,
+            "coinject": 0.7333,
+            "clean": 0.2
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 0.2,
+            "stale": 1.0,
+            "coinject": 0.2,
+            "clean": 0.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.9091,
+            "stale": 0.1818,
+            "coinject": 0.0909,
+            "clean": 0.8182
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 216,
+          "valid_facts": 216,
+          "index_terms": 343,
+          "entities": 174,
+          "graph_nodes": 176
+        }
+      },
+      "keyless/b240": {
+        "metrics": {
+          "current": {
+            "rate": 0.8,
+            "lo": 0.6618,
+            "hi": 0.891,
+            "k": 36,
+            "n": 45
+          },
+          "stale": {
+            "rate": 0.6222,
+            "lo": 0.4763,
+            "hi": 0.7489,
+            "k": 28,
+            "n": 45
+          },
+          "coinject": {
+            "rate": 0.4889,
+            "lo": 0.3496,
+            "hi": 0.63,
+            "k": 22,
+            "n": 45
+          },
+          "wrong": {
+            "rate": 0.0,
+            "lo": 0.0,
+            "hi": 0.0787,
+            "k": 0,
+            "n": 45
+          },
+          "clean": {
+            "rate": 0.3111,
+            "lo": 0.1953,
+            "hi": 0.4567,
+            "k": 14,
+            "n": 45
+          }
+        },
+        "slices": {
+          "rev0": {
+            "current": 0.8,
+            "stale": 0.0,
+            "coinject": 0.0,
+            "clean": 0.8
+          },
+          "rev0_n": 10,
+          "rev1": {
+            "current": 0.8571,
+            "stale": 0.7857,
+            "coinject": 0.6429,
+            "clean": 0.2143
+          },
+          "rev1_n": 14,
+          "rev2": {
+            "current": 0.8,
+            "stale": 0.8,
+            "coinject": 0.7,
+            "clean": 0.1
+          },
+          "rev2_n": 10,
+          "rev3": {
+            "current": 1.0,
+            "stale": 0.6667,
+            "coinject": 0.6667,
+            "clean": 0.3333
+          },
+          "rev3_n": 6,
+          "rev4": {
+            "current": 0.4,
+            "stale": 1.0,
+            "coinject": 0.4,
+            "clean": 0.0
+          },
+          "rev4_n": 5,
+          "cancelled": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "cancelled_n": 2,
+          "verbatim_rev": {
+            "current": 0.3333,
+            "stale": 1.0,
+            "coinject": 0.3333,
+            "clean": 0.0
+          },
+          "verbatim_rev_n": 3,
+          "ambiguous": {
+            "current": 1.0,
+            "stale": 1.0,
+            "coinject": 1.0,
+            "clean": 0.0
+          },
+          "ambiguous_n": 2,
+          "paraphrased_query": {
+            "current": 0.8667,
+            "stale": 0.6,
+            "coinject": 0.5333,
+            "clean": 0.3333
+          },
+          "paraphrased_query_n": 15,
+          "age<=2d": {
+            "current": 0.2,
+            "stale": 1.0,
+            "coinject": 0.2,
+            "clean": 0.0
+          },
+          "age<=2d_n": 5,
+          "age>10d": {
+            "current": 0.7273,
+            "stale": 0.1818,
+            "coinject": 0.0909,
+            "clean": 0.6364
+          },
+          "age>10d_n": 11
+        },
+        "store": {
+          "facts": 216,
+          "valid_facts": 216,
+          "index_terms": 343,
+          "entities": 174,
+          "graph_nodes": 176
+        }
+      }
+    }
+  }
+}

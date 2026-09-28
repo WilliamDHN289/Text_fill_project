@@ -1,0 +1,20 @@
+{
+  "status": "SKIPPED",
+  "reason": "No in-app A/B log provided (study2.log_path is empty or missing). This study requires real usage from the deployed assistant and cannot be simulated offline.",
+  "protocol": {
+    "variable": "dpfm.yaml enabled flag, flipped per day",
+    "control": "memory layer never constructed (zero overhead)",
+    "metrics": [
+      "acceptance rate",
+      "words saved per accepted completion",
+      "latency regression guard"
+    ],
+    "event_schema": {
+      "arm": "A|B",
+      "accepted": "bool",
+      "words_saved": "int",
+      "latency_ms": "float",
+      "ts": "float"
+    }
+  }
+}

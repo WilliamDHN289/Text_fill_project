@@ -1,0 +1,75 @@
+{
+  "status": "DONE",
+  "env": {
+    "python": "3.11.1",
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "timestamp": "2026-07-28 11:53:57",
+    "cpu": "Apple M2",
+    "cores": "8",
+    "ram_bytes": "17179869184",
+    "threading": "hot path single-threaded; DPFM consolidator/prefetch daemon threads exist but are idle (sync ingest via add_fact)",
+    "timing_boundary": "per-add: perf_counter around add_fact() (extraction bypassed; dedup+supersede+index+graph update included). retrieval: perf_counter around retrieve() incl. query build, scoring, ranking, block formatting",
+    "cache_assumptions": "warm process, data fully in RAM (no disk on the measured path); CPython 3.11, no JIT; first 50 queries discarded as warmup"
+  },
+  "grid": [
+    {
+      "n_facts_requested": 100,
+      "valid_facts": 0,
+      "build_s": 0.0,
+      "ingest_facts_per_s": 41381.0,
+      "add_latency": {
+        "p50_ms": 0.0206,
+        "p95_ms": 0.0335,
+        "p99_ms": 0.055
+      },
+      "update_latency_at_size": {
+        "p50_ms": 0.0329,
+        "p95_ms": 0.0522,
+        "p99_ms": 0.0787
+      },
+      "retrieval_latency": {
+        "p50_ms": 0.1855,
+        "p95_ms": 0.2234,
+        "p99_ms": 0.2935
+      },
+      "prune_ms": 3.0,
+      "rss_delta_mb": 0.5,
+      "index": {
+        "terms": 0,
+        "posting_entries": 0,
+        "entities": 0,
+        "graph_nodes": 0
+      }
+    },
+    {
+      "n_facts_requested": 2000,
+      "valid_facts": 0,
+      "build_s": 0.19,
+      "ingest_facts_per_s": 10400.0,
+      "add_latency": {
+        "p50_ms": 0.0933,
+        "p95_ms": 0.1748,
+        "p99_ms": 0.2039
+      },
+      "update_latency_at_size": {
+        "p50_ms": 0.177,
+        "p95_ms": 0.226,
+        "p99_ms": 0.2415
+      },
+      "retrieval_latency": {
+        "p50_ms": 1.2015,
+        "p95_ms": 1.3062,
+        "p99_ms": 1.4023
+      },
+      "prune_ms": 20.7,
+      "rss_delta_mb": 5.7,
+      "index": {
+        "terms": 0,
+        "posting_entries": 0,
+        "entities": 0,
+        "graph_nodes": 0
+      }
+    }
+  ]
+}

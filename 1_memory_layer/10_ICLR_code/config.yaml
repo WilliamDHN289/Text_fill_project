@@ -1,0 +1,157 @@
+# Frozen configuration for every result in the paper.
+# `pfm` is the method; everything below it configures one experiment.
+# Ablations and noise conditions are expressed as overrides of `pfm`
+# inside the experiment blocks, never as edits to `pfm` itself.
+
+pfm:
+  retrieval:
+    k: 6                        # facts per request
+    budget: 800                 # B: characters of the whole serialized block
+    shortlist: 50               # candidates kept before greedy selection
+    max_query_terms: 12         # term cap (0 disables)
+    positional_decay: 0.95      # lambda: weight lambda^d, d = tokens from the generation point
+    participant_weight: 1.5     # added (not multiplied) to each participant token
+  scoring:
+    field_weights: {text: 1.0, entities: 2.5, participants: 2.0}
+    bm25_k1: 1.2                # shared by all fields (simple BM25F)
+    bm25_b: 0.75
+    recency_half_life_days: 30  # T_rec; age = now - last_seen
+    recency_floor: 0.15         # epsilon
+    usage_half_life_days: 14
+    usage_eta: 0.35             # eta
+    graph_gamma: 0.8            # gamma
+  graph:
+    half_life_days: 30          # decay of edge weights w_eg
+    max_degree: 64              # neighbors stored per node
+    damping: 0.5
+    max_neighbors: 12           # non-seed nodes activated per request
+    seed_participants: true     # participants of P_t act as seeds
+  admission:
+    dedup_jaccard: 0.8          # near-duplicate threshold for keyless drafts
+    value_aware_dedup: true     # near-duplicates must also share value tokens
+    inherit_usage: true         # a successor inherits its predecessor's usage
+    order_by: transaction       # transaction = arrival order; event = stated time wins
+  prune:
+    min_score: 0.02             # recency x (1 + usage) below this is dropped
+    graph_min_weight: 0.05
+
+benchmark:
+  n_chains: 160                 # 240 queries per corpus
+  seeds: [7, 11, 13, 17, 19]    # seed 7 is the primary corpus (latency, LLM)
+  fillers: {lean: 0, noisy: 1000}
+  p_cancel: 0.25
+  rev_weights: {0: 0.20, 1: 0.30, 2: 0.25, 3: 0.15, 4: 0.10}
+
+dense:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  device: cpu
+  torch_threads: 4
+
+temporal:                        # keyed vs keyless, both corpora, both budgets
+  budgets: [800, 240]
+
+baselines:
+  corpus: noisy
+  latency_repeats: 5             # timed runs per (query, arm); arm order shuffled per run
+  deadlines_ms: [0.5, 1, 2, 5, 10, 20, 50]
+
+ablation:
+  corpus: noisy
+  variants:
+    full: {}
+    no_participant_field: {scoring: {field_weights: {participants: 0.0}}}
+    no_participant_terms: {retrieval: {participant_weight: 0.0}}
+    no_participant_seeds: {graph: {seed_participants: false}}
+    no_participants_at_all:
+      scoring: {field_weights: {participants: 0.0}}
+      retrieval: {participant_weight: 0.0}
+      graph: {seed_participants: false}
+    no_entity_field: {scoring: {field_weights: {entities: 0.0}}}
+    no_graph: {scoring: {graph_gamma: 0.0}}
+    no_usage: {scoring: {usage_eta: 0.0}}
+    no_recency: {scoring: {recency_floor: 1.0}}
+    no_positional_decay: {retrieval: {positional_decay: 1.0}}
+    no_term_cap: {retrieval: {max_query_terms: 0}}
+    no_usage_inheritance: {admission: {inherit_usage: false}}
+    text_only_dedup: {admission: {value_aware_dedup: false}}
+  cutoffs: [0.5, 0.7, 0.9]
+
+key_noise:
+  corpus: noisy
+  p_miss: [0.0, 0.05, 0.1, 0.2, 0.4]
+  q_false: [0.0, 0.05, 0.1, 0.2]
+
+extractor:
+  corpus: lean                   # 441 messages; every chain message is rewritten
+  rewriter: qwen2:7b             # held fixed, so every key assigner reads the same text
+  models: [llama3.2:3b, qwen2:7b, qwen2.5:7b, qwen2.5:14b]   # a capability ladder
+  seeds: [7, 11, 13]
+  update_seeds: [7]              # the Mem0-shaped arm is a contrast; one seed per model
+  num_predict: 80
+
+slices:
+  corpus: noisy
+  multi_valued_people: 24        # two standing meetings each
+  hard_pairs: 12                 # same-first-name pairs; half also get an unanswerable query
+  reorder_fraction: 0.3          # chains delivered out of order
+  cutoff: 0.7                    # relative score cutoff for the identity baseline
+
+crossover:
+  grid: [1000, 5000, 10000, 20000, 50000]
+  queries: 100
+  warmup: 20
+  distributions:                  # vocab = distinct verbs and objects shared by all facts
+    wide vocabulary: {pool_div: 10, vocab: 6}
+    narrow vocabulary: {pool_div: 10, vocab: 1}
+
+serving:
+  corpus: noisy
+  fresh_wait_ms: 5
+  requests: 2000
+  ingest_facts_per_s: 400        # background construction load
+  prune_every_s: 1.0
+  publish_every_s: 0.05           # background snapshot refresh
+  store_facts: 20000
+
+llm:
+  corpus: noisy
+  models: [qwen2:7b, llama3.2:3b]   # first model is the one reported in the main table
+  num_predict: 24
+  timeout_s: 120
+  arms: ["none", pfm, pfm_keyless, bm25, bm25_latest, bm25_validity, dense_validity]
+  retrieval_during_generation: 200   # timed retrievals while a generation runs
+  slices:                            # response level where the prompt is broken on purpose
+    key_noise: [0.05, 0.05]          # (missed merge p, false merge q)
+    reorder: 0.3
+  sampling_check:                    # the main gap under sampling rather than greedy
+    model: qwen2:7b
+    temperature: 0.7
+    seeds: [1, 2, 3]
+
+real:
+  model: qwen2:7b                 # labels the answer spans
+  key_models: [qwen2:7b, qwen2.5:7b]  # open-domain key assigners; each also gets a model linker
+  key_aware_extract: [qwen2:7b]       # of those, the ones also run with the store in the prompt
+  budget: 1200                    # B: real turns are longer than template sentences
+  dense: false                    # the MiniLM arm segfaults alongside ollama on this machine
+  link_theta: [0.8, 0.6, 0.4]         # Jaccard over the model key's tokens for merging two keys
+  key_aware_candidates: 10            # existing keys shown to the extractor before it names one
+  distractors: 160                # other LongMemEval questions whose sessions join the corpus
+  foreign_per_conversation: 20    # unanswerable probes borrowed from other conversations
+  abstain_tau: [1.5, 2.0, 3.0, 5.0]   # MarginAbstain: top score over the shortlist mean
+
+systems:                          # query-time model baselines
+  corpus: noisy
+  model: qwen2:7b
+  seeds: 2                        # 480 main + 72 hard queries per arm
+
+identity:
+  corpus: noisy
+  posterior_tau: [0.3, 0.5, 0.7]  # identity floor swept on the participants slice
+  abstain_tau: [1.5, 2.0, 3.0]
+
+scaling:
+  grid: [100, 1000, 5000, 10000, 20000, 50000, 100000]
+  queries: 300
+  warmup: 50
+  entity_pool_div: 10

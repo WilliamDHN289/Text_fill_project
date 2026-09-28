@@ -1,0 +1,10 @@
+AAAI-27 experiment run 20260728-120946 | {'python': '3.11.1', 'platform': 'macOS-26.5-arm64-arm-64bit', 'machine': 'arm64', 'timestamp': '2026-07-28 12:09:46'}
+
+=== study7 ===
+Study 7 (frozen LLM = qwen2:7b, 120 queries):
+  off          correct 0.000 stale 0.000 wrong-person 0.000 other 1.000 TTFT p50=296.1ms
+  pfm_full     correct 0.925 stale 0.000 wrong-person 0.000 other 0.075 TTFT p50=1193.5ms
+  bm25_plain   correct 0.517 stale 0.358 wrong-person 0.008 other 0.117 TTFT p50=1036.1ms
+  [398.3s]
+
+All done. Results: /Users/denghaonan/Desktop/Text_Fill_Project/1_memory_layer/9_AAAI/experiments/results/20260728-120946

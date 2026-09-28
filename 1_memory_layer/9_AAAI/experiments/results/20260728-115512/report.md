@@ -1,0 +1,100 @@
+# Experiment report — 20260728-115512
+
+`{'python': '3.11.1', 'platform': 'macOS-26.5-arm64-arm-64bit', 'machine': 'arm64', 'timestamp': '2026-07-28 12:04:26'}`
+
+Statuses: study1=DONE, study2=SKIPPED, study3=DONE, study4=DONE, study5=DONE, study6=DONE, study7=DONE, study8=DONE
+
+```
+Study 1: availability small ON 6/7 OFF 0/7; large ON 24/25 OFF 0/25 (associative 2/2, cjk 1/1, conflict 1/1, direct 20/20, known-limit 0/1); extraction noise 0/16, seeds 30/31; latency @270 p50=0.014ms p95=0.0457ms; @19895 p50=10.8912ms p95=11.9329ms; budget_ok=True
+  [7.8s]
+```
+
+```
+Study 2: SKIPPED (no in-app log; protocol-only, as stated in the paper)
+  [0.0s]
+```
+
+```
+Study 3 (acceptance_true / injected chars, mean over seeds):
+  mixed/associative/b240 A 0.705/201c  B 0.686/199c  C 0.680/169c
+  mixed/associative/b800 A 0.698/297c  B 0.691/297c  C 0.691/297c
+  mixed/balanced/b240    A 0.794/202c  B 0.774/201c  C 0.764/168c
+  mixed/balanced/b800    A 0.792/290c  B 0.773/290c  C 0.773/290c
+  mixed/repetition/b240  A 0.764/202c  B 0.735/200c  C 0.707/167c
+  mixed/repetition/b800  A 0.775/293c  B 0.767/292c  C 0.767/292c
+  mnl/associative/b240   A 0.738/200c  B 0.725/198c  C 0.720/166c
+  mnl/associative/b800   A 0.746/302c  B 0.737/302c  C 0.737/302c
+  mnl/balanced/b240      A 0.852/201c  B 0.836/200c  C 0.834/166c
+  mnl/balanced/b800      A 0.862/292c  B 0.857/293c  C 0.857/293c
+  mnl/repetition/b240    A 0.823/200c  B 0.802/197c  C 0.774/166c
+  mnl/repetition/b800    A 0.831/296c  B 0.828/296c  C 0.828/296c
+  nested/associative/b240 A 0.730/200c  B 0.724/198c  C 0.717/166c
+  nested/associative/b800 A 0.747/290c  B 0.743/290c  C 0.743/290c
+  nested/balanced/b240   A 0.854/201c  B 0.841/200c  C 0.833/166c
+  nested/balanced/b800   A 0.856/291c  B 0.852/292c  C 0.852/292c
+  nested/repetition/b240 A 0.817/201c  B 0.790/199c  C 0.771/167c
+  nested/repetition/b800 A 0.825/297c  B 0.819/296c  C 0.819/296c
+  gain retention under mismatch: mixed/associative/b240=1.354, mixed/associative/b800=0.795, mixed/balanced/b240=1.59, mixed/balanced/b800=3.958, mixed/repetition/b240=1.182, mixed/repetition/b800=2.333, nested/associative/b240=0.735, nested/associative/b800=0.409, nested/balanced/b240=1.126, nested/balanced/b800=0.854, nested/repetition/b240=0.963, nested/repetition/b800=1.694
+  [2.4s]
+```
+
+```
+Study 4 (availability on the large harness; deadline 20ms):
+  pfm_full         24/25 (associative 2/2, cjk 1/1, conflict 1/1, direct 20/20, known-limit 0/1), p95=0.0506ms, violations=0, identity 8/8, stale_coinject=True
+  no_participants  24/25 (associative 2/2, cjk 1/1, conflict 1/1, direct 20/20, known-limit 0/1), p95=0.041ms, violations=0, identity 5/8, stale_coinject=True
+  no_graph         24/25 (associative 2/2, cjk 1/1, conflict 1/1, direct 20/20, known-limit 0/1), p95=0.0497ms, violations=0, identity 8/8, stale_coinject=True
+  no_recency       24/25 (associative 2/2, cjk 1/1, conflict 1/1, direct 20/20, known-limit 0/1), p95=0.0485ms, violations=0, identity 8/8, stale_coinject=True
+  recency_only     1/25 (associative 0/2, cjk 0/1, conflict 0/1, direct 1/20, known-limit 0/1)
+  random_k         1/25 (associative 0/2, cjk 0/1, conflict 0/1, direct 1/20, known-limit 0/1)
+  mem0             SKIPPED
+  langmem          SKIPPED
+  [0.3s]
+```
+
+```
+Study 5 (temporal): 240 labeled queries/corpus, 160 chains
+  lean   keyed/b240     current 0.804 stale 0.000 coinject 0.000 wrong 0.013 clean 0.800
+  lean   keyed/b800     current 0.829 stale 0.000 coinject 0.000 wrong 0.113 clean 0.771
+  lean   keyless/b240   current 0.675 stale 0.408 coinject 0.267 wrong 0.000 clean 0.408
+  lean   keyless/b800   current 0.812 stale 0.654 coinject 0.517 wrong 0.004 clean 0.292
+  noisy  keyed/b240     current 0.804 stale 0.000 coinject 0.000 wrong 0.017 clean 0.796
+  noisy  keyed/b800     current 0.829 stale 0.000 coinject 0.000 wrong 0.113 clean 0.771
+  noisy  keyless/b240   current 0.667 stale 0.388 coinject 0.250 wrong 0.000 clean 0.417
+  noisy  keyless/b800   current 0.812 stale 0.662 coinject 0.525 wrong 0.004 clean 0.283
+  [9.2s]
+```
+
+```
+Study 6 (baselines, corpus=noisy, 240 queries, 1135 valid facts):
+  pfm_full       clean 0.771 (cur 0.829 stale 0.000 wrong 0.113) lat p50=0.0565ms p95=0.0819ms
+  temporal_bm25  clean 0.692 (cur 0.721 stale 0.000 wrong 0.083) lat p50=0.0158ms p95=0.0259ms
+  bm25_recency   clean 0.212 (cur 0.863 stale 0.633 wrong 0.117) lat p50=0.0374ms p95=0.0859ms
+  bm25_plain     clean 0.188 (cur 0.858 stale 0.692 wrong 0.092) lat p50=0.0271ms p95=0.0635ms
+  dense          clean 0.196 (cur 0.975 stale 0.779 wrong 0.138) lat p50=16.6823ms p95=53.1102ms
+  hybrid_rrf     clean 0.192 (cur 0.879 stale 0.771 wrong 0.113) lat p50=16.4864ms p95=43.6872ms
+  pfm_snapshot   clean 0.771 (cur 0.829 stale 0.000 wrong 0.113) lat p50=0.0ms p95=0.0ms
+  success@D: pfm_full=0.77@0.5ms→0.77@20ms; temporal_bm25=0.69@0.5ms→0.69@20ms; bm25_recency=0.21@0.5ms→0.21@20ms; bm25_plain=0.19@0.5ms→0.19@20ms; dense=0.00@0.5ms→0.13@20ms; hybrid_rrf=0.00@0.5ms→0.14@20ms; pfm_snapshot=0.77@0.5ms→0.77@20ms
+  [59.4s]
+```
+
+```
+Study 7 (frozen LLM = qwen2:7b, 120 queries):
+  off          correct 0.000 stale 0.000 wrong-person 0.000 other 1.000 TTFT p50=310.5ms
+  pfm_full     correct 0.775 stale 0.000 wrong-person 0.025 other 0.200 TTFT p50=1191.2ms
+  bm25_plain   correct 0.517 stale 0.358 wrong-person 0.008 other 0.117 TTFT p50=1043.0ms
+  [398.1s]
+```
+
+```
+Study 8 (scaling on Apple M2):
+      100 facts: retrieve p50=0.1775ms p95=0.1974ms p99=0.2064ms; add p50=0.0193ms; RSS +1.3MB; ingest 43631/s
+    1,000 facts: retrieve p50=0.7059ms p95=0.8282ms p99=0.9895ms; add p50=0.0613ms; RSS +1.8MB; ingest 10409/s
+    5,000 facts: retrieve p50=3.0238ms p95=7.7468ms p99=21.4923ms; add p50=0.0995ms; RSS +13.1MB; ingest 9394/s
+   10,000 facts: retrieve p50=5.4715ms p95=6.007ms p99=6.3145ms; add p50=0.0955ms; RSS +13.2MB; ingest 9627/s
+   20,000 facts: retrieve p50=12.4976ms p95=16.8181ms p99=22.4908ms; add p50=0.0977ms; RSS +32.0MB; ingest 9932/s
+   50,000 facts: retrieve p50=36.7942ms p95=43.2553ms p99=45.1863ms; add p50=0.0992ms; RSS +105.9MB; ingest 9386/s
+  100,000 facts: retrieve p50=81.0911ms p95=94.1145ms p99=113.4987ms; add p50=0.1012ms; RSS +98.2MB; ingest 8801/s
+  [77.2s]
+```
+
+Paper cross-check: Study-1 availability/extraction must match aaai2027_full.tex Tables 2-4 (Swift reference numbers in study1.json expected_from_paper); Study-3 feeds the Choice-Theoretic Serving section; Study-4 feeds the baselines subsection. Latency absolute values are Python-implementation numbers — the paper's Swift release-build numbers remain the deployment claim.

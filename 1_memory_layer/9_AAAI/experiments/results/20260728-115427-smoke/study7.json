@@ -1,0 +1,242 @@
+{
+  "status": "DONE",
+  "model": "qwen2:7b",
+  "n_queries": 4,
+  "corpus": "noisy",
+  "arms": {
+    "off": {
+      "outcomes": {
+        "correct": 0,
+        "stale": 0,
+        "wrong_person": 0,
+        "other": 4
+      },
+      "rates": {
+        "correct": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        },
+        "stale": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        },
+        "wrong_person": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        },
+        "other": {
+          "rate": 1.0,
+          "ci": [
+            0.5101,
+            1.0
+          ]
+        }
+      },
+      "ttft_ms": {
+        "p50": 330.0,
+        "p95": 351.9
+      },
+      "total_ms_p50": 614.3
+    },
+    "pfm_full": {
+      "outcomes": {
+        "correct": 4,
+        "stale": 0,
+        "wrong_person": 0,
+        "other": 0
+      },
+      "rates": {
+        "correct": {
+          "rate": 1.0,
+          "ci": [
+            0.5101,
+            1.0
+          ]
+        },
+        "stale": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        },
+        "wrong_person": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        },
+        "other": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        }
+      },
+      "ttft_ms": {
+        "p50": 1136.5,
+        "p95": 1221.8
+      },
+      "total_ms_p50": 1437.8
+    },
+    "bm25_plain": {
+      "outcomes": {
+        "correct": 3,
+        "stale": 1,
+        "wrong_person": 0,
+        "other": 0
+      },
+      "rates": {
+        "correct": {
+          "rate": 0.75,
+          "ci": [
+            0.3006,
+            0.9544
+          ]
+        },
+        "stale": {
+          "rate": 0.25,
+          "ci": [
+            0.0456,
+            0.6994
+          ]
+        },
+        "wrong_person": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        },
+        "other": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.4899
+          ]
+        }
+      },
+      "ttft_ms": {
+        "p50": 968.1,
+        "p95": 1036.6
+      },
+      "total_ms_p50": 1224.1
+    }
+  },
+  "sample_transcripts": [
+    {
+      "arm": "off",
+      "prefix": "Just confirming, Robin sync is now at ",
+      "partner": "Robin Hale",
+      "current": "11:10pm",
+      "completion": "version 10.5.3.",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "Quick check — Maya deadline is now ",
+      "partner": "Maya Patel",
+      "current": "Nov 21",
+      "completion": "next Monday",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "Reminder — the sync with Robin is at ",
+      "partner": "Robin Hale",
+      "current": "11:10pm",
+      "completion": "Reminder — the sync with Robin is at",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "Yusuf's day rate is ",
+      "partner": "Yusuf Demir",
+      "current": "$491",
+      "completion": "€300",
+      "verdict": "other"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "Just confirming, Robin sync is now at ",
+      "partner": "Robin Hale",
+      "current": "11:10pm",
+      "completion": "11:10pm.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "Quick check — Maya deadline is now ",
+      "partner": "Maya Patel",
+      "current": "Nov 21",
+      "completion": "Nov 21.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "Reminder — the sync with Robin is at ",
+      "partner": "Robin Hale",
+      "current": "11:10pm",
+      "completion": "Reminder — the sync with Robin is at 11:10pm.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "Yusuf's day rate is ",
+      "partner": "Yusuf Demir",
+      "current": "$491",
+      "completion": "$491.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "Just confirming, Robin sync is now at ",
+      "partner": "Robin Hale",
+      "current": "11:10pm",
+      "completion": "11:10pm.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "Quick check — Maya deadline is now ",
+      "partner": "Maya Patel",
+      "current": "Nov 21",
+      "completion": "Nov 21.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "Reminder — the sync with Robin is at ",
+      "partner": "Robin Hale",
+      "current": "11:10pm",
+      "completion": "11:10pm.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "Yusuf's day rate is ",
+      "partner": "Yusuf Demir",
+      "current": "$491",
+      "completion": "$228.",
+      "verdict": "stale"
+    }
+  ],
+  "log": [
+    "available models: ['qwen2:7b']"
+  ],
+  "decoding": {
+    "temperature": 0.0,
+    "num_predict": 24
+  }
+}

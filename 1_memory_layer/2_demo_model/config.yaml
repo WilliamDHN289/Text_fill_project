@@ -1,0 +1,83 @@
+# DPHM + llama.cpp autocomplete — all tunable parameters
+
+server:
+  url: "http://127.0.0.1:8080"
+  model: "models/gemma-4-E2B-base-Q4_K_M.gguf"
+  ngl: 99                       # Metal GPU layers (0 = CPU only)
+
+experiment:
+  passage: email                # email | prose
+  label: dphm_compare
+  min_words: 6                  # first cut point after this many words
+  step_words: 8                 # spacing between cut points
+  mid_cursor: false
+  min_suffix_words: 10
+  modes: [base, dphm]           # base = llama only; dphm = shallow fusion
+
+completion:
+  n_predict: 24                 # max tokens (base mode) / budget hint (dphm mode)
+  temperature: 0.0              # 0 = greedy
+  top_k: 40
+  top_p: 0.95
+  min_p: 0.05
+  cache_prompt: true
+  stop_para: false
+
+# Dual-Path Habit Memory (hot path = suggest(); cold path = commit())
+dphm:
+  enabled: true
+  # interpolation weights (probability space, normalized internally):
+  # P(w) = sum_src w_src * r_src * p_src(w); r_src shrinks with low
+  # evidence, and the memory weights are additionally gated by base-LM
+  # confidence (see dphm.py suggest()) so memory only overrides where the
+  # base LM is flat (names, personal boilerplate), not on generic syntax
+  lambda_long: 0.5
+  lambda_sess: 0.2
+  lambda_base: 1.0
+  beta_prefetch: 0.6
+  # forgetting half-lives (seconds)
+  long_half_life_s: 2592000     # 30 days
+  sess_half_life_s: 900         # 15 minutes
+  # n-gram trie
+  ngram_order: 3
+  backoff_alpha: 0.4
+  # habit lexicon promotion (cold path): PMI >= 4 keeps distinctive
+  # collocations ("government affairs"), rejects generic ones ("will be")
+  promote_min_count: 3.0
+  promote_min_pmi: 4.0
+  # speculative prefetch debounce
+  prefetch_debounce_s: 0.15
+  suggest_k: 5                  # candidates per keystroke (internal)
+  # fused generation: word-at-a-time shallow fusion, then stop
+  fusion_max_words: 2
+  fusion_min_score: -1.5        # skip fusion when memory signal is weak
+  fusion_stop: ["\n\n", "\n"]   # stop tokens while generating
+
+# llama-server bridge (base LM logits for fusion)
+llama_bridge:
+  n_probs: 64                   # top logprobs per step from server
+  logprob_timeout_s: 120
+
+# style / template memory for speculative prefetch (keyword -> token boosts)
+prefetch_memory:
+  email:
+    quarterly: 0.7
+    marketing: 0.8
+    daniel: 1.0
+  report:
+    revenue: 0.7
+    charts: 0.6
+
+# long-term user simulation (simulate_longterm.py): public-data corpus,
+# one virtual day per session, test-then-train at sampled cut points
+longterm:
+  sessions: 30
+  emails_per_session: 5
+  prose_per_session: 2
+  pts_per_text: 6               # evaluated cut points per text
+
+# cold-path training corpus (user habits); see habit_corpus.py for defaults
+training:
+  corpus: default               # default | none | list of strings in override file
+  repeats: 8                    # simulate recurrence over time
+  flush_timeout_s: 10.0

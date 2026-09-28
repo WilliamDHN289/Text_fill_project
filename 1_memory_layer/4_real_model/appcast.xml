@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>FlowIn Updates</title>
+    <link>https://raw.githubusercontent.com/Xin-Jing/flowin-releases/main/appcast.xml</link>
+    <description>FlowIn app updates</description>
+    <language>en</language>
+    <item>
+      <title>Version 1.0.7</title>
+      <description><![CDATA[
+        <p>First of all, thanks for everyone's support and feedback. Your enthusiasm for FlowIn is something I really didn't expect, and I'm grateful that FlowIn is helping with your daily writing, even in a small way.</p>
+        <p>Our goal is really to make it much easier to express your intent, and we've been working day and night to make that happen. This update has a few major features I'm excited to share.</p>
+        <ul>
+          <li><b>Draft a full reply anywhere.</b> Tap the right Option (⌥) key in any app, pick a direction, and FlowIn writes the whole reply in your voice.</li>
+          <li><b>A much faster, smoother local model.</b></li>
+          <li><b>Updated shortcuts.</b> Tab accepts word by word, the backtick key (`) accepts the whole suggestion, and right-Command + ↑/↓ cycles alternatives.</li>
+        </ul>
+      ]]></description>
+      <pubDate>Fri, 19 Jun 2026 09:56:50 +0000</pubDate>
+      <sparkle:version>1.0.7</sparkle:version>
+      <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.7/FlowIn-1.0.7.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="D4a30nSMGpCJBahhk7nnkEGER7Voqu4Xza+A/HO5KdWZkrHOkqnkanGzofwSE0Tqme6+jY0gc9RgyEe3T3RlAQ=="
+                 length="4400378" />
+    </item>
+    <item>
+      <title>Version 1.0.6.1</title>
+      <description><![CDATA[
+        <ul>
+          <li>Significantly improved Fast model performance, now it is the default model</li>
+          <li>New onboarding step: an "About you" profile that tailors suggestions to how you write</li>
+          <li>Suggestions now default to Phrase length</li>
+          <li>Better Chinese and Japanese input: accept suggestions one character at a time, with smoother overlap handling for non-Latin scripts</li>
+          <li>Longer suggestions can extend one line below the input box</li>
+          <li>Fixes: steadier insertion in Safari, accurate caret alignment in terminals, and fewer duplicated characters</li>
+        </ul>
+      ]]></description>
+      <pubDate>Sat, 30 May 2026 07:03:34 +0000</pubDate>
+      <sparkle:version>1.0.6.1</sparkle:version>
+      <sparkle:shortVersionString>1.0.6.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.6.1/FlowIn-1.0.6.1.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="3nand1H3u2Pw8MMvW2qTUuzhEI3RnvHXJbZgCaprTfMBB7+k6KDkSfyP51VtMNLeYPAZTOnzFDL4cI0YU7ZTCA=="
+                 length="4265915" />
+    </item>
+    <item>
+      <title>Version 1.0.6</title>
+      <description><![CDATA[
+        <ul>
+          <li>Cycle through 3 alternative suggestions with right-Option + ⌥↓ / ⌥↑ after a partial accept</li>
+          <li>Screen context: keeps OCR fresh during typing, better sender attribution in chat bubbles</li>
+          <li>Onboarding: new keyboard graphics for permission steps and an interactive cycle tutorial</li>
+          <li>App now requires an invite code on first launch — contact us if you need one</li>
+          <li>Fixes around 3-in-1 cycle parsing and special-character edge cases</li>
+        </ul>
+      ]]></description>
+      <pubDate>Mon, 18 May 2026 01:29:05 +0000</pubDate>
+      <sparkle:version>1.0.6</sparkle:version>
+      <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.6/FlowIn-1.0.6.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="VG5QARuHcqLf4WTFuKWTRvFdC4rLRiPYrXcItYyN/D99MM/7LnEgHvrET9aATTuSmaEXO8K0rq83Ulv1PYUUBw=="
+                 length="4258537" />
+    </item>
+    <item>
+      <title>Version 1.0.5</title>
+      <description><![CDATA[
+        <ul>
+          <li>Suggestions stay aligned even after pasting, deleting, or inserting ChatGPT/Telegram conversation snippets</li>
+          <li>Ghost text now stays put on the active Space and renders over app launchers (Raycast, Spotlight, etc.) instead of disappearing</li>
+          <li>Fewer false-fire suggestions: skip when caret has no preceding text after a click, skip when prefix ends with "?", arrow keys no longer trigger inference, selection mode hides ghost text</li>
+          <li>Onboarding step 2 reveal animation + softer pill buttons</li>
+          <li>DMG now uses drag-to-install layout with an arrow guide</li>
+        </ul>
+      ]]></description>
+      <pubDate>Wed, 06 May 2026 04:03:00 +0000</pubDate>
+      <sparkle:version>1.0.5</sparkle:version>
+      <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.5/FlowIn-1.0.5.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="W3pUdo+nm2SfNjqaOuAVkxUxOnKbpfPGJsajOcszoRqECH8wFd1qEkV/GtaWFULaN/DsaCCn5+gmpnJkTWijAw=="
+                 length="4199022" />
+    </item>
+    <item>
+      <title>Version 1.0.4</title>
+      <description><![CDATA[
+        <ul>
+          <li>Auto-update prompts now reliably come to the front so you don't miss them</li>
+        </ul>
+      ]]></description>
+      <pubDate>Wed, 29 Apr 2026 10:19:00 +0000</pubDate>
+      <sparkle:version>1.0.4</sparkle:version>
+      <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.4/FlowIn-1.0.4.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="+GufGlktnOQR0i3hLIjSQjepQb3efdvTNW8X4xnaEBVFgIrKxTXr9tKAFDn0W+7Ja35fIYTbyi5iOEzsixrsBg=="
+                 length="4677205" />
+    </item>
+    <item>
+      <title>Version 1.0.3</title>
+      <description><![CDATA[
+        <ul>
+          <li>New first-launch onboarding with permissions setup and an interactive tutorial page</li>
+          <li>Redesigned Settings window with auto-saving User Context, scrollable layout, and new "AI Models" and "Suggestion Length" sections</li>
+          <li>Local model significantly improved across quality, latency, and reliability</li>
+          <li>Better support for typing in Chinese, Japanese, and Korean</li>
+          <li>Fixed text insertion edge cases around word boundaries, special characters, and Gmail quoted replies</li>
+          <li>Autocomplete now starts disabled in IDEs on first install (toggle per-app from the menu)</li>
+        </ul>
+      ]]></description>
+      <pubDate>Wed, 29 Apr 2026 08:55:00 +0000</pubDate>
+      <sparkle:version>1.0.3</sparkle:version>
+      <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.3/FlowIn-1.0.3.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="g7u7sWwadhoC0iCeyRzO0FPLO2r/etFY1NhK26jCNZ1Poej3bOG1pA84pUtlI6h1bcv2P9Or8srS+85pVEsfBQ=="
+                 length="4669399" />
+    </item>
+    <item>
+      <title>Version 1.0.2</title>
+      <description><![CDATA[
+        <ul>
+          <li>Ghost text now dismisses cleanly on Return, Cmd+A, forward delete, and Emacs-style keybindings</li>
+          <li>Improved ghost text dismissal in search fields and on paste/cut</li>
+          <li>Fixed a crash in text measurement (Double-to-Int overflow)</li>
+          <li>Faster context reads (capped at ~8K chars)</li>
+        </ul>
+      ]]></description>
+      <pubDate>Wed, 15 Apr 2026 21:51:27 +0000</pubDate>
+      <sparkle:version>1.0.2</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.2/FlowIn-1.0.2.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="rGTr/wQjlKfIe9WhJ3JDpD+utWsYUq4G8qw0JZzt4Msy3vclTYLbXHxIUwvAg9ypPAGLN6LJ4uwFik+Y8xP0Dg=="
+                 length="4568429" />
+    </item>
+    <item>
+      <title>Version 1.0.1</title>
+      <description><![CDATA[
+        <ul>
+          <li>Fixed text insertion in Gmail replies with quoted history</li>
+          <li>Added support for terminal emulators (iTerm2, Warp, ghostty, kitty, etc.)</li>
+          <li>Fixed rapid word-by-word acceptance occasionally duplicating words</li>
+          <li>Fixed crash when Chrome's accessibility state became temporarily invalid</li>
+          <li>Detect limited browsers (Firefox/Arc) and show an inline hint</li>
+        </ul>
+      ]]></description>
+      <pubDate>Thu, 09 Apr 2026 06:32:55 +0000</pubDate>
+      <sparkle:version>1.0.1</sparkle:version>
+      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.1/FlowIn-1.0.1.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="UaSL5Zl2o5vDGC59GysCtUL1+LKehMS3OZFnV4DAj5LcRrSt7gWVVEXWoaf1yTu+4U0r9yJ+R8g/Q2b6YXsvDQ=="
+                 length="4565248" />
+    </item>
+    <item>
+      <title>Version 1.0.0</title>
+      <description><![CDATA[
+        <ul>
+          <li>Rebranded to FlowIn</li>
+          <li>Improved permission prompts for Screen Context</li>
+          <li>Fixed reliability issues (secure input, sleep/wake, App Nap)</li>
+          <li>Better suggestion display in Outlook and WKWebView apps</li>
+          <li>Smart ghost text persistence on space and delete</li>
+          <li>Clipboard session management for rapid Tab acceptance</li>
+          <li>Redesigned toolbar with collapsible FlowIn widget</li>
+          <li>Timed disable options (15m, 60m, indefinitely)</li>
+          <li>Auto-update support via Sparkle</li>
+        </ul>
+      ]]></description>
+      <pubDate>Wed, 02 Apr 2026 00:00:00 +0000</pubDate>
+      <sparkle:version>1.0.0</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Xin-Jing/flowin-releases/releases/download/v1.0.0/FlowIn-1.0.0.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="Uk4I0VfiuFKB8JVZyeXd2zaf3Zs8QazVxc4RqWibBLWoUopZFBYUQ8OX09g/I+vNLFMadhJsN8kJoUvP7OHVBg=="
+                 length="4549385" />
+    </item>
+  </channel>
+</rss>

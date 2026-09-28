@@ -1,0 +1,446 @@
+{
+  "status": "DONE",
+  "deadline_ms": 20,
+  "variants": {
+    "pfm_full": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 500,
+        "p50_ms": 0.0141,
+        "p95_ms": 0.045,
+        "max_ms": 0.0804
+      },
+      "deadline_violations": 0,
+      "stale_coinjection": true,
+      "identity_probes": {
+        "accuracy": "8/8",
+        "details": [
+          {
+            "partner": "Alice Chen",
+            "expects": "9am",
+            "good_pos": 76,
+            "bad_pos": 390,
+            "ok": true
+          },
+          {
+            "partner": "Bob Park",
+            "expects": "11am",
+            "good_pos": 74,
+            "bad_pos": 451,
+            "ok": true
+          },
+          {
+            "partner": "Carol Wu",
+            "expects": "March 6",
+            "good_pos": 79,
+            "bad_pos": 315,
+            "ok": true
+          },
+          {
+            "partner": "Dan Lee",
+            "expects": "March 9",
+            "good_pos": 78,
+            "bad_pos": 300,
+            "ok": true
+          },
+          {
+            "partner": "Erin Gomez",
+            "expects": "3pm",
+            "good_pos": 84,
+            "bad_pos": 324,
+            "ok": true
+          },
+          {
+            "partner": "Frank Liu",
+            "expects": "4pm",
+            "good_pos": 83,
+            "bad_pos": 316,
+            "ok": true
+          },
+          {
+            "partner": "HR Desk",
+            "expects": "12F",
+            "good_pos": 65,
+            "bad_pos": 120,
+            "ok": true
+          },
+          {
+            "partner": "IT Support",
+            "expects": "47B",
+            "good_pos": 68,
+            "bad_pos": 120,
+            "ok": true
+          }
+        ]
+      }
+    },
+    "no_participants": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 500,
+        "p50_ms": 0.0135,
+        "p95_ms": 0.0368,
+        "max_ms": 0.0576
+      },
+      "deadline_violations": 0,
+      "stale_coinjection": true,
+      "identity_probes": {
+        "accuracy": "5/8",
+        "details": [
+          {
+            "partner": "Alice Chen",
+            "expects": "9am",
+            "good_pos": 76,
+            "bad_pos": 137,
+            "ok": true
+          },
+          {
+            "partner": "Bob Park",
+            "expects": "11am",
+            "good_pos": 74,
+            "bad_pos": 138,
+            "ok": true
+          },
+          {
+            "partner": "Carol Wu",
+            "expects": "March 6",
+            "good_pos": 79,
+            "bad_pos": 148,
+            "ok": true
+          },
+          {
+            "partner": "Dan Lee",
+            "expects": "March 9",
+            "good_pos": 148,
+            "bad_pos": 79,
+            "ok": false
+          },
+          {
+            "partner": "Erin Gomez",
+            "expects": "3pm",
+            "good_pos": 84,
+            "bad_pos": 154,
+            "ok": true
+          },
+          {
+            "partner": "Frank Liu",
+            "expects": "4pm",
+            "good_pos": 154,
+            "bad_pos": 84,
+            "ok": false
+          },
+          {
+            "partner": "HR Desk",
+            "expects": "12F",
+            "good_pos": 65,
+            "bad_pos": 120,
+            "ok": true
+          },
+          {
+            "partner": "IT Support",
+            "expects": "47B",
+            "good_pos": 120,
+            "bad_pos": 65,
+            "ok": false
+          }
+        ]
+      }
+    },
+    "no_graph": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 500,
+        "p50_ms": 0.0138,
+        "p95_ms": 0.0461,
+        "max_ms": 0.063
+      },
+      "deadline_violations": 0,
+      "stale_coinjection": true,
+      "identity_probes": {
+        "accuracy": "8/8",
+        "details": [
+          {
+            "partner": "Alice Chen",
+            "expects": "9am",
+            "good_pos": 76,
+            "bad_pos": 390,
+            "ok": true
+          },
+          {
+            "partner": "Bob Park",
+            "expects": "11am",
+            "good_pos": 74,
+            "bad_pos": 451,
+            "ok": true
+          },
+          {
+            "partner": "Carol Wu",
+            "expects": "March 6",
+            "good_pos": 79,
+            "bad_pos": 315,
+            "ok": true
+          },
+          {
+            "partner": "Dan Lee",
+            "expects": "March 9",
+            "good_pos": 78,
+            "bad_pos": 300,
+            "ok": true
+          },
+          {
+            "partner": "Erin Gomez",
+            "expects": "3pm",
+            "good_pos": 84,
+            "bad_pos": 324,
+            "ok": true
+          },
+          {
+            "partner": "Frank Liu",
+            "expects": "4pm",
+            "good_pos": 83,
+            "bad_pos": 316,
+            "ok": true
+          },
+          {
+            "partner": "HR Desk",
+            "expects": "12F",
+            "good_pos": 65,
+            "bad_pos": 120,
+            "ok": true
+          },
+          {
+            "partner": "IT Support",
+            "expects": "47B",
+            "good_pos": 68,
+            "bad_pos": 120,
+            "ok": true
+          }
+        ]
+      }
+    },
+    "no_recency": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 500,
+        "p50_ms": 0.0139,
+        "p95_ms": 0.042,
+        "max_ms": 0.0599
+      },
+      "deadline_violations": 0,
+      "stale_coinjection": true,
+      "identity_probes": {
+        "accuracy": "8/8",
+        "details": [
+          {
+            "partner": "Alice Chen",
+            "expects": "9am",
+            "good_pos": 76,
+            "bad_pos": 492,
+            "ok": true
+          },
+          {
+            "partner": "Bob Park",
+            "expects": "11am",
+            "good_pos": 74,
+            "bad_pos": 451,
+            "ok": true
+          },
+          {
+            "partner": "Carol Wu",
+            "expects": "March 6",
+            "good_pos": 79,
+            "bad_pos": 315,
+            "ok": true
+          },
+          {
+            "partner": "Dan Lee",
+            "expects": "March 9",
+            "good_pos": 78,
+            "bad_pos": 300,
+            "ok": true
+          },
+          {
+            "partner": "Erin Gomez",
+            "expects": "3pm",
+            "good_pos": 84,
+            "bad_pos": 324,
+            "ok": true
+          },
+          {
+            "partner": "Frank Liu",
+            "expects": "4pm",
+            "good_pos": 83,
+            "bad_pos": 316,
+            "ok": true
+          },
+          {
+            "partner": "HR Desk",
+            "expects": "12F",
+            "good_pos": 65,
+            "bad_pos": 202,
+            "ok": true
+          },
+          {
+            "partner": "IT Support",
+            "expects": "47B",
+            "good_pos": 68,
+            "bad_pos": 120,
+            "ok": true
+          }
+        ]
+      }
+    },
+    "recency_only": {
+      "availability": "1/25",
+      "by_category": {
+        "direct": {
+          "hit": 1,
+          "n": 20
+        },
+        "associative": {
+          "hit": 0,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 0,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 0,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": null,
+      "deadline_violations": 0
+    },
+    "random_k": {
+      "availability": "1/25",
+      "by_category": {
+        "direct": {
+          "hit": 1,
+          "n": 20
+        },
+        "associative": {
+          "hit": 0,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 0,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 0,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": null,
+      "deadline_violations": 0
+    }
+  },
+  "external": {
+    "mem0": {
+      "status": "SKIPPED",
+      "reason": "package 'mem0' not installed. Install it and add an adapter in study4_baselines.py; note both systems require embedding/LLM services, so a faithful edge-budget run must stub or locally host those and count their latency against the deadline."
+    },
+    "langmem": {
+      "status": "SKIPPED",
+      "reason": "package 'langmem' not installed. Install it and add an adapter in study4_baselines.py; note both systems require embedding/LLM services, so a faithful edge-budget run must stub or locally host those and count their latency against the deadline."
+    }
+  }
+}

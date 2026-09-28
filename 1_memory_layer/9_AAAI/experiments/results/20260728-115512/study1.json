@@ -1,0 +1,420 @@
+{
+  "status": "DONE",
+  "extraction": {
+    "noise_admitted": "0/16",
+    "seed_recall": "30/31",
+    "known_limit_seeds": 1,
+    "large_index": {
+      "facts": 270,
+      "valid_facts": 270,
+      "index_terms": 518,
+      "entities": 238,
+      "graph_nodes": 251
+    }
+  },
+  "small": {
+    "n_scenarios": 7,
+    "hits_on": 6,
+    "hits_off": 0,
+    "expected_hits": 6,
+    "expected_got": 6,
+    "by_category": {
+      "direct": {
+        "hit": 5,
+        "n": 5
+      },
+      "known-limit": {
+        "hit": 0,
+        "n": 1
+      },
+      "associative": {
+        "hit": 1,
+        "n": 1
+      }
+    },
+    "prompt_budget_respected": true,
+    "latency": {
+      "n": 140,
+      "p50_ms": 0.009,
+      "p95_ms": 0.0139,
+      "max_ms": 0.018
+    },
+    "scenarios": [
+      {
+        "category": "direct",
+        "prefix": "Quick reminder: the Phoenix launch is on ",
+        "truth": [
+          "2026-08-15"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "As discussed, our infra budget cap for Q3 is ",
+        "truth": [
+          "$250k"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Heads up — the Atlas API freeze lands on ",
+        "truth": [
+          "jul 28"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Moving our weekly sync to ",
+        "truth": [
+          "9:30"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Following up on the battery swap, asset tag ",
+        "truth": [
+          "c02-7841-xj"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "known-limit",
+        "prefix": "The vendor quote was ",
+        "truth": [
+          "$187k"
+        ],
+        "on_hit": false,
+        "off_hit": false,
+        "expect_hit": false
+      },
+      {
+        "category": "associative",
+        "prefix": "Alice is the owner of the rollout for ",
+        "truth": [
+          "phoenix"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      }
+    ]
+  },
+  "large": {
+    "n_scenarios": 25,
+    "hits_on": 24,
+    "hits_off": 0,
+    "expected_hits": 24,
+    "expected_got": 24,
+    "by_category": {
+      "direct": {
+        "hit": 20,
+        "n": 20
+      },
+      "associative": {
+        "hit": 2,
+        "n": 2
+      },
+      "conflict": {
+        "hit": 1,
+        "n": 1
+      },
+      "cjk": {
+        "hit": 1,
+        "n": 1
+      },
+      "known-limit": {
+        "hit": 0,
+        "n": 1
+      }
+    },
+    "prompt_budget_respected": true,
+    "latency": {
+      "n": 500,
+      "p50_ms": 0.014,
+      "p95_ms": 0.0457,
+      "max_ms": 0.063
+    },
+    "scenarios": [
+      {
+        "category": "direct",
+        "prefix": "Quick reminder: the Phoenix launch is on ",
+        "truth": [
+          "2026-08-15"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Heads up — the Atlas API freeze lands on ",
+        "truth": [
+          "jul 28"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The security audit deadline is ",
+        "truth": [
+          "sep 12"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The Kestrel cutover is scheduled for ",
+        "truth": [
+          "2026-09-01"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Onboarding for the new analyst is on ",
+        "truth": [
+          "aug 3"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Please share the pentest findings by ",
+        "truth": [
+          "aug 20"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Carol presents the roadmap at the all-hands on ",
+        "truth": [
+          "sep 5"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The Phoenix go/no-go call is now ",
+        "truth": [
+          "aug 11"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "As agreed, our Q3 infra budget cap is ",
+        "truth": [
+          "$250k"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The contractor day rate we agreed is ",
+        "truth": [
+          "$950"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The print vendor deposit was ",
+        "truth": [
+          "$3,750"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Our Atlas SLA target for Q4 is ",
+        "truth": [
+          "99.95%"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Our data-retention window is ",
+        "truth": [
+          "18 months"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Following up on the battery swap, asset tag ",
+        "truth": [
+          "c02-7841-xj"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Checking on invoice ",
+        "truth": [
+          "inv-20449"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The monitor RMA number is ",
+        "truth": [
+          "rma-55302"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The hotel block code for the offsite is ",
+        "truth": [
+          "flow26"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "The PO number for the GPU order is ",
+        "truth": [
+          "po-88231"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Moving our weekly sync to ",
+        "truth": [
+          "9:30"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "direct",
+        "prefix": "Reminder: oncall handoff is daily at ",
+        "truth": [
+          "09:15"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "associative",
+        "prefix": "Alice is the owner of the rollout for ",
+        "truth": [
+          "phoenix"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "associative",
+        "prefix": "Dan is the person to ask about ",
+        "truth": [
+          "kestrel"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "conflict",
+        "prefix": "Budget review is now on ",
+        "truth": [
+          "monday 2pm"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "cjk",
+        "prefix": "提醒一下，凤凰项目的上线时间是",
+        "truth": [
+          "8月15日"
+        ],
+        "on_hit": true,
+        "off_hit": false,
+        "expect_hit": true
+      },
+      {
+        "category": "known-limit",
+        "prefix": "The vendor quote was ",
+        "truth": [
+          "$187k"
+        ],
+        "on_hit": false,
+        "off_hit": false,
+        "expect_hit": false
+      }
+    ]
+  },
+  "stress_20k": {
+    "n_facts": 19895,
+    "build_s": 2.15,
+    "latency": {
+      "n": 500,
+      "p50_ms": 10.8912,
+      "p95_ms": 11.9329,
+      "max_ms": 13.3523
+    }
+  },
+  "expected_from_paper": {
+    "small_on": "6/7",
+    "large_on": "24/25",
+    "off": "0",
+    "seed_recall": "30/31",
+    "noise_admitted": "0/16"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "status": "DONE",
+  "deadline_ms": 20,
+  "variants": {
+    "pfm_full": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 50,
+        "p50_ms": 0.0145,
+        "p95_ms": 0.0447,
+        "max_ms": 0.0499
+      },
+      "deadline_violations": 0
+    },
+    "no_participants": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 50,
+        "p50_ms": 0.0145,
+        "p95_ms": 0.0402,
+        "max_ms": 0.0424
+      },
+      "deadline_violations": 0
+    },
+    "no_graph": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 50,
+        "p50_ms": 0.014,
+        "p95_ms": 0.045,
+        "max_ms": 0.0502
+      },
+      "deadline_violations": 0
+    },
+    "no_recency": {
+      "availability": "24/25",
+      "by_category": {
+        "direct": {
+          "hit": 20,
+          "n": 20
+        },
+        "associative": {
+          "hit": 2,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 1,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 1,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": {
+        "n": 50,
+        "p50_ms": 0.0139,
+        "p95_ms": 0.0422,
+        "max_ms": 0.046
+      },
+      "deadline_violations": 0
+    },
+    "recency_only": {
+      "availability": "1/25",
+      "by_category": {
+        "direct": {
+          "hit": 1,
+          "n": 20
+        },
+        "associative": {
+          "hit": 0,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 0,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 0,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": null,
+      "deadline_violations": 0
+    },
+    "random_k": {
+      "availability": "1/25",
+      "by_category": {
+        "direct": {
+          "hit": 1,
+          "n": 20
+        },
+        "associative": {
+          "hit": 0,
+          "n": 2
+        },
+        "conflict": {
+          "hit": 0,
+          "n": 1
+        },
+        "cjk": {
+          "hit": 0,
+          "n": 1
+        },
+        "known-limit": {
+          "hit": 0,
+          "n": 1
+        }
+      },
+      "latency": null,
+      "deadline_violations": 0
+    }
+  },
+  "external": {
+    "mem0": {
+      "status": "SKIPPED",
+      "reason": "package 'mem0' not installed. Install it and add an adapter in study4_baselines.py; note both systems require embedding/LLM services, so a faithful edge-budget run must stub or locally host those and count their latency against the deadline."
+    },
+    "langmem": {
+      "status": "SKIPPED",
+      "reason": "package 'langmem' not installed. Install it and add an adapter in study4_baselines.py; note both systems require embedding/LLM services, so a faithful edge-budget run must stub or locally host those and count their latency against the deadline."
+    }
+  }
+}

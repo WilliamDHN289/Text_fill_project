@@ -1,0 +1,465 @@
+{
+  "status": "DONE",
+  "n_scenarios_used": 24,
+  "config_used": {
+    "episodes": 120,
+    "warmup_frac": 0.25,
+    "shortlist": 30,
+    "seeds": [
+      1
+    ],
+    "lr": 0.15,
+    "l2": 0.001,
+    "char_unit": 40,
+    "relevance_boost": 2.5,
+    "mixed_sigma": 0.4,
+    "nested_lambda": 0.5,
+    "budgets": [
+      800,
+      240
+    ]
+  },
+  "table": {
+    "mnl/balanced/b800": {
+      "A": {
+        "acc": 0.8586,
+        "chars": 274.8,
+        "ndcg": 0.9402,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8443,
+        "chars": 276.4,
+        "ndcg": 0.9029,
+        "truth": 0.9778
+      },
+      "C": {
+        "acc": 0.8443,
+        "chars": 276.4,
+        "ndcg": 0.9029,
+        "truth": 0.9778
+      }
+    },
+    "mnl/repetition/b800": {
+      "A": {
+        "acc": 0.8109,
+        "chars": 287.6,
+        "ndcg": 0.9325,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7958,
+        "chars": 286.2,
+        "ndcg": 0.7205,
+        "truth": 0.8889
+      },
+      "C": {
+        "acc": 0.7958,
+        "chars": 286.2,
+        "ndcg": 0.7205,
+        "truth": 0.8889
+      }
+    },
+    "mnl/associative/b800": {
+      "A": {
+        "acc": 0.7806,
+        "chars": 295.8,
+        "ndcg": 0.9238,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7417,
+        "chars": 296.4,
+        "ndcg": 0.7655,
+        "truth": 0.9333
+      },
+      "C": {
+        "acc": 0.7417,
+        "chars": 296.4,
+        "ndcg": 0.7655,
+        "truth": 0.9333
+      }
+    },
+    "mnl/balanced/b240": {
+      "A": {
+        "acc": 0.8581,
+        "chars": 198.1,
+        "ndcg": 0.9045,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.8403,
+        "chars": 197.0,
+        "ndcg": 0.8283,
+        "truth": 0.9667
+      },
+      "C": {
+        "acc": 0.8444,
+        "chars": 163.9,
+        "ndcg": 0.8879,
+        "truth": 0.9778
+      }
+    },
+    "mnl/repetition/b240": {
+      "A": {
+        "acc": 0.8561,
+        "chars": 200.5,
+        "ndcg": 0.9186,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7728,
+        "chars": 197.3,
+        "ndcg": 0.7285,
+        "truth": 0.8667
+      },
+      "C": {
+        "acc": 0.8391,
+        "chars": 169.2,
+        "ndcg": 0.7814,
+        "truth": 0.9778
+      }
+    },
+    "mnl/associative/b240": {
+      "A": {
+        "acc": 0.7489,
+        "chars": 209.9,
+        "ndcg": 0.922,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.7066,
+        "chars": 207.6,
+        "ndcg": 0.7949,
+        "truth": 0.9222
+      },
+      "C": {
+        "acc": 0.6973,
+        "chars": 171.7,
+        "ndcg": 0.7803,
+        "truth": 0.9111
+      }
+    }
+  },
+  "gain_retention_C_over_A": {},
+  "runs": [
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8586,
+          "acceptance_realized": 0.8778,
+          "ndcg_at_k": 0.9402,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 274.8,
+          "acceptance_per_100_chars": 0.3124
+        },
+        "B": {
+          "acceptance_true": 0.8443,
+          "acceptance_realized": 0.8556,
+          "ndcg_at_k": 0.9029,
+          "truth_injected_rate": 0.9778,
+          "injected_chars_mean": 276.4,
+          "acceptance_per_100_chars": 0.3055
+        },
+        "C": {
+          "acceptance_true": 0.8443,
+          "acceptance_realized": 0.8556,
+          "ndcg_at_k": 0.9029,
+          "truth_injected_rate": 0.9778,
+          "injected_chars_mean": 276.4,
+          "acceptance_per_100_chars": 0.3055
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.494,
+        "rec": -0.11,
+        "heat": -0.04,
+        "assoc": 0.214,
+        "bias": -0.087
+      },
+      "theta_hat_C": {
+        "bm25": 0.494,
+        "rec": -0.11,
+        "heat": -0.04,
+        "assoc": 0.214,
+        "bias": -0.087
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8109,
+          "acceptance_realized": 0.7333,
+          "ndcg_at_k": 0.9325,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 287.6,
+          "acceptance_per_100_chars": 0.282
+        },
+        "B": {
+          "acceptance_true": 0.7958,
+          "acceptance_realized": 0.7222,
+          "ndcg_at_k": 0.7205,
+          "truth_injected_rate": 0.8889,
+          "injected_chars_mean": 286.2,
+          "acceptance_per_100_chars": 0.2781
+        },
+        "C": {
+          "acceptance_true": 0.7958,
+          "acceptance_realized": 0.7222,
+          "ndcg_at_k": 0.7205,
+          "truth_injected_rate": 0.8889,
+          "injected_chars_mean": 286.2,
+          "acceptance_per_100_chars": 0.2781
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": -0.127,
+        "rec": -0.216,
+        "heat": 0.179,
+        "assoc": -0.089,
+        "bias": -0.248
+      },
+      "theta_hat_C": {
+        "bm25": -0.127,
+        "rec": -0.216,
+        "heat": 0.179,
+        "assoc": -0.089,
+        "bias": -0.248
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 800,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7806,
+          "acceptance_realized": 0.7778,
+          "ndcg_at_k": 0.9238,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 295.8,
+          "acceptance_per_100_chars": 0.2639
+        },
+        "B": {
+          "acceptance_true": 0.7417,
+          "acceptance_realized": 0.7444,
+          "ndcg_at_k": 0.7655,
+          "truth_injected_rate": 0.9333,
+          "injected_chars_mean": 296.4,
+          "acceptance_per_100_chars": 0.2502
+        },
+        "C": {
+          "acceptance_true": 0.7417,
+          "acceptance_realized": 0.7444,
+          "ndcg_at_k": 0.7655,
+          "truth_injected_rate": 0.9333,
+          "injected_chars_mean": 296.4,
+          "acceptance_per_100_chars": 0.2502
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.094,
+        "rec": -0.114,
+        "heat": 0.11,
+        "assoc": 0.72,
+        "bias": -0.076
+      },
+      "theta_hat_C": {
+        "bm25": 0.094,
+        "rec": -0.114,
+        "heat": 0.11,
+        "assoc": 0.72,
+        "bias": -0.076
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8581,
+          "acceptance_realized": 0.8889,
+          "ndcg_at_k": 0.9045,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 198.1,
+          "acceptance_per_100_chars": 0.4331
+        },
+        "B": {
+          "acceptance_true": 0.8403,
+          "acceptance_realized": 0.8889,
+          "ndcg_at_k": 0.8283,
+          "truth_injected_rate": 0.9667,
+          "injected_chars_mean": 197.0,
+          "acceptance_per_100_chars": 0.4266
+        },
+        "C": {
+          "acceptance_true": 0.8444,
+          "acceptance_realized": 0.8889,
+          "ndcg_at_k": 0.8879,
+          "truth_injected_rate": 0.9778,
+          "injected_chars_mean": 163.9,
+          "acceptance_per_100_chars": 0.5153
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.593,
+        "rec": -0.118,
+        "heat": 0.347,
+        "assoc": 0.279,
+        "bias": -0.121
+      },
+      "theta_hat_C": {
+        "bm25": 0.758,
+        "rec": -0.209,
+        "heat": 0.175,
+        "assoc": 0.315,
+        "bias": -0.25
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.8561,
+          "acceptance_realized": 0.8333,
+          "ndcg_at_k": 0.9186,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 200.5,
+          "acceptance_per_100_chars": 0.427
+        },
+        "B": {
+          "acceptance_true": 0.7728,
+          "acceptance_realized": 0.7778,
+          "ndcg_at_k": 0.7285,
+          "truth_injected_rate": 0.8667,
+          "injected_chars_mean": 197.3,
+          "acceptance_per_100_chars": 0.3917
+        },
+        "C": {
+          "acceptance_true": 0.8391,
+          "acceptance_realized": 0.8222,
+          "ndcg_at_k": 0.7814,
+          "truth_injected_rate": 0.9778,
+          "injected_chars_mean": 169.2,
+          "acceptance_per_100_chars": 0.496
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.589,
+        "rec": -0.286,
+        "heat": 0.116,
+        "assoc": 0.193,
+        "bias": -0.33
+      },
+      "theta_hat_C": {
+        "bm25": 0.457,
+        "rec": -0.282,
+        "heat": 0.32,
+        "assoc": 0.387,
+        "bias": -0.327
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 1,
+      "budget": 240,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.7489,
+          "acceptance_realized": 0.7333,
+          "ndcg_at_k": 0.922,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 209.9,
+          "acceptance_per_100_chars": 0.3568
+        },
+        "B": {
+          "acceptance_true": 0.7066,
+          "acceptance_realized": 0.6889,
+          "ndcg_at_k": 0.7949,
+          "truth_injected_rate": 0.9222,
+          "injected_chars_mean": 207.6,
+          "acceptance_per_100_chars": 0.3403
+        },
+        "C": {
+          "acceptance_true": 0.6973,
+          "acceptance_realized": 0.6778,
+          "ndcg_at_k": 0.7803,
+          "truth_injected_rate": 0.9111,
+          "injected_chars_mean": 171.7,
+          "acceptance_per_100_chars": 0.4061
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -6.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.073,
+        "rec": -0.325,
+        "heat": -0.513,
+        "assoc": 0.659,
+        "bias": -0.383
+      },
+      "theta_hat_C": {
+        "bm25": 0.135,
+        "rec": -0.295,
+        "heat": -0.623,
+        "assoc": 0.642,
+        "bias": -0.318
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+seed: 20260727
+output_dir: results
+dpfm:
+  retrieval:
+    k: 6
+    max_query_terms: 12
+    query_pos_decay: 0.95
+    participant_boost: 1.5
+    prompt_char_budget: 800
+  scoring:
+    recency_half_life_days: 30
+    recency_floor: 0.15
+    heat_half_life_days: 14
+    heat_eta: 0.35
+    assoc_gamma: 0.8
+    field_weight_text: 1.0
+    field_weight_entities: 2.5
+    field_weight_participants: 2.0
+  graph:
+    damping: 0.5
+    expand_top: 12
+    max_degree: 64
+  admission:
+    dedup_jaccard: 0.8
+  extraction:
+    gazetteer:
+    - 凤凰项目
+    - 王小明
+studies:
+  study1: true
+  study2: true
+  study3: true
+  study4: true
+study1:
+  latency_repeats: 2
+  stress:
+    n_facts: 2000
+    n_runs: 50
+    entity_pool: 2000
+study2:
+  log_path: ''
+study3:
+  episodes: 120
+  warmup_frac: 0.25
+  shortlist: 30
+  seeds:
+  - 1
+  lr: 0.15
+  l2: 0.001
+  utility_clip: 30.0
+  char_unit: 40
+  line_overhead: 18
+  relevance_boost: 2.5
+  usage_history_mean: 1.0
+  budgets:
+  - 800
+  - 240
+  personas:
+    balanced:
+      bm25: 1.0
+      rec: 0.8
+      heat: 0.6
+      assoc: 0.6
+      bias: -6.0
+    repetition:
+      bm25: 0.7
+      rec: 0.4
+      heat: 1.8
+      assoc: 0.3
+      bias: -6.0
+    associative:
+      bm25: 0.6
+      rec: 0.5
+      heat: 0.3
+      assoc: 1.8
+      bias: -6.0
+  user_models:
+  - mnl
+  mixed_sigma: 0.4
+  nested_lambda: 0.5
+study4:
+  deadline_ms: 20
+  latency_repeats: 2
+  variants:
+  - pfm_full
+  - no_participants
+  - no_graph
+  - no_recency
+  - recency_only
+  - random_k
+  external:
+  - mem0
+  - langmem

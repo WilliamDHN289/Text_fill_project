@@ -1,0 +1,224 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+%
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{comment}
+\usepackage{amsmath,amssymb,amsthm}
+%
+\usepackage{booktabs}
+%
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+% Theorem environments and notation (shared with the main paper).
+\newtheorem{assumption}{Assumption}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Acal}{\mathcal{A}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+
+\setcounter{secnumdepth}{0}
+
+% Title
+\title{Supplementary Material for\\
+PFM: Serving Current Personal Facts Under On-Device Latency Budgets}
+\author{
+    Written by AAAI Press Staff\textsuperscript{\rm 1}\thanks{With help from the AAAI Publications Committee.}\\
+    AAAI Style Contributions by Peter Patel Schneider,
+    Sunil Issar,\\
+    J. Scott Penberthy,
+    George Ferguson,
+    Hans Guesgen,
+    Francisco Cruz\equalcontrib\corresponding,
+    Marc Pujol-Gonzalez\equalcontrib\corresponding
+}
+\affiliations{
+    \textsuperscript{\rm 1}Association for the Advancement of Artificial Intelligence\\
+    1101 Pennsylvania Ave, NW Suite 300\\
+    Washington, DC 20004 USA\\
+    proceedings-questions@aaai.org
+}
+
+\begin{document}
+\maketitle
+
+\noindent
+This document is supplementary material for the paper \emph{PFM: Serving Current Personal Facts Under On-Device Latency Budgets}. The main paper is self-contained; this document adds detail that a reviewer may consult but does not need to follow the argument. It contains: (A) a budget-aware prompt-selection method and its evaluation under synthetic response models; (B) systems-scaling measurements on a fixed hardware profile; (C) additional experimental analysis deferred from the main paper's evaluation; and (D) full proofs of the three formal claims stated in the main paper (Propositions 1--3). References of the form ``Proposition~$n$ of the main paper'' point to the primary submission.
+
+\section{A. Budget-Aware Prompt Selection}
+
+The deployed PFM ranker inserts facts in score order until the fact-count or character budget binds (main paper, ``Retrieval and Ranking''). This section develops a budget-aware alternative and evaluates it. It is a secondary policy: the deployed assistant uses greedy score order, and the method here is analyzed separately.
+
+PFM retrieval produces a candidate set before prompt assembly. The greedy rule is inexpensive, but it can waste prompt capacity when high-scoring facts differ substantially in length. We therefore consider a separate selection problem over the candidate set, without interpreting the candidates as objects of user choice.
+
+Let $C_t$ denote the candidate set for request $t$. Each candidate fact $f\in C_t$ has prompt length $\ell_f$ and a nonnegative value $v_t(f)$ supplied by the retrieval layer. The value may be the deployed PFM score or another predictive score computed from the same candidate features. Conditional on these values, the selector solves
+\begin{equation}
+S_t^*\in\arg\max_{S\subseteq C_t}\sum_{f\in S}v_t(f)\qquad\text{s.t.}\qquad |S|\le k,\quad \sum_{f\in S}\ell_f\le B.
+\label{eq:budgeted_selection}
+\end{equation}
+The optimization separates retrieval from prompt allocation. Retrieval determines which facts are plausible and how valuable they are; selection determines which of those facts consume the limited prompt budget. The formulation does not require a probabilistic interpretation of $v_t(f)$ and does not assume that the user chooses among retrieved facts.
+
+When lengths are measured in integer characters, Eq.~\eqref{eq:budgeted_selection} is a cardinality-constrained knapsack problem. Index the $n=|C_t|$ candidates by $1,\ldots,n$, and let $D(j,b,m)$ denote the largest total value attainable using the first $j$ candidates, at most $b$ characters, and at most $m$ facts. The recursion is
+\begin{equation}
+D(j,b,m)=\max\left\{D(j-1,b,m),\;D(j-1,b-\ell_j,m-1)+v_t(j)\right\},
+\label{eq:selection_dp}
+\end{equation}
+where the second term is omitted when $b<\ell_j$ or $m=0$.
+
+\setcounter{proposition}{2}
+\begin{proposition}[Exact budgeted selection; Proposition 3 of the main paper]
+\label{prop:budgeted_selection}
+For nonnegative candidate values and integer fact lengths, the dynamic program in Eq.~\eqref{eq:selection_dp} returns an optimal solution to Eq.~\eqref{eq:budgeted_selection} in $O(|C_t|Bk)$ time and $O(Bk)$ memory. If all candidate lengths are equal and the character budget permits at least $k$ facts, the solution reduces to selecting the $k$ candidates with largest values.
+\end{proposition}
+
+The recursion conditions on whether the final candidate is excluded or included, which yields optimal substructure; rolling the candidate dimension gives the stated memory bound. A full proof is given in Section D. In the deployed configuration, $k=6$ and $B=800$ characters, and the retrieval stage produces a shortlist of roughly 40 candidates. The deployed assistant continues to use greedy score order; the exact selector of Proposition~\ref{prop:budgeted_selection} is evaluated separately as a secondary policy. Because completion acceptance is observed only after the language model transforms the prompt into a completion, we do not interpret candidate values as structural preference parameters.
+
+\subsection{Budgeted Selection under Synthetic Response Models}
+
+We evaluate budgeted selection in a synthetic response experiment that isolates the allocation rule. The top-$k$ arm and the exact budgeted arm use the same per-user candidate values, $v_t(f)=\exp(\theta_u^{\top}x_t(f))$, where $x_t(f)$ contains lexical relevance, age, usage, graph association, and an intercept. The parameters are updated online from simulated accept or reject feedback. Each configuration runs 1{,}200 episodes with a 25 percent warm-up period over three personas and two seeds. Simulated responses follow MNL, mixed-logit, or nested-logit models. The experiment tests prompt allocation under controlled response functions; it does not identify a model of real user acceptance.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{Top-$k$} & \multicolumn{2}{c}{Budgeted} \\
+Response model & Accept. & Chars. & Accept. & Chars. \\
+\midrule
+MNL & .788 & 198 & .776 & 166 \\
+Mixed logit & .732 & 200 & .717 & 168 \\
+Nested logit & .785 & 199 & .774 & 166 \\
+\bottomrule
+\end{tabular}
+\caption{Synthetic comparison under the binding $B=240$ character budget. Both policies use the same learned candidate values. Acceptance is the true probability under the simulated response model, averaged over three personas and two seeds.}
+\label{tab:budgeted_selection_sim}
+\end{table}
+
+Under the binding budget (Table~\ref{tab:budgeted_selection_sim}), exact selection uses 31 to 33 fewer characters than top-$k$, a reduction of approximately 16 to 17 percent, while simulated acceptance is lower by 1.1 to 1.5 percentage points. When $B=800$, the character budget does not bind and the exact selector coincides with top-$k$ under the same learned values. The simulation shows a prompt-allocation tradeoff under synthetic response models: budget-aware selection reduces prompt use when capacity is tight, with a small reduction in modeled response probability. It does not establish that the same tradeoff holds for generated completions or real user acceptance.
+
+\section{B. Systems Scaling}
+
+Table~\ref{tab:scaling} reports systems measurements for the reference implementation across store sizes from 100 to 100{,}000 facts. Each row builds a fresh store from synthetic facts whose entity pool grows with store size, so shared vocabulary terms produce posting lists that grow with the store; this distribution is deliberately denser than the replay corpus. Hardware and measurement boundaries are fixed: Apple M2, 8 cores, 16~GB RAM, macOS~26.5, CPython~3.11, single retrieval thread, warm process, timing by a monotonic counter around the full retrieval call (query construction, scoring, ranking, and block formatting), with the first 50 queries discarded as warmup. Per-fact update cost is measured around each insertion, including deduplication, supersession, index, and graph updates.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+Facts & p50 & p95 & p99 & Add p50 & RSS \\
+ & (ms) & (ms) & (ms) & (ms) & (MB) \\
+\midrule
+100     & 0.18 & 0.20 & 0.21 & 0.019 & 1.3 \\
+1{,}000  & 0.71 & 0.83 & 0.99 & 0.061 & 1.8 \\
+5{,}000  & 3.02 & 7.75 & 21.5 & 0.100 & 13.1 \\
+10{,}000 & 5.47 & 6.01 & 6.31 & 0.096 & 13.2 \\
+20{,}000 & 12.5 & 16.8 & 22.5 & 0.098 & 32.0 \\
+50{,}000 & 36.8 & 43.3 & 45.2 & 0.099 & 105.9 \\
+100{,}000 & 81.1 & 94.1 & 113.5 & 0.101 & 98.2 \\
+\bottomrule
+\end{tabular}
+\caption{Reference-implementation scaling on a dense synthetic term distribution (Apple M2, single thread). RSS is the process-memory delta around the build and is approximate at large sizes due to allocator reuse. Ingest throughput is 8{,}800--43{,}600 facts/s across the grid; a full prune pass takes 1.55~s at 100{,}000 facts.}
+\label{tab:scaling}
+\end{table}
+
+Three observations follow. First, per-fact update cost is essentially flat (about 0.1~ms from 5{,}000 facts onward), so construction-path throughput does not degrade with store size in this range. Second, fresh-retrieval latency grows roughly linearly with posting-list length: the same implementation that serves 1.81~ms at 20{,}000 facts on the deployed replay distribution (main paper) reaches 12.5~ms at 20{,}000 facts and 81~ms at 100{,}000 facts on the dense synthetic distribution. Latency at scale is therefore a property of term-frequency structure, not of fact count alone. Third, the serving protocol changes what these numbers mean for the product: snapshot serving keeps the completion path at a single bounded read regardless of store size (the non-blocking serving guarantee of the main paper, Proposition 2), at the cost of snapshot staleness, while fresh retrieval beyond roughly 20{,}000 dense facts requires index-side mitigation such as posting-list truncation or impact ordering. We report both regimes rather than presenting the favorable one.
+
+\section{C. Additional Experimental Analysis}
+
+This section reports detailed breakdowns deferred from the main paper's evaluation: per-slice effects on the update benchmark, completion-level judging detail and time to first token, and component ablations of the replay retriever.
+
+\subsection{Update-Benchmark Slice Analysis}
+
+\paragraph{Construction protocol.} The controlled update benchmark comprises 160 revision chains over (entity, slot) pairs drawn from 36 people and 20 projects, with six mutable slot types (meeting time, deadline, launch date, day rate, budget cap, room). Each chain applies zero to four revisions with distinct values; messages rotate through three sentence templates and queries through two phrasings; roughly ten percent of revised chains repeat the identical sentence surface with only the value changed; and 25 percent of eligible chains end in cancellation rather than replacement. Six shared-first-name pairs are assigned chains on the same slot so that the query surface form is ambiguous while the underlying keys differ. Every value token is globally unique, so exposure metrics reduce to exact normalized containment. This yields 240 labeled queries per corpus, evaluated at two corpus sizes (with and without 1{,}000 filler messages) and two prompt budgets, with 95 percent Wilson intervals. The two arms (keyed and keyless) share identical extraction coverage, so all differences are attributable to temporal versioning alone.
+
+Beyond the aggregate rates reported in the main paper (keyed arm: current-value recall 1.000, stale exposure .000, co-injection .000; keyless arm at $B{=}800$: stale .662, co-injection .525), three effects are worth recording. First, near-duplicate admission interacts destructively with verbatim revisions: in the keyless arm only 87.1 percent of current values are indexed at all, and on the verbatim-revision slice current-value recall drops to .214 because the revised sentence is absorbed as a re-observation of the old fact. Checking supersession before deduplication removes this failure. Second, cancellations are the worst case for the keyless arm, which continues to surface the cancelled time on 85.7 percent of those queries; the keyed arm returns the cancellation statement instead. Third, the tight budget suppresses some stale exposure in the keyless arm (.388 versus .662) only by truncating facts of every kind, including current ones (.667 recall); budget pressure is not a staleness defense.
+
+\subsection{Completion-Level Detail}
+
+Generated completions are judged by normalized containment into four exclusive outcomes---correct, stale, wrong-person, and other. Under this judge, PFM yields correct .925 (95\% Wilson interval .864--.960) with stale and wrong-person both .000 (upper bound 3.1 percent); plain BM25 yields correct .517 with stale .358 (interval .278--.447). The injected memory block carries a measurable serving cost at the model: time to first streamed token rises from 296~ms without memory to about 1.2~s with an 800-character block on the 7B CPU configuration, quantifying the prefill price of injected context and motivating the budget-aware selection of Section~A. Wrong-person exposure does not translate into wrong-person generation for PFM: although a same-first-name competitor's fact enters the prompt on 12.5 percent of benchmark queries, the model selects the correctly attributed fact in every sampled case, plausibly because block lines carry explicit ``to \emph{person}'' attribution and the correct fact ranks first. Prompt-level exposure and completion-level error are therefore related but not identical, which is why both are reported.
+
+\subsection{Replay Ablations and Mechanism Probes}
+
+Table~\ref{tab:ablation} removes individual retrieval components on the large replay harness. Removing participant metadata leaves aggregate availability unchanged but reduces the targeted identity score from 8/8 to 5/8. Removing the entity graph or recency decay also leaves aggregate availability at 24/25. The two associative scenarios therefore do not isolate a case in which graph propagation is necessary, and the current replay does not establish an availability benefit from recency decay. Recency-only and random-$k$ retrieval each recover 1 of 25 target facts, which confirms that the full result is not produced by these degenerate policies.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Variant & Availability & Identity & Stale co-injection \\
+\midrule
+PFM & 24/25 & 8/8 & yes \\
+No participants & 24/25 & 5/8 & yes \\
+No entity graph & 24/25 & 8/8 & yes \\
+No recency decay & 24/25 & 8/8 & yes \\
+Recency only & 1/25 & n/a & n/a \\
+Random $k$ & 1/25 & n/a & n/a \\
+\bottomrule
+\end{tabular}
+\caption{Mechanism probes on the large replay harness. Identity reports the eight targeted participant-disambiguation probes. Stale co-injection records whether the superseded value also reaches the prompt in the conflicting-update scenario.}
+\label{tab:ablation}
+\end{table}
+
+The conflicting-update scenario in this replay exposes the keyless configuration: without a slot key, the newer value is retrieved (the scenario counts as available) but the superseded value is also injected. The controlled update benchmark of the main paper quantifies this failure at scale (52.5 percent co-injection over 240 queries) and shows that the key-emitting extractor with supersession-before-deduplication eliminates it. The scope of the guarantee is unchanged: temporal consistency follows after a revision has been assigned the correct key, not from textual contradiction alone, and the benchmark's slot patterns share a template family with its generator. Key assignment on unconstrained natural text remains open, and the extractor shipped in the deployed assistant has not yet adopted the key-emitting rules evaluated here.
+
+\section{D. Proofs}
+
+This section provides full proofs for the three formal properties stated in the main paper. The results establish invariants of the proposed update and serving procedures and the optimality of the budgeted selector under its stated assumptions. They do not claim that revision keys are always identified correctly, that retrieval always finishes before a user-facing deadline, or that candidate values recover user preferences.
+
+\subsection{Unique Active Value under Keyed Supersession (Proposition 1)}
+
+\paragraph{Claim.} Fix a mutable slot key $\kappa$. Suppose updates carrying key $\kappa$ are processed serially, the store initially contains at most one active fact with that key, and each new keyed fact becomes active at the same time that any active predecessor is closed. Then at every time $t$ the active view contains at most one fact with key $\kappa$.
+
+\begin{proof}
+Order the updates carrying key $\kappa$ by their serialized processing times $s_1,s_2,\ldots$. The claim holds before the first update by assumption. Suppose it holds immediately before update $j$ at time $s_j$. If no fact with key $\kappa$ is active immediately before $s_j$, the update inserts the new fact $f_j$ with activation time $a_{f_j}=s_j$ and no finite invalidation time, so exactly one such fact is active immediately after the update. If an active predecessor $f_{j-1}$ exists, uniqueness before the update implies that it is the only active fact with key $\kappa$. The update sets $b_{f_{j-1}}=s_j$ and $a_{f_j}=s_j$. Because active intervals are half-open, $f_{j-1}$ is inactive for every $t\ge s_j$ while $f_j$ is active from $s_j$ onward, unless a later update closes it. Thus the update cannot create two simultaneously active values. By induction, the active view contains at most one fact with key $\kappa$ after every keyed update. Between updates the relevant activation and invalidation times do not change, so the property holds for every time $t$.
+\end{proof}
+
+The argument is conditional on key assignment. If two semantically conflicting observations receive different keys, both may remain active. The guarantee is therefore an update invariant, not a guarantee of contradiction detection.
+
+\subsection{Bound on Memory-Induced Waiting (Proposition 2)}
+
+\paragraph{Claim.} Assume published snapshots are immutable, publication uses an atomic pointer replacement, the serving path acquires no lock held by construction or background retrieval, and reading the current snapshot after the serving thread is scheduled takes at most $r$. Snapshot mode adds at most $r$ waiting time to a completion request. If fresh mode waits for a new retrieval for at most $\delta_t$ before falling back to the current snapshot, it adds at most $\delta_t+r$.
+
+\begin{proof}
+In snapshot mode, the request does not wait for extraction, index maintenance, graph updates, pruning, or a new retrieval. By assumption, the only memory operation on the request path is reading the published immutable snapshot, which takes at most $r$. The additional waiting time is therefore at most $r$.
+
+In fresh mode, let $\tau$ denote the completion time of the fresh retrieval measured from the start of the wait. If $\tau\le\delta_t$, the fresh result is available within the waiting budget and the request proceeds without waiting beyond $\delta_t$. If $\tau>\delta_t$, the timer expires at $\delta_t$ and the serving path falls back to the published snapshot. The subsequent snapshot read takes at most $r$, so the total memory-induced waiting is at most $\delta_t+r$. Neither case waits for any construction-path operation, so these bounds are independent of extraction, index maintenance, graph updates, and pruning.
+\end{proof}
+
+This bound concerns waiting introduced by the memory protocol after the serving thread is scheduled. It does not bound operating-system scheduling delay, language-model latency, or the age of the snapshot used after a timeout.
+
+\subsection{Exact Budgeted Memory Selection (Proposition 3)}
+
+\paragraph{Claim.} Let $C=\{1,\ldots,n\}$ be candidate facts with nonnegative values $v_j$, integer lengths $\ell_j$, cardinality limit $k$, and character budget $B$. Define $D(j,b,m)$ as the maximum total value of any subset of $\{1,\ldots,j\}$ using at most $b$ characters and at most $m$ facts, with boundary value $D(0,b,m)=0$. For $j\ge1$,
+\begin{equation}
+D(j,b,m)=\max\left\{D(j-1,b,m),D(j-1,b-\ell_j,m-1)+v_j\right\},
+\end{equation}
+where the second term is omitted when $\ell_j>b$ or $m=0$. Then $D(n,B,k)$ equals the optimum of the budgeted selection problem. The algorithm runs in $O(nBk)$ time and can be implemented in $O(Bk)$ memory. If all lengths equal $\ell$ and $B\ge k\ell$, an optimal solution consists of the $k$ largest values, or all candidates when $n<k$.
+
+\begin{proof}
+We prove optimality by induction on $j$. The boundary case $j=0$ is immediate because the empty set is the only feasible subset. Assume the definition is correct for $j-1$. Consider an optimal feasible subset $S$ of the first $j$ candidates for state $(j,b,m)$. If $j\notin S$, then $S$ is feasible for state $(j-1,b,m)$, so its value is at most $D(j-1,b,m)$. If $j\in S$, then $S\setminus\{j\}$ uses at most $b-\ell_j$ characters and at most $m-1$ facts. By the induction hypothesis, its value is at most $D(j-1,b-\ell_j,m-1)$, so the value of $S$ is at most the second term in the recursion. Conversely, each term in the recursion corresponds to a feasible subset of the first $j$ candidates whenever that term is defined. The maximum of the two terms therefore equals the optimal value for state $(j,b,m)$. Induction gives $D(n,B,k)$ as the global optimum.
+
+There are $(n+1)(B+1)(k+1)$ states and each state requires constant work after its predecessor states are available, yielding $O(nBk)$ time. Computing layer $j$ requires only layer $j-1$, so rolling the candidate dimension yields $O(Bk)$ value storage. If all lengths equal $\ell$ and $B\ge k\ell$, every subset containing at most $k$ facts is feasible with respect to the character budget. With nonnegative values, selecting the largest available values maximizes the additive objective, giving the stated top-$k$ special case.
+\end{proof}
+
+\end{document}

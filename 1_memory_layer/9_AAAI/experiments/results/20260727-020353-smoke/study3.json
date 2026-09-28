@@ -1,0 +1,239 @@
+{
+  "status": "DONE",
+  "n_scenarios_used": 24,
+  "config_used": {
+    "episodes": 120,
+    "warmup_frac": 0.25,
+    "shortlist": 30,
+    "seeds": [
+      1
+    ],
+    "lr": 0.15,
+    "l2": 0.001,
+    "char_unit": 40,
+    "relevance_boost": 2.5,
+    "mixed_sigma": 0.4,
+    "nested_lambda": 0.5
+  },
+  "table": {
+    "mnl/balanced": {
+      "A": {
+        "acc": 0.9969,
+        "chars": 299.9,
+        "ndcg": 0.925,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.997,
+        "chars": 302.3,
+        "ndcg": 0.9041,
+        "truth": 1.0
+      },
+      "C": {
+        "acc": 0.997,
+        "chars": 302.3,
+        "ndcg": 0.9041,
+        "truth": 1.0
+      }
+    },
+    "mnl/repetition": {
+      "A": {
+        "acc": 0.9958,
+        "chars": 295.6,
+        "ndcg": 0.939,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.9958,
+        "chars": 297.9,
+        "ndcg": 0.939,
+        "truth": 1.0
+      },
+      "C": {
+        "acc": 0.9958,
+        "chars": 297.9,
+        "ndcg": 0.939,
+        "truth": 1.0
+      }
+    },
+    "mnl/associative": {
+      "A": {
+        "acc": 0.9921,
+        "chars": 287.7,
+        "ndcg": 0.948,
+        "truth": 1.0
+      },
+      "B": {
+        "acc": 0.9921,
+        "chars": 289.0,
+        "ndcg": 0.9792,
+        "truth": 1.0
+      },
+      "C": {
+        "acc": 0.9921,
+        "chars": 289.0,
+        "ndcg": 0.9792,
+        "truth": 1.0
+      }
+    }
+  },
+  "gain_retention_C_over_A": {},
+  "runs": [
+    {
+      "user_model": "mnl",
+      "persona": "balanced",
+      "seed": 1,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.9969,
+          "acceptance_realized": 1.0,
+          "ndcg_at_k": 0.925,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 299.9,
+          "acceptance_per_100_chars": 0.3324
+        },
+        "B": {
+          "acceptance_true": 0.997,
+          "acceptance_realized": 1.0,
+          "ndcg_at_k": 0.9041,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 302.3,
+          "acceptance_per_100_chars": 0.3298
+        },
+        "C": {
+          "acceptance_true": 0.997,
+          "acceptance_realized": 1.0,
+          "ndcg_at_k": 0.9041,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 302.3,
+          "acceptance_per_100_chars": 0.3298
+        }
+      },
+      "theta_star": {
+        "bm25": 1.0,
+        "rec": 0.8,
+        "heat": 0.6,
+        "assoc": 0.6,
+        "bias": -2.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.994,
+        "rec": 0.261,
+        "heat": 0.495,
+        "assoc": 0.286,
+        "bias": 0.321
+      },
+      "theta_hat_C": {
+        "bm25": 0.994,
+        "rec": 0.261,
+        "heat": 0.495,
+        "assoc": 0.286,
+        "bias": 0.321
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "repetition",
+      "seed": 1,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.9958,
+          "acceptance_realized": 1.0,
+          "ndcg_at_k": 0.939,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 295.6,
+          "acceptance_per_100_chars": 0.3368
+        },
+        "B": {
+          "acceptance_true": 0.9958,
+          "acceptance_realized": 1.0,
+          "ndcg_at_k": 0.939,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 297.9,
+          "acceptance_per_100_chars": 0.3342
+        },
+        "C": {
+          "acceptance_true": 0.9958,
+          "acceptance_realized": 1.0,
+          "ndcg_at_k": 0.939,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 297.9,
+          "acceptance_per_100_chars": 0.3342
+        }
+      },
+      "theta_star": {
+        "bm25": 0.7,
+        "rec": 0.4,
+        "heat": 1.8,
+        "assoc": 0.3,
+        "bias": -2.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.956,
+        "rec": 0.305,
+        "heat": 0.451,
+        "assoc": 0.298,
+        "bias": 0.367
+      },
+      "theta_hat_C": {
+        "bm25": 0.956,
+        "rec": 0.305,
+        "heat": 0.451,
+        "assoc": 0.298,
+        "bias": 0.367
+      }
+    },
+    {
+      "user_model": "mnl",
+      "persona": "associative",
+      "seed": 1,
+      "arms": {
+        "A": {
+          "acceptance_true": 0.9921,
+          "acceptance_realized": 0.9889,
+          "ndcg_at_k": 0.948,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 287.7,
+          "acceptance_per_100_chars": 0.3449
+        },
+        "B": {
+          "acceptance_true": 0.9921,
+          "acceptance_realized": 0.9889,
+          "ndcg_at_k": 0.9792,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 289.0,
+          "acceptance_per_100_chars": 0.3433
+        },
+        "C": {
+          "acceptance_true": 0.9921,
+          "acceptance_realized": 0.9889,
+          "ndcg_at_k": 0.9792,
+          "truth_injected_rate": 1.0,
+          "injected_chars_mean": 289.0,
+          "acceptance_per_100_chars": 0.3433
+        }
+      },
+      "theta_star": {
+        "bm25": 0.6,
+        "rec": 0.5,
+        "heat": 0.3,
+        "assoc": 1.8,
+        "bias": -2.0
+      },
+      "theta_hat_B": {
+        "bm25": 0.975,
+        "rec": 0.24,
+        "heat": 0.17,
+        "assoc": 0.394,
+        "bias": 0.321
+      },
+      "theta_hat_C": {
+        "bm25": 0.975,
+        "rec": 0.24,
+        "heat": 0.17,
+        "assoc": 0.394,
+        "bias": 0.321
+      }
+    }
+  ]
+}

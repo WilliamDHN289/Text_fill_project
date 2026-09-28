@@ -1,0 +1,396 @@
+% ==========================================================================
+% aaai2027.bib — bibliography for aaai2027_full.tex
+%
+% 每条目上方的注释标注置信度（沿用 references.bib 的约定，但移出 note 字段
+% 以免被 aaai27.bst 渲染进参考文献）：
+%   [VERIFIED]  2026-07-20/21 已通过 WebFetch 核对 arXiv 摘要页
+%   [LOCAL-PDF] PDF 在 ../1_literature/<name>/paper.pdf，投稿前对照首页核实
+%   [RECALL]    仅来自训练记忆，投稿前必须逐字段查证（标题/作者/年份/卷页）
+%
+% 投稿前 checklist：
+%   1. 逐条核对 [RECALL] 条目（尤其 OR 文献的卷号/页码、EdgeTune/ZenBrain/
+%      ICICT 的作者名单）。
+%   2. arXiv 预印本核对最新版本号。
+%   3. 用 /ars-citation-check 或人工比对正文引用与本文件的一致性。
+% ==========================================================================
+
+% ------------------------------------------------------------------
+% LLM agent memory systems（正文 Related Work 第 1 段 + Architecture 映射）
+% ------------------------------------------------------------------
+
+% [LOCAL-PDF] ../1_literature/mem0/paper.pdf
+@misc{chhikara2025mem0,
+  title         = {Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory},
+  author        = {Chhikara, Prateek and Khant, Dev and Aryan, Saket and Singh, Taranjeet and Yadav, Deshraj},
+  year          = {2025},
+  eprint        = {2504.19413},
+  archivePrefix = {arXiv}
+}
+
+% [LOCAL-PDF] Graphiti; ../1_literature/Zep/paper.pdf
+@misc{rasmussen2025zep,
+  title         = {Zep: A Temporal Knowledge Graph Architecture for Agent Memory},
+  author        = {Rasmussen, Preston and Paliychuk, Pavlo and Beauvais, Travis and Ryan, Jack and Chalef, Daniel},
+  year          = {2025},
+  eprint        = {2501.13956},
+  archivePrefix = {arXiv}
+}
+
+% [LOCAL-PDF] ../1_literature/hipporag/paper.pdf (NeurIPS 2024)
+@misc{gutierrez2024hipporag,
+  title         = {HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models},
+  author        = {Guti{\'e}rrez, Bernal Jim{\'e}nez and Shu, Yiheng and Gu, Yu and Yasunaga, Michihiro and Su, Yu},
+  year          = {2024},
+  eprint        = {2405.14831},
+  archivePrefix = {arXiv}
+}
+
+% [RECALL] title/author string approximate; see ../1_literature/memoryos/paper.pdf
+@misc{memoryos2025,
+  title         = {MemoryOS: A Memory Operating System for AI Agents},
+  author        = {{BAI-LAB}},
+  year          = {2025},
+  eprint        = {2506.06326},
+  archivePrefix = {arXiv}
+}
+
+% [LOCAL-PDF] ../1_literature/a-mem/paper.pdf
+@misc{xu2025amem,
+  title         = {A-MEM: Agentic Memory for LLM Agents},
+  author        = {Xu, Wujiang and Liang, Zujie and Mei, Kai and Gao, Hang and Tan, Juntao and Zhang, Yongfeng},
+  year          = {2025},
+  eprint        = {2502.12110},
+  archivePrefix = {arXiv}
+}
+
+% [LOCAL-PDF] Letta; ../1_literature/letta/paper.pdf
+@misc{packer2023memgpt,
+  title         = {MemGPT: Towards LLMs as Operating Systems},
+  author        = {Packer, Charles and Fang, Vivian and Patil, Shishir G. and Lin, Kevin and Wooders, Sarah and Gonzalez, Joseph E.},
+  year          = {2023},
+  eprint        = {2310.08560},
+  archivePrefix = {arXiv}
+}
+
+% [RECALL] cited in dpfm.py docstring; verify before formal citation
+@misc{zhong2023memorybank,
+  title         = {MemoryBank: Enhancing Large Language Models with Long-Term Memory},
+  author        = {Zhong, Wanjun and Guo, Lianghong and Gao, Qiqi and Ye, He and Wang, Yanlin},
+  year          = {2023},
+  eprint        = {2305.10250},
+  archivePrefix = {arXiv}
+}
+
+% ------------------------------------------------------------------
+% 2026 surveys / cognitively-grounded systems / edge（gap 论证）
+% ------------------------------------------------------------------
+
+% [VERIFIED] fetched 2026-07-20; ten open problems enumerated in S9
+@misc{du2026survey,
+  title         = {Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers},
+  author        = {Du, Pengfei},
+  year          = {2026},
+  eprint        = {2603.07670},
+  archivePrefix = {arXiv}
+}
+
+% [VERIFIED] fetched 2026-07-20; Microsoft; closest cognitively-grounded
+% prior work, explicitly assumes centralized deployment (GPT-4o +
+% text-embedding-3-large); engram maturation & reconsolidation unvalidated
+@misc{kerestecioglu2026human,
+  title         = {Human-Inspired Memory Architecture for LLM Agents},
+  author        = {Kerestecioglu, Doga and Robsky, Alexei and Vasters, Clemens and Sharma, Anshul and Kesselman, Yitzhak},
+  year          = {2026},
+  eprint        = {2605.08538},
+  archivePrefix = {arXiv}
+}
+
+% [VERIFIED] fetched 2026-07-20; proposes evaluation framework (MemoryData),
+% does not itself provide a system meeting latency/storage constraints
+@misc{zhou2026ready,
+  title         = {Are We Ready For An Agent-Native Memory System?},
+  author        = {Zhou, Wei and Zhou, Xuanhe and Han, Shaokun and Xu, Hongming and Li, Guoliang and Li, Zhiyu and Xiong, Feiyu and Wu, Fan},
+  year          = {2026},
+  eprint        = {2606.24775},
+  archivePrefix = {arXiv}
+}
+
+% [RECALL] title/venue from search snippet; AUTHOR LIST NOT VERIFIED.
+% Orthogonal to memory-layer work: on-device LoRA fine-tuning, not retrieval
+@inproceedings{edgetune2026,
+  title     = {EdgeTune: Efficient On-Device LLM Personalization at the Edge},
+  author    = {{Unknown -- verify authors}},
+  booktitle = {Proceedings of the 2026 ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems},
+  year      = {2026},
+  doi       = {10.1145/3774906.3802769}
+}
+
+% [RECALL] from 1_gap_analysis.md; Ebbinghaus curve for long-context
+% management (ICICT 2026). AUTHORS/TITLE MUST BE VERIFIED before submission
+@inproceedings{icict2026ebbinghaus,
+  title     = {Ebbinghaus Forgetting Curve and LLM Memory Management},
+  author    = {{Unknown -- verify authors}},
+  booktitle = {Proceedings of the 2026 International Conference on Information and Communication Technology (ICICT)},
+  year      = {2026}
+}
+
+% [RECALL] from 1_gap_analysis.md; seven-layer architecture claiming 15
+% cognitive-neuroscience models; concept-stage, no edge evaluation.
+% AUTHORS MUST BE VERIFIED before submission
+@misc{zenbrain2026,
+  title         = {ZenBrain: A Multi-Layer Neurocognitive Architecture for LLM Agents},
+  author        = {{Unknown -- verify authors}},
+  year          = {2026},
+  eprint        = {2604.23878},
+  archivePrefix = {arXiv}
+}
+
+% ------------------------------------------------------------------
+% paper-v2.tex 新增引用（作者在 v2 中引入；条目为占位，投稿前必须逐条
+% 用权威元数据替换 —— 标题/作者/venue 均从 v2 正文描述反推，未经核实）
+% ------------------------------------------------------------------
+
+% [RECALL] EMG-RAG: editable memory graph + smartphone assistant (EMNLP 2024
+% findings? arXiv:2409.19401?) — VERIFY all fields
+@misc{wang2024emgrag,
+  title         = {Crafting Personalized Agents through Retrieval-Augmented Generation on Editable Memory Graphs},
+  author        = {Wang, Zheng and others},
+  year          = {2024},
+  eprint        = {2409.19401},
+  archivePrefix = {arXiv}
+}
+
+% [RECALL-USER-ADDED] append-only property graph, temporal evolution,
+% conflict resolution at retrieval — VERIFY title/authors/venue
+@misc{banerjee2026apexmem,
+  title         = {APEX-MEM: Append-Only Property-Graph Memory with Temporal Conflict Resolution for LLM Agents},
+  author        = {Banerjee, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] event time + durative personal states — VERIFY
+@misc{su2026tsm,
+  title         = {Temporal Semantic Memory: Modeling Event Time and Durative States for Personalized Agents},
+  author        = {Su, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] benchmark: obsolete-memory reliance after updates — VERIFY
+@misc{uddin2026memora,
+  title         = {Memora: Evaluating Personalized Agents on Obsolete-Memory Reliance},
+  author        = {Uddin, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] online retrieval vs offline consolidation, fixed
+% retrieval budget — VERIFY
+@misc{zhang2026lightmem,
+  title         = {Lightweight LLM Agent Memory: Budgeted Online Retrieval with Offline Consolidation},
+  author        = {Zhang, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] on-smartphone vector memory co-design — VERIFY
+@misc{zhao2025ame,
+  title         = {AME: Co-Designing Vector Memory Querying, Insertion, and Maintenance for Mobile Hardware},
+  author        = {Zhao, {Unknown -- verify authors}},
+  year          = {2025},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] adaptive dense-channel activation for latency-sensitive
+% conversational memory — VERIFY
+@misc{yuan2026agentir,
+  title         = {AgentIR: Latency-Aware Retrieval for Long-Term Conversational Memory},
+  author        = {Yuan, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] phase-level systems profiling of agent memory — VERIFY
+@misc{omri2026agentmemory,
+  title         = {Profiling the Systems Cost of Agent Memory: Construction, Retrieval, and Freshness},
+  author        = {Omri, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% [RECALL-USER-ADDED] temporal-validity / efficiency evaluation — VERIFY
+@misc{huang2026licomemory,
+  title         = {LiCoMemory: Evaluating Temporal Validity and Retrieval Efficiency in Long-Context Agent Memory},
+  author        = {Huang, {Unknown -- verify authors}},
+  year          = {2026},
+  note          = {Placeholder metadata inferred from paper-v2 prose; replace before submission}
+}
+
+% ------------------------------------------------------------------
+% Memory benchmarks（Related Work 提及）
+% ------------------------------------------------------------------
+
+% [RECALL] LOCOMO; verify author order/venue (ACL 2024, arXiv:2402.17753)
+@inproceedings{maharana2024evaluating,
+  title     = {Evaluating Very Long-Term Conversational Memory of LLM Agents},
+  author    = {Maharana, Adyasha and Lee, Dong-Ho and Tulyakov, Sergey and Bansal, Mohit and Barbieri, Francesco and Fang, Yuwei},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2024}
+}
+
+% [RECALL] verify venue (ICLR 2025) and author list (arXiv:2410.10813)
+@misc{wu2024longmemeval,
+  title         = {LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory},
+  author        = {Wu, Di and Wang, Hongwei and Yu, Wenhao and Zhang, Yuwei and Chang, Kai-Wei and Yu, Dong},
+  year          = {2024},
+  eprint        = {2410.10813},
+  archivePrefix = {arXiv}
+}
+
+% ------------------------------------------------------------------
+% IR foundations（BM25F 打分、WAND 剪枝、RRF 融合的直接出处）
+% ------------------------------------------------------------------
+
+@article{robertson2009probabilistic,
+  title   = {The Probabilistic Relevance Framework: {BM25} and Beyond},
+  author  = {Robertson, Stephen and Zaragoza, Hugo},
+  journal = {Foundations and Trends in Information Retrieval},
+  volume  = {3},
+  number  = {4},
+  pages   = {333--389},
+  year    = {2009}
+}
+
+@inproceedings{robertson2004simple,
+  title     = {Simple {BM25} Extension to Multiple Weighted Fields},
+  author    = {Robertson, Stephen and Zaragoza, Hugo and Taylor, Michael},
+  booktitle = {Proceedings of the Thirteenth ACM International Conference on Information and Knowledge Management (CIKM)},
+  pages     = {42--49},
+  year      = {2004}
+}
+
+% [RECALL] canonical WAND paper; verify pages (CIKM 2003, 426--434)
+@inproceedings{broder2003efficient,
+  title     = {Efficient Query Evaluation Using a Two-Level Retrieval Process},
+  author    = {Broder, Andrei Z. and Carmel, David and Herscovici, Michael and Soffer, Aya and Zien, Jason},
+  booktitle = {Proceedings of the Twelfth ACM International Conference on Information and Knowledge Management (CIKM)},
+  pages     = {426--434},
+  year      = {2003}
+}
+
+% [RECALL] canonical RRF paper; verify pages (SIGIR 2009, 758--759)
+@inproceedings{cormack2009reciprocal,
+  title     = {Reciprocal Rank Fusion Outperforms {Condorcet} and Individual Rank Learning Methods},
+  author    = {Cormack, Gordon V. and Clarke, Charles L. A. and Buettcher, Stefan},
+  booktitle = {Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages     = {758--759},
+  year      = {2009}
+}
+
+% ------------------------------------------------------------------
+% Cognitive science（P3 支柱的直接理论依据）
+% ------------------------------------------------------------------
+
+@article{mcclelland1995complementary,
+  title   = {Why There Are Complementary Learning Systems in the Hippocampus and Neocortex: Insights from the Successes and Failures of Connectionist Models of Learning and Memory},
+  author  = {McClelland, James L. and McNaughton, Bruce L. and O'Reilly, Randall C.},
+  journal = {Psychological Review},
+  volume  = {102},
+  number  = {3},
+  pages   = {419--457},
+  year    = {1995}
+}
+
+@book{ebbinghaus1885memory,
+  title     = {Memory: A Contribution to Experimental Psychology},
+  author    = {Ebbinghaus, Hermann},
+  year      = {1885},
+  note      = {English translation by Henry A. Ruger and Clara E. Bussenius, 1913}
+}
+
+@article{roediger2006test,
+  title   = {Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention},
+  author  = {Roediger, Henry L. and Karpicke, Jeffrey D.},
+  journal = {Psychological Science},
+  volume  = {17},
+  number  = {3},
+  pages   = {249--255},
+  year    = {2006}
+}
+
+% ------------------------------------------------------------------
+% Discrete choice + assortment optimization（Choice-Theoretic Serving 节）
+% ------------------------------------------------------------------
+
+% [RECALL] canonical MNL reference; verify page range before submission
+@incollection{mcfadden1974conditional,
+  title     = {Conditional Logit Analysis of Qualitative Choice Behavior},
+  author    = {McFadden, Daniel},
+  booktitle = {Frontiers in Econometrics},
+  editor    = {Zarembka, Paul},
+  publisher = {Academic Press},
+  pages     = {105--142},
+  year      = {1974}
+}
+
+% [RECALL] revenue-ordered assortment optimality under MNL; verify vol/pages
+@article{talluri2004revenue,
+  title   = {Revenue Management Under a General Discrete Choice Model of Consumer Behavior},
+  author  = {Talluri, Kalyan and van Ryzin, Garrett},
+  journal = {Management Science},
+  volume  = {50},
+  number  = {1},
+  pages   = {15--33},
+  year    = {2004}
+}
+
+% [RECALL] polynomial algorithm for cardinality-constrained MNL assortment;
+% verify author list / volume / pages before submission
+@article{rusmevichientong2010dynamic,
+  title   = {Dynamic Assortment Optimization with a Multinomial Logit Choice Model and Capacity Constraint},
+  author  = {Rusmevichientong, Paat and Shen, Zuo-Jun Max and Shmoys, David B.},
+  journal = {Operations Research},
+  volume  = {58},
+  number  = {6},
+  pages   = {1666--1680},
+  year    = {2010}
+}
+
+% [RECALL] FPTAS for knapsack-constrained assortment; title/venue/year/
+% author list ALL need verification before submission
+@article{desir2020capacitated,
+  title   = {Capacitated Assortment Optimization: Hardness and Approximation},
+  author  = {D{\'e}sir, Antoine and Goyal, Vineet and Zhang, Jiawei},
+  journal = {Operations Research},
+  year    = {2020}
+}
+
+% ------------------------------------------------------------------
+% Choice models on the training side（定位切割：RCPO vs. 本文 serving 侧）
+% ------------------------------------------------------------------
+
+% [VERIFIED] arXiv:2510.23631, fetched 2026-07-21. Training-side use of
+% choice models (generalizes DPO/SimPO); cited for positioning only
+@inproceedings{tang2026rcpo,
+  title     = {Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling},
+  author    = {Tang, Yuxuan and Feng, Yifan},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026}
+}
+
+% [RECALL] DPO, NeurIPS 2023; verify full author list before submission
+@inproceedings{rafailov2023direct,
+  title     = {Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
+  author    = {Rafailov, Rafael and Sharma, Archit and Mitchell, Eric and Manning, Christopher D. and Ermon, Stefano and Finn, Chelsea},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023}
+}
+
+% [RECALL] SimPO, NeurIPS 2024; verify before submission
+@inproceedings{meng2024simpo,
+  title     = {SimPO: Simple Preference Optimization with a Reference-Free Reward},
+  author    = {Meng, Yu and Xia, Mengzhou and Chen, Danqi},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024}
+}

@@ -1,0 +1,15 @@
+AAAI-27 experiment run 20260728-120852 | {'python': '3.11.1', 'platform': 'macOS-26.5-arm64-arm-64bit', 'machine': 'arm64', 'timestamp': '2026-07-28 12:08:52'}
+
+=== study5 ===
+Study 5 (temporal): 240 labeled queries/corpus, 160 chains
+  lean   keyed/b240     current 0.887 stale 0.000 coinject 0.000 wrong 0.000 clean 0.887
+  lean   keyed/b800     current 1.000 stale 0.000 coinject 0.000 wrong 0.117 clean 0.883
+  lean   keyless/b240   current 0.675 stale 0.408 coinject 0.267 wrong 0.000 clean 0.408
+  lean   keyless/b800   current 0.812 stale 0.654 coinject 0.517 wrong 0.004 clean 0.292
+  noisy  keyed/b240     current 0.896 stale 0.000 coinject 0.000 wrong 0.000 clean 0.896
+  noisy  keyed/b800     current 1.000 stale 0.000 coinject 0.000 wrong 0.125 clean 0.875
+  noisy  keyless/b240   current 0.667 stale 0.388 coinject 0.250 wrong 0.000 clean 0.417
+  noisy  keyless/b800   current 0.812 stale 0.662 coinject 0.525 wrong 0.004 clean 0.283
+  [8.6s]
+
+All done. Results: /Users/denghaonan/Desktop/Text_Fill_Project/1_memory_layer/9_AAAI/experiments/results/20260728-120852

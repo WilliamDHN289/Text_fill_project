@@ -1,0 +1,290 @@
+{
+  "status": "DONE",
+  "model": "qwen2:7b",
+  "n_queries": 120,
+  "corpus": "noisy",
+  "arms": {
+    "off": {
+      "outcomes": {
+        "correct": 0,
+        "stale": 0,
+        "wrong_person": 0,
+        "other": 120
+      },
+      "rates": {
+        "correct": {
+          "rate": 0.0,
+          "ci": [
+            -0.0,
+            0.031
+          ]
+        },
+        "stale": {
+          "rate": 0.0,
+          "ci": [
+            -0.0,
+            0.031
+          ]
+        },
+        "wrong_person": {
+          "rate": 0.0,
+          "ci": [
+            -0.0,
+            0.031
+          ]
+        },
+        "other": {
+          "rate": 1.0,
+          "ci": [
+            0.969,
+            1.0
+          ]
+        }
+      },
+      "ttft_ms": {
+        "p50": 310.5,
+        "p95": 366.6
+      },
+      "total_ms_p50": 620.2
+    },
+    "pfm_full": {
+      "outcomes": {
+        "correct": 93,
+        "stale": 0,
+        "wrong_person": 3,
+        "other": 24
+      },
+      "rates": {
+        "correct": {
+          "rate": 0.775,
+          "ci": [
+            0.6924,
+            0.8405
+          ]
+        },
+        "stale": {
+          "rate": 0.0,
+          "ci": [
+            -0.0,
+            0.031
+          ]
+        },
+        "wrong_person": {
+          "rate": 0.025,
+          "ci": [
+            0.0085,
+            0.0709
+          ]
+        },
+        "other": {
+          "rate": 0.2,
+          "ci": [
+            0.1382,
+            0.2804
+          ]
+        }
+      },
+      "ttft_ms": {
+        "p50": 1191.2,
+        "p95": 1251.7
+      },
+      "total_ms_p50": 1454.2
+    },
+    "bm25_plain": {
+      "outcomes": {
+        "correct": 62,
+        "stale": 43,
+        "wrong_person": 1,
+        "other": 14
+      },
+      "rates": {
+        "correct": {
+          "rate": 0.5167,
+          "ci": [
+            0.4281,
+            0.6042
+          ]
+        },
+        "stale": {
+          "rate": 0.3583,
+          "ci": [
+            0.2782,
+            0.4473
+          ]
+        },
+        "wrong_person": {
+          "rate": 0.0083,
+          "ci": [
+            0.0015,
+            0.0457
+          ]
+        },
+        "other": {
+          "rate": 0.1167,
+          "ci": [
+            0.0708,
+            0.1863
+          ]
+        }
+      },
+      "ttft_ms": {
+        "p50": 1043.0,
+        "p95": 1202.7
+      },
+      "total_ms_p50": 1319.6
+    }
+  },
+  "sample_transcripts": [
+    {
+      "arm": "off",
+      "prefix": "The deadline for Leo is ",
+      "partner": "Leo Marchetti",
+      "current": "Jan 25",
+      "completion": "next Monday.",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "The due date for Dana is ",
+      "partner": "Dana Okafor",
+      "current": "Nov 26",
+      "completion": "next Monday.",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "Amara's day rate is ",
+      "partner": "Amara Diallo",
+      "current": "$1202",
+      "completion": "$300",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "Reminder — the sync with Grace is at ",
+      "partner": "Grace Obi",
+      "current": "2:55am",
+      "completion": "Reminder — the sync with Grace is at",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "The due date for Tessa is ",
+      "partner": "Tessa Byrne",
+      "current": "Aug 23",
+      "completion": "next Monday.",
+      "verdict": "other"
+    },
+    {
+      "arm": "off",
+      "prefix": "The review with Dana is in ",
+      "partner": "Dana Wolf",
+      "current": "room 8A",
+      "completion": "just a few minutes.",
+      "verdict": "other"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "The deadline for Leo is ",
+      "partner": "Leo Marchetti",
+      "current": "Jan 25",
+      "completion": "Jan 25.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "The due date for Dana is ",
+      "partner": "Dana Okafor",
+      "current": "Nov 26",
+      "completion": "Nov 26.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "Amara's day rate is ",
+      "partner": "Amara Diallo",
+      "current": "$1202",
+      "completion": "$1202.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "Reminder — the sync with Grace is at ",
+      "partner": "Grace Obi",
+      "current": "2:55am",
+      "completion": "room 19C today at 3 PM. Don't forget!",
+      "verdict": "other"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "The due date for Tessa is ",
+      "partner": "Tessa Byrne",
+      "current": "Aug 23",
+      "completion": "Aug 23.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "pfm_full",
+      "prefix": "The review with Dana is in ",
+      "partner": "Dana Wolf",
+      "current": "room 8A",
+      "completion": "room 6C.",
+      "verdict": "wrong_person"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "The deadline for Leo is ",
+      "partner": "Leo Marchetti",
+      "current": "Jan 25",
+      "completion": "Jan 25.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "The due date for Dana is ",
+      "partner": "Dana Okafor",
+      "current": "Nov 26",
+      "completion": "Mar 15.",
+      "verdict": "stale"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "Amara's day rate is ",
+      "partner": "Amara Diallo",
+      "current": "$1202",
+      "completion": "$1061.",
+      "verdict": "stale"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "Reminder — the sync with Grace is at ",
+      "partner": "Grace Obi",
+      "current": "2:55am",
+      "completion": "Reminder — the sync with Grace is at 3:20pm.",
+      "verdict": "stale"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "The due date for Tessa is ",
+      "partner": "Tessa Byrne",
+      "current": "Aug 23",
+      "completion": "Aug 23.",
+      "verdict": "correct"
+    },
+    {
+      "arm": "bm25_plain",
+      "prefix": "The review with Dana is in ",
+      "partner": "Dana Wolf",
+      "current": "room 8A",
+      "completion": "room 8A.",
+      "verdict": "correct"
+    }
+  ],
+  "log": [
+    "available models: ['qwen2:7b']"
+  ],
+  "decoding": {
+    "temperature": 0.0,
+    "num_predict": 24
+  }
+}
